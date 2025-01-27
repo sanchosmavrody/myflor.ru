@@ -1,1 +1,0 @@
-<a href="{full-link}"><span class="searchheading">{title}</span><span>{short-story limit="150"}</span></a>
