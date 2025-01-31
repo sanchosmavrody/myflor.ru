@@ -46,15 +46,15 @@
 
 
 [available=main]
-{include file="/modules/home.tpl"}
+{include file="/modules/_home.tpl"}
 [/available]
 
 [available=catalog]
-{include file="/modules/catalog.tpl"}
+{include file="/modules/_catalog.tpl"}
 [/available]
 
 [available=item]
-{include file="/modules/item.tpl"}
+{include file="/modules/_item.tpl"}
 [/available]
 
 
