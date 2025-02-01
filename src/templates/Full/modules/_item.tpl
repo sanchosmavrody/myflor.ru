@@ -72,10 +72,10 @@
 
                     <div class="col-lg-6 col-md-6">
                         <div class="product-details-content">
-                            <h3>Belted chino trousers polo</h3>
+                            <h3>Премиум букет из пионов</h3>
 
                             <div class="price">
-                                <span class="new-price">$191.00</span>
+                                <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                             </div>
 
                             <div class="product-review">
@@ -86,30 +86,27 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
                                 </div>
-                                <a href="#" class="rating-count">3 reviews</a>
+                                <a href="#" class="rating-count">3 отзыва</a>
                             </div>
 
                             <ul class="product-info">
-                                <li><span>Vendor:</span> <a href="#">Lereve</a></li>
-                                <li><span>Availability:</span> <a href="#">In stock (7 items)</a></li>
-                                <li><span>Product Type:</span> <a href="#">T-Shirt</a></li>
+                                <li><span>Цветы:</span> <a href="#">Пионы</a>,<a href="#">Эвкалипт</a></li>
+                                <li><span>Упаковка:</span> <a href="#">Фомиран</a></li>
+                                <li><span>Высота:</span> <a href="#">60см.</a></li>
                             </ul>
 
                             <div class="product-size-wrapper">
-                                <h4>Size:</h4>
+                                <h4>Выбрать размер букета:</h4>
 
                                 <ul>
-                                    <li><a href="#">XS</a></li>
-                                    <li class="active"><a href="#">S</a></li>
-                                    <li><a href="#">M</a></li>
-                                    <li><a href="#">XL</a></li>
-                                    <li><a href="#">XXL</a></li>
+                                    <li><a href="#">19 пионов</a></li>
+                                    <li class="active"><a href="#">21 пионов</a></li>
+                                    <li><a href="#">25 пионов</a></li>
                                 </ul>
                             </div>
 
                             <div class="product-info-btn">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#sizeGuideModal"><i class="fas fa-crop"></i> Size guide</a>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#productShippingModal"><i class="fas fa-truck"></i> Shipping</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#sizeGuideModal"><i class="fas fa-crop"></i> Изменить состав при заказе </a>
                             </div>
 
                             <div class="product-add-to-cart">
@@ -119,7 +116,7 @@
                                     <span class="plus-btn"><i class="fas fa-plus"></i></span>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> В корзину</button>
                             </div>
 
                             <div class="buy-checkbox-btn">
@@ -131,12 +128,12 @@
                                                 <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                             </svg>
                                         </span>
-                                        <span>I agree with the terms and conditions</span>
+                                        <span>Я на всё согласен</span>
                                     </label>
                                 </div>
 
                                 <div class="item">
-                                    <a href="#" class="btn btn-primary">Buy it now!</a>
+                                    <a href="#" class="btn btn-primary">Купить сейчас!</a>
                                 </div>
                             </div>
                         </div>
@@ -148,15 +145,15 @@
                                 <div class="col-lg-12 col-md-12">
                                     <ul class="tabs">
                                         <li><a href="#">
-                                                <div class="dot"></div> Description
+                                                <div class="dot"></div> Описание
                                             </a></li>
 
                                         <li><a href="#">
-                                                <div class="dot"></div> Additional information
+                                                <div class="dot"></div> Доставка и оплата
                                             </a></li>
 
                                         <li><a href="#">
-                                                <div class="dot"></div> Reviews
+                                                <div class="dot"></div> Отзывы
                                             </a></li>
                                     </ul>
                                 </div>
@@ -165,22 +162,24 @@
                                     <div class="tab_content">
                                         <div class="tabs_item">
                                             <div class="products-details-tab-content">
-                                                <p>Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum.  Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Nulla libero. Vivamus pharetra posuere sapien.</p>
+                                                <p>Вот вам яркий пример современных тенденций — понимание сути ресурсосберегающих технологий способствует повышению качества соответствующих условий активизации.
+                                                   Сложно сказать, почему независимые государства, вне зависимости от их уровня, должны быть ассоциативно распределены по отраслям. Но действия представителей оппозиции, вне зависимости от их уровня, должны быть подвергнуты целой серии независимых исследований. Современные технологии достигли такого уровня,
+                                                   что современная методология разработки выявляет срочную потребность экономической целесообразности принимаемых решений.</p>
 
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6">
                                                         <ul>
-                                                            <li>Fabric 1: 100% Polyester</li>
-                                                            <li>Fabric 2: 100% Polyester,Lining: 100% Polyester</li>
-                                                            <li>Fabric 3: 75% Polyester, 20% Viscose, 5% Elastane</li>
+                                                            <li>Сложно сказать, почему независимые государства</li>
+                                                            <li>Но действия представителей оппозиции</li>
+                                                            <li>Вот вам яркий пример современных тенденций</li>
                                                         </ul>
                                                     </div>
 
                                                     <div class="col-lg-6 col-md-6">
                                                         <ol>
-                                                            <li>Fabric 1: 75% Polyester, 20% Viscose, 5% Elastane</li>
-                                                            <li>Fabric 2: 100% Polyester,Lining: 100% Polyester</li>
-                                                            <li>Fabric 3: 100% Polyester</li>
+                                                            <li>Сложно сказать, почему независимые государства</li>
+                                                            <li>Но действия представителей оппозиции</li>
+                                                            <li>Вот вам яркий пример современных тенденций</li>
                                                         </ol>
                                                     </div>
                                                 </div>
@@ -191,40 +190,7 @@
                                             <div class="products-details-tab-content">
                                                 <div class="table-responsive">
                                                     <table class="table table-striped">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td>Color:</td>
-                                                            <td>Blue, Purple, White</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Size:</td>
-                                                            <td>20, 24</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Material:</td>
-                                                            <td>100% Polyester</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Height:</td>
-                                                            <td>180 cm - 5' 11”</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Bust</td>
-                                                            <td>83 cm - 32”</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Waist</td>
-                                                            <td>57 cm - 22”</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Hips</td>
-                                                            <td>88 cm - 35</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Shipping</td>
-                                                            <td>Free</td>
-                                                        </tr>
-                                                        </tbody>
+
                                                     </table>
                                                 </div>
                                             </div>
@@ -233,7 +199,7 @@
                                         <div class="tabs_item">
                                             <div class="products-details-tab-content">
                                                 <div class="product-review-form">
-                                                    <h3>Customer Reviews</h3>
+                                                    <h3>Отзывы наших клиентов</h3>
 
                                                     <div class="review-title">
                                                         <div class="rating">
@@ -390,26 +356,26 @@
                 <div class="product-single-aside">
                     <div class="services-aside">
                         <div class="facility-block">
-                            <h3><i class="fas fa-plane"></i> Delivery</h3>
+                            <h3><i class="fas fa-plane"></i> Доставка</h3>
 
-                            <p>Free shipping on orders over $100.</p>
+                            Доставка до 2 часов по мск.</p>
                         </div>
 
                         <div class="facility-block">
-                            <h3><i class="fas fa-headset"></i> Support 24/7</h3>
+                            <h3><i class="fas fa-headset"></i> Наш колцентр</h3>
 
-                            <p>Contact us 24 hours a day, 7 days a week.</p>
+                            <p>24/7 приём заказов</p>
                         </div>
 
                         <div class="facility-block">
-                            <h3><i class="fas fa-exchange-alt"></i> Return</h3>
+                            <h3><i class="fas fa-exchange-alt"></i> Возврат</h3>
 
-                            <p>Simply return it within 30 days for an exchange.</p>
+                            <p>Отказать от заказа можно до его отправки получателю</p>
                         </div>
                     </div>
 
                     <div class="products-payments-info">
-                        <span>Guaranteed safe checkout</span>
+                        <span>Мы принимаем</span>
 
                         <div class="payments-type">
                             <a href="#"><img src="/templates/Full/assets/img/payment-image/1.svg" alt="image"></a>
@@ -426,8 +392,8 @@
                         <img src="/templates/Full/assets/img/bestseller-hover-img1.jpg" alt="image">
 
                         <div class="category">
-                            <h4>Top Trending</h4>
-                            <span>Spring/Summer 2024 Collection</span>
+                            <h4>Остались вопросы?</h4>
+                            <span>Напишите нашим менеджерам</span>
                         </div>
 
                         <a href="#"></a>
@@ -440,7 +406,7 @@
     <div class="related-products-area">
         <div class="container">
             <div class="section-title">
-                <h2><span class="dot"></span> Related Products</h2>
+                <h2><span class="dot"></span> Поъожие товары</h2>
             </div>
 
             <div class="row">
@@ -464,7 +430,7 @@
                                 <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$191.00</span>
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -475,7 +441,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -499,8 +465,8 @@
                                 <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
-                                    <span class="old-price">$200.00</span>
-                                    <span class="new-price">$191.00</span>
+                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -511,7 +477,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -539,7 +505,8 @@
                                 <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$191.00</span>
+                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -550,7 +517,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -574,7 +541,8 @@
                                 <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$191.00</span>
+                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -585,7 +553,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -609,7 +577,8 @@
                                 <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$191.00</span>
+                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -620,7 +589,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -639,7 +608,7 @@
                     <div class="icon">
                         <i class="fas fa-plane"></i>
                     </div>
-                    <h3>Free Shipping World Wide</h3>
+                    <h3>Доставка до 2 часов по мск.</h3>
                 </div>
             </div>
 
@@ -648,16 +617,16 @@
                     <div class="icon">
                         <i class="fas fa-money-check-alt"></i>
                     </div>
-                    <h3>100% money back guarantee</h3>
+                    <h3>Оплата любыми способами</h3>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="facility-box">
                     <div class="icon">
-                        <i class="far fa-credit-card"></i>
+                        <i class="far fa-flag"></i>
                     </div>
-                    <h3>Many payment gatways</h3>
+                    <h3>Есть самовывоз</h3>
                 </div>
             </div>
 
@@ -666,12 +635,13 @@
                     <div class="icon">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>24/7 online support</h3>
+                    <h3>24/7 приём заказов</h3>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Start Shopping Cart Modal -->
 <div class="modal right fade shoppingCartModal" id="shoppingCartModal" tabindex="-1" role="dialog">
@@ -882,7 +852,7 @@
                                 <span class="plus-btn"><i class="fas fa-plus"></i></span>
                             </div>
 
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> В корзину</button>
                         </div>
 
                         <a href="product-type-1.html" class="view-full-info">View full info</a>
