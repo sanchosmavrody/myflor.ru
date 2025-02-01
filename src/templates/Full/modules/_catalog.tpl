@@ -8,10 +8,8 @@
                 <div class="category-boxes">
                     <img src="/templates/Full/assets/img/category-product-image/img1.jpg" alt="image">
                     <div class="content">
-                        <h3>Shop for Woman</h3>
-                        <span>165 Products</span>
-                        <a href="collections-style-1.html" class="shop-now-btn">Shop Now</a>
-
+                        <h3>Корзины</h3>
+                        <a href="#" class="shop-now-btn">Показать</a>
                     </div>
                 </div>
             </div>
@@ -20,10 +18,8 @@
                 <div class="category-boxes">
                     <img src="/templates/Full/assets/img/category-product-image/img2.jpg" alt="image">
                     <div class="content">
-                        <h3>Shop for Man</h3>
-                        <span>165 Products</span>
-                        <a href="collections-style-1.html" class="shop-now-btn">Shop Now</a>
-
+                        <h3>Коробки</h3>
+                        <a href="#" class="shop-now-btn">Показать</a>
                     </div>
                 </div>
             </div>
@@ -32,10 +28,8 @@
                 <div class="category-boxes">
                     <img src="/templates/Full/assets/img/category-product-image/img3.jpg" alt="image">
                     <div class="content">
-                        <h3>Shop for Man & Woman</h3>
-                        <span>165 Products</span>
-                        <a href="collections-style-1.html" class="shop-now-btn">Shop Now</a>
-
+                        <h3>Букеты</h3>
+                        <a href="#" class="shop-now-btn">Показать</a>
                     </div>
                 </div>
             </div>
@@ -48,7 +42,10 @@
 <section class="products-collections-area pb-60">
     <div class="container">
         <div class="section-title">
-            <h2><span class="dot"></span> Sunglasses</h2>
+            <h2>
+                <span class="dot"></span>
+                Каталог букетов
+            </h2>
         </div>
 
         <div class="row">
@@ -56,212 +53,131 @@
                 <div class="woocommerce-sidebar-area">
                     <div class="collapse-widget filter-list-widget">
                         <h3 class="collapse-widget-title">
-                            Current Selection
+                            Ваш выбор
 
                             <i class="fas fa-angle-up"></i>
                         </h3>
 
                         <div class="selected-filters-wrap-list">
                             <ul>
-                                <li><a href="product-type-1.html">44</a></li>
-                                <li><a href="product-type-1.html">XI</a></li>
-                                <li><a href="product-type-1.html">Clothing</a></li>
-                                <li><a href="product-type-1.html">Shoes</a></li>
-                                <li><a href="product-type-1.html">Accessories</a></li>
+                                <li><a href="/?do=item">80см</a></li>
+                                <li><a href="/?do=item">Букеты</a></li>
+                                <li><a href="/?do=item">Розы</a></li>
+                                <li><a href="/?do=item">Эквадор</a></li>
                             </ul>
 
                             <div class="delete-selected-filters">
-                                <a href="#"><i class="far fa-trash-alt"></i> <span>Clear All</span></a>
+                                <a href="#"><i class="far fa-trash-alt"></i>
+                                    <span> Очистить</span>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="collapse-widget collections-list-widget">
                         <h3 class="collapse-widget-title">
-                            Collections
-
+                            Категории
                             <i class="fas fa-angle-up"></i>
                         </h3>
 
                         <ul class="collections-list-row">
-                            <li class="active"><a href="collections-style-1.html">Women’s</a></li>
-                            <li><a href="collections-style-1.html">Men</a></li>
-                            <li><a href="collections-style-1.html">Clothing</a></li>
-                            <li><a href="collections-style-1.html">Shoes</a></li>
-                            <li><a href="collections-style-1.html">Accessories</a></li>
-                            <li><a href="collections-style-1.html">Uncategorized</a></li>
+                            <li class="active"><a href="collections-style-1.html">Букеты</a></li>
+                            <li><a href="#">Коробки</a></li>
+                            <li><a href="#">Корзины</a></li>
+                            <li><a href="#">Букет невесте</a></li>
+                            <li><a href="#">Декор</a></li>
                         </ul>
                     </div>
 
                     <div class="collapse-widget brands-list-widget">
                         <h3 class="collapse-widget-title">
-                            Brands
-
+                            Подборки
                             <i class="fas fa-angle-up"></i>
                         </h3>
 
                         <ul class="brands-list-row">
-                            <li class="active"><a href="category-left-sidebar-with-block-2.html">Adidas</a></li>
-                            <li><a href="category-left-sidebar-with-block-2.html">Nike</a></li>
-                            <li><a href="category-left-sidebar-with-block-2.html">Reebok</a></li>
-                            <li><a href="category-left-sidebar-with-block-2.html">Shoes</a></li>
-                            <li><a href="category-left-sidebar-with-block-2.html">Ralph Lauren</a></li>
-                            <li><a href="category-left-sidebar-with-block-2.html">Delpozo</a></li>
+                            <li class="active"><a href="#">Акции</a></li>
+                            <li><a href="#">Сезонные предложения</a></li>
+                            <li><a href="#">Топ от нашего флориста</a></li>
+                            <li><a href="#">Топ 10 букетов невесте</a></li>
                         </ul>
                     </div>
 
                     <div class="collapse-widget size-list-widget">
                         <h3 class="collapse-widget-title">
-                            Size
+                            Высота
 
                             <i class="fas fa-angle-up"></i>
                         </h3>
 
                         <ul class="size-list-row">
-                            <li><a href="product-type-2.html">20</a></li>
-                            <li><a href="product-type-2.html">24</a></li>
-                            <li><a href="product-type-2.html">36</a></li>
-                            <li><a href="product-type-2.html">30</a></li>
-                            <li class="active"><a href="product-type-2.html">XS</a></li>
-                            <li><a href="product-type-2.html">S</a></li>
-                            <li><a href="product-type-2.html">M</a></li>
-                            <li><a href="product-type-2.html">L</a></li>
-                            <li><a href="product-type-2.html">L</a></li>
-                            <li><a href="product-type-2.html">XL</a></li>
+                            <li><a href="#">30</a></li>
+                            <li><a href="#">40</a></li>
+                            <li><a href="#">50</a></li>
+                            <li><a href="#">60</a></li>
+                            <li class="active"><a href="#">70</a></li>
+                            <li><a href="#">80</a></li>
+                            <li><a href="#">90</a></li>
+                            <li><a href="#">100</a></li>
+                            <li><a href="#">100+</a></li>
                         </ul>
                     </div>
 
                     <div class="collapse-widget price-list-widget">
                         <h3 class="collapse-widget-title">
-                            Price
+                            Бюджет
 
                             <i class="fas fa-angle-up"></i>
                         </h3>
 
                         <ul class="price-list-row">
-                            <li><a href="product-type-3.html">$10 - $100</a></li>
-                            <li class="active"><a href="product-type-3.html">$100 - $200</a></li>
-                            <li><a href="product-type-3.html">$200 - $300</a></li>
-                            <li><a href="product-type-3.html">$300 - $400</a></li>
-                            <li><a href="product-type-3.html">$400 - $500</a></li>
-                            <li><a href="product-type-3.html">$500 - $600</a></li>
+                            <li><a href="#">1000<i class="fa fa-ruble"></i> - 2000<i class="fa fa-ruble"></i> </a></li>
+                            <li class="active"><a href="#">2000<i class="fa fa-ruble"></i> - 3000<i class="fa fa-ruble"></i> </a></li>
+                            <li><a href="#">3000<i class="fa fa-ruble"></i> - 4000<i class="fa fa-ruble"></i> </a></li>
+                            <li><a href="#">4000<i class="fa fa-ruble"></i> - 5000<i class="fa fa-ruble"></i> </a></li>
+                            <li><a href="#">5000<i class="fa fa-ruble"></i> - 6000<i class="fa fa-ruble"></i> </a></li>
+                            <li><a href="#">7000<i class="fa fa-ruble"></i> +</a></li>
                         </ul>
                     </div>
 
                     <div class="collapse-widget color-list-widget">
                         <h3 class="collapse-widget-title">
-                            Color
+                            Цвета
 
                             <i class="fas fa-angle-up"></i>
                         </h3>
 
                         <ul class="color-list-row">
-                            <li><a href="product-type-3.html" title="Black" class="color-black"></a></li>
-                            <li><a href="product-type-3.html" title="Red" class="color-red"></a></li>
-                            <li><a href="product-type-3.html" title="Yellow" class="color-yellow"></a></li>
-                            <li><a href="product-type-3.html" title="White" class="color-white"></a></li>
-                            <li><a href="product-type-3.html" title="Blue" class="color-blue"></a></li>
-                            <li><a href="product-type-3.html" title="Green" class="color-green"></a></li>
-                            <li><a href="product-type-3.html" title="Yellow Green" class="color-yellowgreen"></a></li>
-                            <li><a href="product-type-3.html" title="Pink" class="color-pink"></a></li>
-                            <li><a href="product-type-3.html" title="Violet" class="color-violet"></a></li>
-                            <li><a href="product-type-3.html" title="Blue Violet" class="color-blueviolet"></a></li>
-                            <li><a href="product-type-3.html" title="Lime" class="color-lime"></a></li>
-                            <li><a href="product-type-3.html" title="Plum" class="color-plum"></a></li>
-                            <li><a href="product-type-3.html" title="Teal" class="color-teal"></a></li>
+                            <li><a href="#" title="Red" class="color-red"></a></li>
+                            <li><a href="#" title="Yellow" class="color-yellow"></a></li>
+                            <li><a href="#" title="White" class="color-white"></a></li>
+                            <li><a href="#" title="Blue" class="color-blue"></a></li>
+                            <li><a href="#" title="Green" class="color-green"></a></li>
+                            <li><a href="#" title="Yellow Green" class="color-yellowgreen"></a></li>
+                            <li><a href="#" title="Pink" class="color-pink"></a></li>
+                            <li><a href="#" title="Violet" class="color-violet"></a></li>
+                            <li><a href="#" title="Blue Violet" class="color-blueviolet"></a></li>
+                            <li><a href="#" title="Lime" class="color-lime"></a></li>
+                            <li><a href="#" title="Plum" class="color-plum"></a></li>
+
                         </ul>
                     </div>
 
                     <div class="collapse-widget tag-list-widget">
                         <h3 class="collapse-widget-title">
-                            Popular Tags
+                            Теги подборки
 
                             <i class="fas fa-angle-up"></i>
                         </h3>
 
                         <ul class="tags-list-row">
-                            <li><a href="category-right-sidebar.html">Vintage</a></li>
-                            <li><a href="category-right-sidebar.html">Black</a></li>
-                            <li class="active"><a href="category-right-sidebar.html">Discount</a></li>
-                            <li><a href="category-right-sidebar.html">Good</a></li>
-                            <li><a href="category-right-sidebar.html">Jeans</a></li>
-                            <li><a href="category-right-sidebar.html">Summer</a></li>
-                            <li><a href="category-right-sidebar.html">Winter</a></li>
+                            <li><a href="#">Топ 10</a></li>
+                            <li><a href="#">Акции</a></li>
+                            <li class="active"><a href="#">Топ флориста</a></li>
+                            <li><a href="#">Невесте</a></li>
                         </ul>
                     </div>
 
-                    <div class="collapse-widget aside-products-widget">
-                        <h3 class="aside-widget-title">
-                            Popular Products
-                        </h3>
-
-                        <div class="aside-single-products">
-                            <div class="products-image">
-                                <a href="product-type-1.html">
-                                    <img src="/templates/Full/assets/img/img2.jpg" alt="image">
-                                </a>
-                            </div>
-
-                            <div class="products-content">
-                                <span><a href="category-left-sidebar.html">Men's</a></span>
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
-
-                                <div class="product-price">
-                                    <span class="new-price">$191.00</span>
-                                    <span class="old-price">$291.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="aside-single-products">
-                            <div class="products-image">
-                                <a href="product-type-1.html">
-                                    <img src="/templates/Full/assets/img/img3.jpg" alt="image">
-                                </a>
-                            </div>
-
-                            <div class="products-content">
-                                <span><a href="category-left-sidebar.html">Men's</a></span>
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
-
-                                <div class="product-price">
-                                    <span class="new-price">$191.00</span>
-                                    <span class="old-price">$291.00</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="aside-single-products">
-                            <div class="products-image">
-                                <a href="product-type-1.html">
-                                    <img src="/templates/Full/assets/img/img4.jpg" alt="image">
-                                </a>
-                            </div>
-
-                            <div class="products-content">
-                                <span><a href="category-left-sidebar.html">Men's</a></span>
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
-
-                                <div class="product-price">
-                                    <span class="new-price">$191.00</span>
-                                    <span class="old-price">$291.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="collapse-widget aside-trending-widget">
-                        <div class="aside-trending-products">
-                            <img src="/templates/Full/assets/img/bestseller-hover-img1.jpg" alt="image">
-
-                            <div class="category">
-                                <h4>Top Trending</h4>
-                                <span>Spring/Summer 2024 Collection</span>
-                            </div>
-
-                            <a href="#"></a>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -269,9 +185,9 @@
                 <div class="products-filter-options">
                     <div class="row align-items-center">
                         <div class="col d-flex">
-                            <span class="d-none"><a href="#" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fas fa-filter"></i> Filter</a></span>
+                            <span class="d-none"><a href="#" data-bs-toggle="modal" data-bs-target="#myModal"><i class="fas fa-filter"></i> Фильтр</a></span>
 
-                            <span>View:</span>
+                            <span>Отображение:</span>
 
                             <div class="view-list-row">
                                 <div class="view-column">
@@ -295,34 +211,26 @@
                         </div>
 
                         <div class="col d-flex justify-content-center">
-                            <p>Showing 22 of 102 results</p>
+                            <p>Показано 22 из 102 результатов</p>
                         </div>
 
                         <div class="col d-flex">
-                            <span>Show:</span>
+                            <span>Лимит:</span>
 
                             <div class="show-products-number">
                                 <select>
-                                    <option value="1">22</option>
-                                    <option value="2">32</option>
-                                    <option value="3">42</option>
-                                    <option value="4">52</option>
-                                    <option value="5">62</option>
+                                    <option value="1">30</option>
+                                    <option value="2">50</option>
+                                    <option value="3">100</option>
                                 </select>
                             </div>
 
-                            <span>Sort:</span>
+                            <span>Сортировка:</span>
 
                             <div class="products-ordering-list">
                                 <select>
-                                    <option value="1">Featured</option>
-                                    <option value="2">Best Selling</option>
-                                    <option value="3">Price Ascending</option>
-                                    <option value="4">Price Descending</option>
-                                    <option value="5">Date Ascending</option>
-                                    <option value="6">Date Descending</option>
-                                    <option value="7">Name Ascending</option>
-                                    <option value="8">Name Descending</option>
+                                    <option value="1">По популярности</option>
+                                    <option value="2">По цене</option>
                                 </select>
                             </div>
                         </div>
@@ -333,7 +241,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/sunglasses-image/img1.jpg" alt="image">
                                 </a>
 
@@ -344,10 +252,10 @@
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Linen crochet trim</a></h3>
+                                <h3><a href="/?do=item">Linen crochet trim</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$191.00</span>
+                                    <span class="new-price">1910<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -358,7 +266,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -366,7 +274,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/sunglasses-image/img2.jpg" alt="image">
                                 </a>
 
@@ -377,11 +285,11 @@
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Neck empire sleeve</a></h3>
+                                <h3><a href="/?do=item">Neck empire sleeve</a></h3>
 
                                 <div class="product-price">
-                                    <span class="old-price">$400.00</span>
-                                    <span class="new-price">$300.00</span>
+                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -392,7 +300,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -400,7 +308,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/sunglasses-image/img3.jpg" alt="image">
                                 </a>
 
@@ -411,10 +319,10 @@
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Mermaid pencil midi</a></h3>
+                                <h3><a href="/?do=item">Mermaid pencil midi</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$166.00</span>
+                                    <span class="new-price">3680<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -425,7 +333,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -433,7 +341,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/trending-image/img1.jpg" alt="image">
                                 </a>
 
@@ -444,11 +352,11 @@
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Clubmaster</a></h3>
+                                <h3><a href="/?do=item">Clubmaster</a></h3>
 
                                 <div class="product-price">
-                                    <span class="old-price">$300.00</span>
-                                    <span class="new-price">$299.00</span>
+                                    <span class="old-price">5600<i class="fa fa-ruble"></i></span>
+                                    <span class="new-price">4830<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -459,7 +367,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -467,7 +375,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/trending-image/img2.jpg" alt="image">
                                 </a>
 
@@ -477,16 +385,16 @@
                                 </ul>
 
                                 <div class="sale-tag">
-                                    Sale
+                                    Акция
                                 </div>
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Rectangle</a></h3>
+                                <h3><a href="/?do=item">Rectangle</a></h3>
 
                                 <div class="product-price">
-                                    <span class="old-price">$200.00</span>
-                                    <span class="new-price">$191.00</span>
+                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -497,7 +405,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -505,21 +413,22 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/trending-image/img3.jpg" alt="image">
                                 </a>
 
                                 <ul>
                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
                                 </ul>
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Wayfarer</a></h3>
+                                <h3><a href="/?do=item">Wayfarer</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$187.00</span>
+
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -530,7 +439,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -538,7 +447,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/bestseller-image/img1.jpg" alt="image">
                                 </a>
 
@@ -549,10 +458,11 @@
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Heartland Alabama</a></h3>
+                                <h3><a href="/?do=item">Heartland Alabama</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$191.00</span>
+
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -563,7 +473,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -571,7 +481,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/bestseller-image/img2.jpg" alt="image">
                                 </a>
 
@@ -586,11 +496,11 @@
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Cat Eye</a></h3>
+                                <h3><a href="/?do=item">Cat Eye</a></h3>
 
                                 <div class="product-price">
-                                    <span class="old-price">$200.00</span>
-                                    <span class="new-price">$191.00</span>
+
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -601,7 +511,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -609,7 +519,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/bestseller-image/img3.jpg" alt="image">
                                 </a>
 
@@ -620,10 +530,11 @@
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Aviator/Pilot</a></h3>
+                                <h3><a href="/?do=item">Aviator/Pilot</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$166.00</span>
+
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -634,7 +545,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -642,7 +553,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/sunglasses-image/img1.jpg" alt="image">
                                 </a>
 
@@ -653,10 +564,10 @@
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Linen crochet trim</a></h3>
+                                <h3><a href="/?do=item">Linen crochet trim</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$191.00</span>
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -667,7 +578,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -675,7 +586,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/sunglasses-image/img2.jpg" alt="image">
                                 </a>
 
@@ -686,11 +597,11 @@
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Neck empire sleeve</a></h3>
+                                <h3><a href="/?do=item">Neck empire sleeve</a></h3>
 
                                 <div class="product-price">
-                                    <span class="old-price">$400.00</span>
-                                    <span class="new-price">$300.00</span>
+                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -701,7 +612,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -709,7 +620,7 @@
                     <div class="col-lg-6 col-md-6 products-col-item">
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/sunglasses-image/img3.jpg" alt="image">
                                 </a>
 
@@ -720,10 +631,10 @@
                             </div>
 
                             <div class="product-content">
-                                <h3><a href="product-type-1.html">Mermaid pencil midi</a></h3>
+                                <h3><a href="/?do=item">Mermaid pencil midi</a></h3>
 
                                 <div class="product-price">
-                                    <span class="new-price">$166.00</span>
+                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                 </div>
 
                                 <div class="rating">
@@ -734,7 +645,7 @@
                                     <i class="far fa-star"></i>
                                 </div>
 
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                <a href="cart.html" class="btn btn-light">В корзину</a>
                             </div>
                         </div>
                     </div>
@@ -743,10 +654,14 @@
                 <nav class="woocommerce-pagination">
                     <ul>
                         <li><a href="#" class="page-numbers">1</a></li>
-                        <li><span class="page-numbers current">2</span></li>
+                        <li>
+                            <span class="page-numbers current">2</span>
+                        </li>
                         <li><a href="#" class="page-numbers">3</a></li>
                         <li><a href="#" class="page-numbers">4</a></li>
-                        <li><span class="page-numbers dots">…</span></li>
+                        <li>
+                            <span class="page-numbers dots">…</span>
+                        </li>
                         <li><a href="#" class="page-numbers">11</a></li>
                         <li><a href="#" class="page-numbers">12</a></li>
                         <li><a href="#" class="next page-numbers"><i class="fas fa-chevron-right"></i></a></li>
@@ -767,7 +682,7 @@
                     <div class="icon">
                         <i class="fas fa-plane"></i>
                     </div>
-                    <h3>Free Shipping World Wide</h3>
+                    <h3>Доставка до 2 часов по мск.</h3>
                 </div>
             </div>
 
@@ -776,16 +691,16 @@
                     <div class="icon">
                         <i class="fas fa-money-check-alt"></i>
                     </div>
-                    <h3>100% money back guarantee</h3>
+                    <h3>Оплата любыми способами</h3>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="facility-box">
                     <div class="icon">
-                        <i class="far fa-credit-card"></i>
+                        <i class="far fa-flag"></i>
                     </div>
-                    <h3>Many payment gatways</h3>
+                    <h3>Есть самовывоз</h3>
                 </div>
             </div>
 
@@ -794,7 +709,7 @@
                     <div class="icon">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>24/7 online support</h3>
+                    <h3>24/7 приём заказов</h3>
                 </div>
             </div>
         </div>
@@ -806,7 +721,9 @@
 <div class="modal right fade shoppingCartModal" id="shoppingCartModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
 
             <div class="modal-body">
                 <h3>My Cart (3)</h3>
@@ -818,7 +735,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -834,7 +751,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -850,7 +767,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -881,7 +798,9 @@
 <div class="modal right fade shoppingWishlistModal" id="shoppingWishlistModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
 
             <div class="modal-body">
                 <h3>My Wish List (3)</h3>
@@ -893,7 +812,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -909,7 +828,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -925,7 +844,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -961,7 +880,7 @@
 
                 <div class="col-lg-6 col-md-6">
                     <div class="product-content">
-                        <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                        <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                         <div class="price">
                             <span class="new-price">$191.00</span>
@@ -979,9 +898,15 @@
                         </div>
 
                         <ul class="product-info">
-                            <li><span>Vendor:</span> <a href="#">Lereve</a></li>
-                            <li><span>Availability:</span> <a href="#">In stock (7 items)</a></li>
-                            <li><span>Product Type:</span> <a href="#">T-Shirt</a></li>
+                            <li>
+                                <span>Vendor:</span>
+                                <a href="#">Lereve</a></li>
+                            <li>
+                                <span>Availability:</span>
+                                <a href="#">In stock (7 items)</a></li>
+                            <li>
+                                <span>Product Type:</span>
+                                <a href="#">T-Shirt</a></li>
                         </ul>
 
                         <div class="product-color-switch">
@@ -1015,10 +940,10 @@
                                 <span class="plus-btn"><i class="fas fa-plus"></i></span>
                             </div>
 
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> В корзину</button>
                         </div>
 
-                        <a href="product-type-1.html" class="view-full-info">View full info</a>
+                        <a href="/?do=item" class="view-full-info">View full info</a>
                     </div>
                 </div>
             </div>
@@ -1208,7 +1133,9 @@
 <div class="modal left fade productsFilterModal" id="myModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i> Close</span></button>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="fas fa-times"></i> Close</span>
+            </button>
 
             <div class="modal-body">
                 <div class="woocommerce-sidebar-area">
@@ -1221,15 +1148,17 @@
 
                         <div class="selected-filters-wrap-list">
                             <ul>
-                                <li><a href="product-type-1.html">44</a></li>
-                                <li><a href="product-type-1.html">XI</a></li>
-                                <li><a href="product-type-1.html">Clothing</a></li>
-                                <li><a href="product-type-1.html">Shoes</a></li>
-                                <li><a href="product-type-1.html">Accessories</a></li>
+                                <li><a href="/?do=item">44</a></li>
+                                <li><a href="/?do=item">XI</a></li>
+                                <li><a href="/?do=item">Clothing</a></li>
+                                <li><a href="/?do=item">Shoes</a></li>
+                                <li><a href="/?do=item">Accessories</a></li>
                             </ul>
 
                             <div class="delete-selected-filters">
-                                <a href="#"><i class="far fa-trash-alt"></i> <span>Clear All</span></a>
+                                <a href="#"><i class="far fa-trash-alt"></i>
+                                    <span>Clear All</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1338,13 +1267,13 @@
                         </h3>
 
                         <ul class="tags-list-row">
-                            <li><a href="category-right-sidebar.html">Vintage</a></li>
-                            <li><a href="category-right-sidebar.html">Black</a></li>
-                            <li class="active"><a href="category-right-sidebar.html">Discount</a></li>
-                            <li><a href="category-right-sidebar.html">Good</a></li>
-                            <li><a href="category-right-sidebar.html">Jeans</a></li>
-                            <li><a href="category-right-sidebar.html">Summer</a></li>
-                            <li><a href="category-right-sidebar.html">Winter</a></li>
+                            <li><a href="#">Vintage</a></li>
+                            <li><a href="#">Black</a></li>
+                            <li class="active"><a href="#">Discount</a></li>
+                            <li><a href="#">Good</a></li>
+                            <li><a href="#">Jeans</a></li>
+                            <li><a href="#">Summer</a></li>
+                            <li><a href="#">Winter</a></li>
                         </ul>
                     </div>
 
@@ -1355,14 +1284,14 @@
 
                         <div class="aside-single-products">
                             <div class="products-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/img2.jpg" alt="image">
                                 </a>
                             </div>
 
                             <div class="products-content">
                                 <span><a href="category-left-sidebar.html">Men's</a></span>
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                                <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
                                     <span class="new-price">$191.00</span>
@@ -1373,14 +1302,14 @@
 
                         <div class="aside-single-products">
                             <div class="products-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/img3.jpg" alt="image">
                                 </a>
                             </div>
 
                             <div class="products-content">
                                 <span><a href="category-left-sidebar.html">Men's</a></span>
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                                <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
                                     <span class="new-price">$191.00</span>
@@ -1391,14 +1320,14 @@
 
                         <div class="aside-single-products">
                             <div class="products-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/img4.jpg" alt="image">
                                 </a>
                             </div>
 
                             <div class="products-content">
                                 <span><a href="category-left-sidebar.html">Men's</a></span>
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                                <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
                                     <span class="new-price">$191.00</span>

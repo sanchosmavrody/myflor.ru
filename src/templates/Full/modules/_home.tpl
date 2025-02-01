@@ -17,8 +17,8 @@
                                 <h1>Ограниченное предложение!</h1>
                                 <p>Новый тренд во флористике</p>
 
-                                <a href="single-post-2.html" class="btn btn-primary">Заказать букет</a>
-                                <a href="single-post-3.html" class="btn btn-light">В каталог</a>
+                                <a href="/?do=catalog" class="btn btn-primary">Заказать букет</a>
+                                <a href="/?do=catalog" class="btn btn-light">В каталог</a>
                             </div>
                         </div>
                     </div>
@@ -45,8 +45,8 @@
                                 <h1>Удиви по настоящему редким букетом</h1>
                                 <p>Сборка композиции по экслюзивным заказам</p>
 
-                                <a href="single-post-2.html" class="btn btn-primary">Сделать заказ</a>
-                                <a href="single-post-3.html" class="btn btn-light">В каталог</a>
+                                <a href="/?do=catalog" class="btn btn-primary">Сделать заказ</a>
+                                <a href="/?do=catalog" class="btn btn-light">В каталог</a>
                             </div>
                         </div>
                     </div>
@@ -73,8 +73,8 @@
                                 <h1>Ограниченное предложение!</h1>
                                 <p>Новый тренд во флористике</p>
 
-                                <a href="single-post-2.html" class="btn btn-primary">Заказать букет</a>
-                                <a href="single-post-3.html" class="btn btn-light">В каталог</a>
+                                <a href="/?do=catalog" class="btn btn-primary">Заказать букет</a>
+                                <a href="/?do=catalog" class="btn btn-light">В каталог</a>
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
 
                         </div>
 
-                        <a href="product-type-1.html"></a>
+                        <a href="/?do=catalog"></a>
                     </div>
                 </div>
 
@@ -117,7 +117,7 @@
 
                         </div>
 
-                        <a href="product-type-1.html"></a>
+                        <a href="/?do=catalog"></a>
                     </div>
                 </div>
 
@@ -130,7 +130,7 @@
 
                         </div>
 
-                        <a href="product-type-1.html"></a>
+                        <a href="/?do=catalog"></a>
                     </div>
                 </div>
 
@@ -142,7 +142,7 @@
                             <h3>Коробки</h3>
                         </div>
 
-                        <a href="product-type-1.html"></a>
+                        <a href="/?do=catalog"></a>
                     </div>
                 </div>
 
@@ -155,7 +155,7 @@
 
                         </div>
 
-                        <a href="product-type-1.html"></a>
+                        <a href="/?do=catalog"></a>
                     </div>
                 </div>
             </div>
@@ -211,17 +211,17 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <ul class="tabs without-bg">
-                        <li><a href="#">
+                        <li><a href="/?do=catalog">
                                 <div class="dot"></div>
                                 Новинки
                             </a></li>
 
-                        <li><a href="#">
+                        <li><a href="/?do=catalog">
                                 <div class="dot"></div>
                                 Популярное
                             </a></li>
 
-                        <li><a href="#">
+                        <li><a href="/?do=catalog">
                                 <div class="dot"></div>
                                 Акции </a></li>
                     </ul>
@@ -235,15 +235,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img1.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover1.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -251,7 +251,7 @@
                                                 <h3><a href="product-type-2.html">Linen crochet trim t-shirt</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$191.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -262,7 +262,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -270,15 +270,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img2.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover2.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -286,8 +286,8 @@
                                                 <h3><a href="product-type-2.html">Neck empire sleeve t-shirts</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="old-price">$400.00</span>
-                                                    <span class="new-price">$300.00</span>
+                                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -298,7 +298,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -306,15 +306,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img3.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover3.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -322,7 +322,7 @@
                                                 <h3><a href="product-type-2.html">Mermaid pencil midi lace</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$166.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -333,7 +333,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -341,15 +341,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img4.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover4.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -357,7 +357,7 @@
                                                 <h3><a href="product-type-2.html">Criss-cross V neck bodycon</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$200.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -368,7 +368,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -376,15 +376,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img5.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover5.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -392,7 +392,7 @@
                                                 <h3><a href="product-type-2.html">The cosmic cornucopia</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$150.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -403,7 +403,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -411,15 +411,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img6.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover6.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -427,7 +427,7 @@
                                                 <h3><a href="product-type-2.html">Tenku remastered</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$177.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -438,7 +438,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -446,15 +446,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img7.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover7.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -462,8 +462,8 @@
                                                 <h3><a href="product-type-2.html">Women's sherpa lined hoodie</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="old-price">$300.00</span>
-                                                    <span class="new-price">$299.00</span>
+                                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -474,7 +474,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -482,15 +482,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img8.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover8.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -498,7 +498,7 @@
                                                 <h3><a href="product-type-2.html">Belted chino trousers polo</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$191.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -509,7 +509,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -523,15 +523,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img5.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover5.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -539,7 +539,7 @@
                                                 <h3><a href="product-type-2.html">The cosmic cornucopia</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$150.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -550,7 +550,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -558,15 +558,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img6.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover6.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -574,7 +574,7 @@
                                                 <h3><a href="product-type-2.html">Tenku remastered</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$177.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -585,7 +585,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -593,15 +593,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img7.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover7.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -609,8 +609,8 @@
                                                 <h3><a href="product-type-2.html">Women's sherpa lined hoodie</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="old-price">$300.00</span>
-                                                    <span class="new-price">$299.00</span>
+                                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -621,7 +621,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -629,15 +629,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img8.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover8.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -645,7 +645,7 @@
                                                 <h3><a href="product-type-2.html">Belted chino trousers polo</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$191.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -656,7 +656,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -664,15 +664,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img1.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover1.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -680,7 +680,8 @@
                                                 <h3><a href="product-type-2.html">Linen crochet trim t-shirt</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$191.00</span>
+                                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -691,7 +692,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -699,15 +700,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img2.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover2.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -715,8 +716,8 @@
                                                 <h3><a href="product-type-2.html">Neck empire sleeve t-shirts</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="old-price">$400.00</span>
-                                                    <span class="new-price">$300.00</span>
+                                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -727,7 +728,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -735,15 +736,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img3.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover3.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -751,7 +752,7 @@
                                                 <h3><a href="product-type-2.html">Mermaid pencil midi lace</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$166.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -762,7 +763,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -770,15 +771,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img4.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover4.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -786,7 +787,7 @@
                                                 <h3><a href="product-type-2.html">Criss-cross V neck bodycon</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$200.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -797,7 +798,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -811,15 +812,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img1.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover1.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -827,7 +828,7 @@
                                                 <h3><a href="product-type-2.html">Linen crochet trim t-shirt</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$191.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -838,7 +839,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -846,15 +847,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img2.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover2.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -862,8 +863,8 @@
                                                 <h3><a href="product-type-2.html">Neck empire sleeve t-shirts</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="old-price">$400.00</span>
-                                                    <span class="new-price">$300.00</span>
+                                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -874,7 +875,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -882,15 +883,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img3.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover3.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -898,7 +899,7 @@
                                                 <h3><a href="product-type-2.html">Mermaid pencil midi lace</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$166.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -909,7 +910,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -917,15 +918,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img4.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover4.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -933,7 +934,7 @@
                                                 <h3><a href="product-type-2.html">Criss-cross V neck bodycon</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$200.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -944,7 +945,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -952,15 +953,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img5.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover5.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -968,7 +969,7 @@
                                                 <h3><a href="product-type-2.html">The cosmic cornucopia</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$150.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -979,7 +980,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -987,15 +988,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img6.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover6.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -1003,7 +1004,7 @@
                                                 <h3><a href="product-type-2.html">Tenku remastered</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$177.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -1014,7 +1015,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1022,15 +1023,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img7.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover7.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -1038,8 +1039,8 @@
                                                 <h3><a href="product-type-2.html">Women's sherpa lined hoodie</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="old-price">$300.00</span>
-                                                    <span class="new-price">$299.00</span>
+                                                    <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -1050,7 +1051,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1058,15 +1059,15 @@
                                     <div class="col-lg-12 col-md-12 col-sm-12">
                                         <div class="single-product-box">
                                             <div class="product-image">
-                                                <a href="product-type-1.html">
+                                                <a href="/?do=item">
                                                     <img src="/templates/Full/assets/img/img8.jpg" alt="image">
                                                     <img src="/templates/Full/assets/img/img-hover8.jpg" alt="image">
                                                 </a>
 
                                                 <ul>
                                                     <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                                    <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                                                 </ul>
                                             </div>
 
@@ -1074,7 +1075,7 @@
                                                 <h3><a href="product-type-2.html">Belted chino trousers polo</a></h3>
 
                                                 <div class="product-price">
-                                                    <span class="new-price">$191.00</span>
+                                                    <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                                                 </div>
 
                                                 <div class="rating">
@@ -1085,7 +1086,7 @@
                                                     <i class="far fa-star"></i>
                                                 </div>
 
-                                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                                                <a href="cart.html" class="btn btn-light">В корзину</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1121,7 +1122,7 @@
                             <div class="category-content">
                                 <h3>Летнее настроение</h3>
                             </div>
-                            <a href="/" class="link-btn"></a>
+                            <a href="/?do=catalog" class="link-btn"></a>
                         </div>
                     </div>
 
@@ -1131,7 +1132,7 @@
                             <div class="category-content">
                                 <h3>Свадебные композиции</h3>
                             </div>
-                            <a href="/" class="link-btn"></a>
+                            <a href="/?do=catalog" class="link-btn"></a>
                         </div>
                     </div>
 
@@ -1141,7 +1142,7 @@
                             <div class="category-content">
                                 <h3>Все акции и спец. предложения</h3>
                             </div>
-                            <a href="/" class="link-btn"></a>
+                            <a href="/?do=catalog" class="link-btn"></a>
                         </div>
                     </div>
                 </div>
@@ -1164,23 +1165,23 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-product-box">
                         <div class="product-image">
-                            <a href="product-type-1.html">
+                            <a href="/?do=item">
                                 <img src="/templates/Full/assets/img/trending-img1.jpg" alt="image">
                                 <img src="/templates/Full/assets/img/trending-hover-img1.jpg" alt="image">
                             </a>
 
                             <ul>
                                 <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                             </ul>
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                             <div class="product-price">
-                                <span class="new-price">$191.00</span>
+                                <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                             </div>
 
                             <div class="rating">
@@ -1191,7 +1192,7 @@
                                 <i class="far fa-star"></i>
                             </div>
 
-                            <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-light">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -1199,24 +1200,24 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-product-box">
                         <div class="product-image">
-                            <a href="product-type-1.html">
+                            <a href="/?do=item">
                                 <img src="/templates/Full/assets/img/trending-img2.jpg" alt="image">
                                 <img src="/templates/Full/assets/img/trending-hover-img2.jpg" alt="image">
                             </a>
 
                             <ul>
                                 <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                             </ul>
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                             <div class="product-price">
-                                <span class="old-price">$200.00</span>
-                                <span class="new-price">$191.00</span>
+                                <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                             </div>
 
                             <div class="rating">
@@ -1227,7 +1228,7 @@
                                 <i class="far fa-star"></i>
                             </div>
 
-                            <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-light">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -1235,15 +1236,15 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-product-box">
                         <div class="product-image">
-                            <a href="product-type-1.html">
+                            <a href="/?do=item">
                                 <img src="/templates/Full/assets/img/trending-img3.jpg" alt="image">
                                 <img src="/templates/Full/assets/img/trending-hover-img3.jpg" alt="image">
                             </a>
 
                             <ul>
                                 <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                             </ul>
 
                             <div class="sale-tag">
@@ -1252,10 +1253,10 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                             <div class="product-price">
-                                <span class="new-price">$191.00</span>
+                                <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                             </div>
 
                             <div class="rating">
@@ -1266,7 +1267,7 @@
                                 <i class="far fa-star"></i>
                             </div>
 
-                            <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-light">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -1274,23 +1275,23 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-product-box">
                         <div class="product-image">
-                            <a href="product-type-1.html">
+                            <a href="/?do=item">
                                 <img src="/templates/Full/assets/img/trending-img4.jpg" alt="image">
                                 <img src="/templates/Full/assets/img/trending-hover-img4.jpg" alt="image">
                             </a>
 
                             <ul>
                                 <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                             </ul>
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                             <div class="product-price">
-                                <span class="new-price">$191.00</span>
+                                <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                             </div>
 
                             <div class="rating">
@@ -1301,7 +1302,7 @@
                                 <i class="far fa-star"></i>
                             </div>
 
-                            <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-light">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -1309,24 +1310,24 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-product-box">
                         <div class="product-image">
-                            <a href="product-type-1.html">
+                            <a href="/?do=item">
                                 <img src="/templates/Full/assets/img/trending-img2.jpg" alt="image">
                                 <img src="/templates/Full/assets/img/trending-hover-img2.jpg" alt="image">
                             </a>
 
                             <ul>
                                 <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                             </ul>
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                             <div class="product-price">
-                                <span class="old-price">$200.00</span>
-                                <span class="new-price">$191.00</span>
+                                <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                             </div>
 
                             <div class="rating">
@@ -1337,7 +1338,7 @@
                                 <i class="far fa-star"></i>
                             </div>
 
-                            <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-light">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -1360,23 +1361,23 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-product-box">
                         <div class="product-image">
-                            <a href="product-type-1.html">
+                            <a href="/?do=item">
                                 <img src="/templates/Full/assets/img/bestseller-img1.jpg" alt="image">
                                 <img src="/templates/Full/assets/img/bestseller-hover-img1.jpg" alt="image">
                             </a>
 
                             <ul>
                                 <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                             </ul>
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                             <div class="product-price">
-                                <span class="new-price">$191.00</span>
+                                <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                             </div>
 
                             <div class="rating">
@@ -1387,7 +1388,7 @@
                                 <i class="far fa-star"></i>
                             </div>
 
-                            <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-light">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -1395,24 +1396,24 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-product-box">
                         <div class="product-image">
-                            <a href="product-type-1.html">
+                            <a href="/?do=item">
                                 <img src="/templates/Full/assets/img/bestseller-img2.jpg" alt="image">
                                 <img src="/templates/Full/assets/img/bestseller-hover-img2.jpg" alt="image">
                             </a>
 
                             <ul>
                                 <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                             </ul>
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                             <div class="product-price">
-                                <span class="old-price">$200.00</span>
-                                <span class="new-price">$191.00</span>
+                                <span class="old-price">2900<i class="fa fa-ruble"></i></span>
+                                <span class="new-price">2630<i class="fa fa-ruble"></i></span>
                             </div>
 
                             <div class="rating">
@@ -1423,7 +1424,7 @@
                                 <i class="far fa-star"></i>
                             </div>
 
-                            <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-light">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -1431,15 +1432,15 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-product-box">
                         <div class="product-image">
-                            <a href="product-type-1.html">
+                            <a href="/?do=item">
                                 <img src="/templates/Full/assets/img/bestseller-img3.jpg" alt="image">
                                 <img src="/templates/Full/assets/img/bestseller-hover-img3.jpg" alt="image">
                             </a>
 
                             <ul>
                                 <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                             </ul>
 
                             <div class="sale-tag">
@@ -1448,7 +1449,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                             <div class="product-price">
                                 <span class="new-price">$191.00</span>
@@ -1462,7 +1463,7 @@
                                 <i class="far fa-star"></i>
                             </div>
 
-                            <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-light">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -1470,20 +1471,20 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-product-box">
                         <div class="product-image">
-                            <a href="product-type-1.html">
+                            <a href="/?do=item">
                                 <img src="/templates/Full/assets/img/bestseller-img4.jpg" alt="image">
                                 <img src="/templates/Full/assets/img/bestseller-hover-img4.jpg" alt="image">
                             </a>
 
                             <ul>
                                 <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                             </ul>
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                             <div class="product-price">
                                 <span class="new-price">$191.00</span>
@@ -1497,7 +1498,7 @@
                                 <i class="far fa-star"></i>
                             </div>
 
-                            <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-light">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -1505,20 +1506,20 @@
                 <div class="col-lg-12 col-md-12">
                     <div class="single-product-box">
                         <div class="product-image">
-                            <a href="product-type-1.html">
+                            <a href="/?do=item">
                                 <img src="/templates/Full/assets/img/bestseller-img2.jpg" alt="image">
                                 <img src="/templates/Full/assets/img/bestseller-hover-img2.jpg" alt="image">
                             </a>
 
                             <ul>
                                 <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                                <li><a href="/?do=item" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
                             </ul>
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                             <div class="product-price">
                                 <span class="old-price">$200.00</span>
@@ -1533,7 +1534,7 @@
                                 <i class="far fa-star"></i>
                             </div>
 
-                            <a href="cart.html" class="btn btn-light">Add to Cart</a>
+                            <a href="cart.html" class="btn btn-light">В корзину</a>
                         </div>
                     </div>
                 </div>
@@ -1617,27 +1618,27 @@
     <div class="container">
         <div class="partner-slides owl-carousel owl-theme">
             <div class="partner-item">
-                <a href="index.html" target="_blank"><img src="/templates/Full/assets/img/partner1.png" alt="image"></a>
+                <a href="/" target="_blank"><img src="/templates/Full/assets/img/partner1.png" alt="image"></a>
             </div>
 
             <div class="partner-item">
-                <a href="index.html" target="_blank"><img src="/templates/Full/assets/img/partner2.png" alt="image"></a>
+                <a href="/" target="_blank"><img src="/templates/Full/assets/img/partner2.png" alt="image"></a>
             </div>
 
             <div class="partner-item">
-                <a href="index.html" target="_blank"><img src="/templates/Full/assets/img/partner3.png" alt="image"></a>
+                <a href="/" target="_blank"><img src="/templates/Full/assets/img/partner3.png" alt="image"></a>
             </div>
 
             <div class="partner-item">
-                <a href="index.html" target="_blank"><img src="/templates/Full/assets/img/partner4.png" alt="image"></a>
+                <a href="/" target="_blank"><img src="/templates/Full/assets/img/partner4.png" alt="image"></a>
             </div>
 
             <div class="partner-item">
-                <a href="index.html" target="_blank"><img src="/templates/Full/assets/img/partner5.png" alt="image"></a>
+                <a href="/" target="_blank"><img src="/templates/Full/assets/img/partner5.png" alt="image"></a>
             </div>
 
             <div class="partner-item">
-                <a href="index.html" target="_blank"><img src="/templates/Full/assets/img/partner6.png" alt="image"></a>
+                <a href="/" target="_blank"><img src="/templates/Full/assets/img/partner6.png" alt="image"></a>
             </div>
         </div>
     </div>
@@ -1755,7 +1756,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -1771,7 +1772,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -1787,7 +1788,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -1830,7 +1831,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -1846,7 +1847,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -1862,7 +1863,7 @@
                         </div>
 
                         <div class="product-content">
-                            <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
                             <span>Blue / XS</span>
                             <div class="product-price">
                                 <span>1</span>
@@ -1896,7 +1897,7 @@
 
                 <div class="col-lg-6 col-md-6">
                     <div class="product-content">
-                        <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                        <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                         <div class="price">
                             <span class="new-price">$191.00</span>
@@ -1956,10 +1957,10 @@
                                 <span class="plus-btn"><i class="fas fa-plus"></i></span>
                             </div>
 
-                            <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> В корзину</button>
                         </div>
 
-                        <a href="product-type-1.html" class="view-full-info">View full info</a>
+                        <a href="/?do=item" class="view-full-info">View full info</a>
                     </div>
                 </div>
             </div>
@@ -2158,11 +2159,11 @@
 
                         <div class="selected-filters-wrap-list">
                             <ul>
-                                <li><a href="product-type-1.html">44</a></li>
-                                <li><a href="product-type-1.html">XI</a></li>
-                                <li><a href="product-type-1.html">Clothing</a></li>
-                                <li><a href="product-type-1.html">Shoes</a></li>
-                                <li><a href="product-type-1.html">Accessories</a></li>
+                                <li><a href="/?do=item">44</a></li>
+                                <li><a href="/?do=item">XI</a></li>
+                                <li><a href="/?do=item">Clothing</a></li>
+                                <li><a href="/?do=item">Shoes</a></li>
+                                <li><a href="/?do=item">Accessories</a></li>
                             </ul>
 
                             <div class="delete-selected-filters">
@@ -2236,12 +2237,12 @@
                         </h3>
 
                         <ul class="price-list-row">
-                            <li><a href="product-type-3.html">$10 - $100</a></li>
-                            <li class="active"><a href="product-type-3.html">$100 - $200</a></li>
-                            <li><a href="product-type-3.html">$200 - $300</a></li>
-                            <li><a href="product-type-3.html">$300 - $400</a></li>
-                            <li><a href="product-type-3.html">$400 - $500</a></li>
-                            <li><a href="product-type-3.html">$500 - $600</a></li>
+                            <li><a href="/?do=item">$10 - $100</a></li>
+                            <li class="active"><a href="/?do=item">$100 - $200</a></li>
+                            <li><a href="/?do=item">$200 - $300</a></li>
+                            <li><a href="/?do=item">$300 - $400</a></li>
+                            <li><a href="/?do=item">$400 - $500</a></li>
+                            <li><a href="/?do=item">$500 - $600</a></li>
                         </ul>
                     </div>
 
@@ -2253,19 +2254,19 @@
                         </h3>
 
                         <ul class="color-list-row">
-                            <li><a href="product-type-3.html" title="Black" class="color-black"></a></li>
-                            <li><a href="product-type-3.html" title="Red" class="color-red"></a></li>
-                            <li><a href="product-type-3.html" title="Yellow" class="color-yellow"></a></li>
-                            <li><a href="product-type-3.html" title="White" class="color-white"></a></li>
-                            <li><a href="product-type-3.html" title="Blue" class="color-blue"></a></li>
-                            <li><a href="product-type-3.html" title="Green" class="color-green"></a></li>
-                            <li><a href="product-type-3.html" title="Yellow Green" class="color-yellowgreen"></a></li>
-                            <li><a href="product-type-3.html" title="Pink" class="color-pink"></a></li>
-                            <li><a href="product-type-3.html" title="Violet" class="color-violet"></a></li>
-                            <li><a href="product-type-3.html" title="Blue Violet" class="color-blueviolet"></a></li>
-                            <li><a href="product-type-3.html" title="Lime" class="color-lime"></a></li>
-                            <li><a href="product-type-3.html" title="Plum" class="color-plum"></a></li>
-                            <li><a href="product-type-3.html" title="Teal" class="color-teal"></a></li>
+                            <li><a href="/?do=item" title="Black" class="color-black"></a></li>
+                            <li><a href="/?do=item" title="Red" class="color-red"></a></li>
+                            <li><a href="/?do=item" title="Yellow" class="color-yellow"></a></li>
+                            <li><a href="/?do=item" title="White" class="color-white"></a></li>
+                            <li><a href="/?do=item" title="Blue" class="color-blue"></a></li>
+                            <li><a href="/?do=item" title="Green" class="color-green"></a></li>
+                            <li><a href="/?do=item" title="Yellow Green" class="color-yellowgreen"></a></li>
+                            <li><a href="/?do=item" title="Pink" class="color-pink"></a></li>
+                            <li><a href="/?do=item" title="Violet" class="color-violet"></a></li>
+                            <li><a href="/?do=item" title="Blue Violet" class="color-blueviolet"></a></li>
+                            <li><a href="/?do=item" title="Lime" class="color-lime"></a></li>
+                            <li><a href="/?do=item" title="Plum" class="color-plum"></a></li>
+                            <li><a href="/?do=item" title="Teal" class="color-teal"></a></li>
                         </ul>
                     </div>
 
@@ -2294,14 +2295,14 @@
 
                         <div class="aside-single-products">
                             <div class="products-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/img2.jpg" alt="image">
                                 </a>
                             </div>
 
                             <div class="products-content">
                                 <span><a href="category-left-sidebar.html">Men's</a></span>
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                                <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
                                     <span class="new-price">$191.00</span>
@@ -2312,14 +2313,14 @@
 
                         <div class="aside-single-products">
                             <div class="products-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/img3.jpg" alt="image">
                                 </a>
                             </div>
 
                             <div class="products-content">
                                 <span><a href="category-left-sidebar.html">Men's</a></span>
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                                <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
                                     <span class="new-price">$191.00</span>
@@ -2330,14 +2331,14 @@
 
                         <div class="aside-single-products">
                             <div class="products-image">
-                                <a href="product-type-1.html">
+                                <a href="/?do=item">
                                     <img src="/templates/Full/assets/img/img4.jpg" alt="image">
                                 </a>
                             </div>
 
                             <div class="products-content">
                                 <span><a href="category-left-sidebar.html">Men's</a></span>
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
+                                <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
 
                                 <div class="product-price">
                                     <span class="new-price">$191.00</span>

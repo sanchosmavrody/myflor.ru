@@ -8,33 +8,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap Min CSS -->
+    {headers}
+
     <link rel="stylesheet" href="/templates/Full/assets/css/bootstrap.min.css">
-    <!-- Animate Min CSS -->
     <link rel="stylesheet" href="/templates/Full/assets/css/animate.min.css">
-    <!-- Font Awesome Min CSS -->
     <link rel="stylesheet" href="/templates/Full/assets/css/fontawesome.min.css">
-    <!-- Owl Carousel Min CSS -->
     <link rel="stylesheet" href="/templates/Full/assets/css/owl.carousel.min.css">
-    <!-- niceSelect CSS -->
     <link rel="stylesheet" href="/templates/Full/assets/css/nice-select.min.css">
-    <!-- Magnific Popup Min CSS -->
     <link rel="stylesheet" href="/templates/Full/assets/css/magnific-popup.min.css">
-    <!-- MeanMenu CSS -->
     <link rel="stylesheet" href="/templates/Full/assets/css/meanmenu.css">
-    <!-- ION rangeSlider Min CSS -->
     <link rel="stylesheet" href="/templates/Full/assets/css/ion.rangeSlider.min.css">
-    <!-- Slick CSS -->
-    <!-- Slick CSS -->
     <link rel="stylesheet" href="/templates/Full/assets/css/slick.min.css">
-    <!-- Style CSS -->
     <link rel="stylesheet" href="/templates/Full/assets/css/style.css">
-    <!-- Responsive CSS -->
     <link rel="stylesheet" href="/templates/Full/assets/css/responsive.css">
-
-    <title>Comero - Responsive eCommerce HTML Template</title>
-
     <link rel="icon" type="image/png" href="/templates/Full/assets/img/favicon.png">
+    <link rel="stylesheet" href="/templates/Full/assets/css/sm.css">
 </head>
 <body>
 
