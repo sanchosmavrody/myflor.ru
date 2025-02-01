@@ -13,12 +13,12 @@
 
                         <div class="col-lg-6">
                             <div class="main-banner-content">
-                                <span>New Inspiration 2024</span>
-                                <h1>Clothing made for you!</h1>
-                                <p>Trending from men and women style collection</p>
+                                <span>Новинка в каталоге 2025</span>
+                                <h1>Ограниченное предложение!</h1>
+                                <p>Новый тренд во флористике</p>
 
-                                <a href="single-post-2.html" class="btn btn-primary">Shop Women's</a>
-                                <a href="single-post-3.html" class="btn btn-light">Shop Men's</a>
+                                <a href="single-post-2.html" class="btn btn-primary">Заказать букет</a>
+                                <a href="single-post-3.html" class="btn btn-light">В каталог</a>
                             </div>
                         </div>
                     </div>
@@ -41,12 +41,12 @@
 
                         <div class="col-lg-6">
                             <div class="main-banner-content">
-                                <span>New Inspiration 2024</span>
-                                <h1>Clothing made for you!</h1>
-                                <p>Trending from men and women style collection</p>
+                                <span>Сезонная экзотика</span>
+                                <h1>Удиви по настоящему редким букетом</h1>
+                                <p>Сборка композиции по экслюзивным заказам</p>
 
-                                <a href="single-post-2.html" class="btn btn-primary">Shop Women's</a>
-                                <a href="single-post-3.html" class="btn btn-light">Shop Men's</a>
+                                <a href="single-post-2.html" class="btn btn-primary">Сделать заказ</a>
+                                <a href="single-post-3.html" class="btn btn-light">В каталог</a>
                             </div>
                         </div>
                     </div>
@@ -69,12 +69,12 @@
 
                         <div class="col-lg-6">
                             <div class="main-banner-content">
-                                <span>New Inspiration 2024</span>
-                                <h1>Clothing made for you!</h1>
-                                <p>Trending from men and women style collection</p>
+                                <span>Новинка в каталоге 2025</span>
+                                <h1>Ограниченное предложение!</h1>
+                                <p>Новый тренд во флористике</p>
 
-                                <a href="single-post-2.html" class="btn btn-primary">Shop Women's</a>
-                                <a href="single-post-3.html" class="btn btn-light">Shop Men's</a>
+                                <a href="single-post-2.html" class="btn btn-primary">Заказать букет</a>
+                                <a href="single-post-3.html" class="btn btn-light">В каталог</a>
                             </div>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
         <div class="section-title">
             <h2>
                 <span class="dot"></span>
-                Alow your style to match your ambition!
+                Найди особенный стиль для своего подарка
             </h2>
         </div>
 
@@ -100,8 +100,8 @@
                         <img src="/templates/Full/assets/img/offer-img1.jpg" alt="image">
 
                         <div class="offer-content">
-                            <h3>T-Shirts</h3>
-                            <span>65 Products</span>
+                            <h3>Букеты</h3>
+
                         </div>
 
                         <a href="product-type-1.html"></a>
@@ -113,8 +113,8 @@
                         <img src="/templates/Full/assets/img/offer-img2.jpg" alt="image">
 
                         <div class="offer-content">
-                            <h3>Accessories</h3>
-                            <span>155 Products</span>
+                            <h3>Корзины</h3>
+
                         </div>
 
                         <a href="product-type-1.html"></a>
@@ -126,8 +126,8 @@
                         <img src="/templates/Full/assets/img/offer-img3.jpg" alt="image">
 
                         <div class="offer-content">
-                            <h3>Footwaer</h3>
-                            <span>175 Products</span>
+                            <h3>Свадебные</h3>
+
                         </div>
 
                         <a href="product-type-1.html"></a>
@@ -139,8 +139,7 @@
                         <img src="/templates/Full/assets/img/offer-img4.jpg" alt="image">
 
                         <div class="offer-content">
-                            <h3>Shirts</h3>
-                            <span>548 Products</span>
+                            <h3>Коробки</h3>
                         </div>
 
                         <a href="product-type-1.html"></a>
@@ -152,8 +151,8 @@
                         <img src="/templates/Full/assets/img/offer-img3.jpg" alt="image">
 
                         <div class="offer-content">
-                            <h3>Footwaer</h3>
-                            <span>175 Products</span>
+                            <h3>Экзотика</h3>
+
                         </div>
 
                         <a href="product-type-1.html"></a>
@@ -172,7 +171,7 @@
                     <div class="icon">
                         <i class="fas fa-plane"></i>
                     </div>
-                    <h3>Free Shipping World Wide</h3>
+                    <h3>Доставка до 2 часов по мск.</h3>
                 </div>
             </div>
 
@@ -181,16 +180,16 @@
                     <div class="icon">
                         <i class="fas fa-money-check-alt"></i>
                     </div>
-                    <h3>100% money back guarantee</h3>
+                    <h3>Оплата любыми способами</h3>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="facility-box">
                     <div class="icon">
-                        <i class="far fa-credit-card"></i>
+                        <i class="far fa-flag"></i>
                     </div>
-                    <h3>Many payment gatways</h3>
+                    <h3>Есть самовывоз</h3>
                 </div>
             </div>
 
@@ -199,7 +198,7 @@
                     <div class="icon">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>24/7 online support</h3>
+                    <h3>24/7 приём заказов</h3>
                 </div>
             </div>
         </div>
@@ -214,18 +213,17 @@
                     <ul class="tabs without-bg">
                         <li><a href="#">
                                 <div class="dot"></div>
-                                Latest Products
+                                Новинки
                             </a></li>
 
                         <li><a href="#">
                                 <div class="dot"></div>
-                                Special Products
+                                Популярное
                             </a></li>
 
                         <li><a href="#">
                                 <div class="dot"></div>
-                                Featured Products
-                            </a></li>
+                                Акции </a></li>
                     </ul>
                 </div>
 
@@ -1107,13 +1105,11 @@
             <div class="col-lg-4 col-md-12">
                 <div class="single-category-box">
                     <img src="/templates/Full/assets/img/category-products-img1.jpg" alt="image">
-
                     <div class="category-content">
-                        <h3>Our Popular Products</h3>
-                        <a href="collections-style-1.html" class="btn btn-light">View More</a>
+                        <h3>Наш топ от ведущего флориста</h3>
+                        <a href="#" class="btn btn-light">В подборку</a>
                     </div>
-
-                    <a href="collections-style-1.html" class="link-btn"></a>
+                    <a href="#" class="link-btn"></a>
                 </div>
             </div>
 
@@ -1122,36 +1118,30 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="single-category-box">
                             <img src="/templates/Full/assets/img/category-products-img2.jpg" alt="image">
-
                             <div class="category-content">
-                                <h3>Winter Collections</h3>
+                                <h3>Летнее настроение</h3>
                             </div>
-
-                            <a href="collections-style-1.html" class="link-btn"></a>
+                            <a href="/" class="link-btn"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-6 col-md-6">
                         <div class="single-category-box">
                             <img src="/templates/Full/assets/img/category-products-img3.jpg" alt="image">
-
                             <div class="category-content">
-                                <h3>Summer Collections</h3>
+                                <h3>Свадебные композиции</h3>
                             </div>
-
-                            <a href="collections-style-1.html" class="link-btn"></a>
+                            <a href="/" class="link-btn"></a>
                         </div>
                     </div>
 
                     <div class="col-lg-12 col-md-12">
                         <div class="single-category-box">
                             <img src="/templates/Full/assets/img/category-products-img4.jpg" alt="image">
-
                             <div class="category-content">
-                                <h3>Up to 75% OFF Spring Sale!</h3>
+                                <h3>Все акции и спец. предложения</h3>
                             </div>
-
-                            <a href="collections-style-1.html" class="link-btn"></a>
+                            <a href="/" class="link-btn"></a>
                         </div>
                     </div>
                 </div>
@@ -1165,7 +1155,7 @@
         <div class="section-title">
             <h2>
                 <span class="dot"></span>
-                Trending Products
+                Топ 15 букетов дня
             </h2>
         </div>
 
@@ -1361,7 +1351,7 @@
         <div class="section-title">
             <h2>
                 <span class="dot"></span>
-                Best Sellers
+                Самые популярные корзины
             </h2>
         </div>
 
@@ -1560,11 +1550,12 @@
                     <img src="/templates/Full/assets/img/client1.jpg" alt="image">
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                <p>Большое спасибо организации, большой выбор от классических букетов до оригинальных. От космического букета получатель был в восторге!!! Очень понравилось новогодняя коробочка с мандаринами. Учли все пожелания для оформления открытки юбиляру и дополнительной информации к цветам. По сколько это был сюрприз, курьер, спасибо большое ему, вручил цветы и уведомил меня о доставке.
+                   Приятно было общаться с сотрудниками, рекомендую доставку цветов очень-очень!!!</p>
 
                 <div class="client-info">
-                    <h4>Jason Statham</h4>
-                    <span>Founder at Brand</span>
+                    <h4>Валерия Ж.</h4>
+                    <span>20.01.2025</span>
                 </div>
             </div>
 
@@ -1573,11 +1564,13 @@
                     <img src="/templates/Full/assets/img/client1.jpg" alt="image">
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                <p>
+                    Отличный флористический! Учли все пожелания, доставили в точный диапазон. Огромный букет гортензий и очень красивый, утонченный ирисов. Буду рекомендовать другим и заказывать вновь. Спасибо за четкость. И, что важно, оплата не переводом, а картой на сайте. Все прозрачно, слаженно и очень красиво!
+                </p>
 
                 <div class="client-info">
-                    <h4>Jason Statham</h4>
-                    <span>Founder at Brand</span>
+                    <h4>Сергей Г. </h4>
+                    <span>20.02.2025</span>
                 </div>
             </div>
 
@@ -1586,121 +1579,33 @@
                     <img src="/templates/Full/assets/img/client1.jpg" alt="image">
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
+                <p>Быстро, своевременно! Всё работает чётко. Цветы свежайшие. Упаковано на отлично, лента атласная в цвет купола роз. Заказывала букет из 15 роз 40см, цены на сайте актуальные. Важно было доставить цветы до 14.00, цветы заказала около 10.20, менеджер отзвонился, обратная связь хорошая, доставили в указанное время. Благодарю за оперативность! Буду пользоваться вашими услугами ещё!)</p>
 
                 <div class="client-info">
-                    <h4>Jason Statham</h4>
-                    <span>Founder at Brand</span>
+                    <h4>Инна Р.</h4>
+                    <span>26.01.2025</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="news-area ptb-60">
-    <div class="container">
-        <div class="section-title">
-            <h2>
-                <span class="dot"></span>
-                Comero News
-            </h2>
-        </div>
 
-        <div class="row">
-            <div class="news-slides owl-carousel owl-theme">
-                <div class="col-lg-12 col-md-12">
-                    <div class="single-news-post">
-                        <div class="news-image">
-                            <a href="single-post-1.html"><img src="/templates/Full/assets/img/blog-img1.jpg" alt="image"></a>
-                        </div>
-
-                        <div class="news-content">
-                            <h3><a href="single-post-1.html">Styling White Jeans after Labor Day</a></h3>
-                            <span class="author">By <a href="single-post-1.html">Admin</a></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a href="single-post-1.html" class="btn btn-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-12">
-                    <div class="single-news-post">
-                        <div class="news-image">
-                            <a href="single-post-1.html"><img src="/templates/Full/assets/img/blog-img2.jpg" alt="image"></a>
-                        </div>
-
-                        <div class="news-content">
-                            <h3><a href="single-post-1.html">The Best Ecommerce Platform for Growing Sales</a></h3>
-                            <span class="author">By <a href="single-post-1.html">Admin</a></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a href="single-post-1.html" class="btn btn-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-12">
-                    <div class="single-news-post">
-                        <div class="news-image">
-                            <a href="single-post-1.html"><img src="/templates/Full/assets/img/blog-img3.jpg" alt="image"></a>
-                        </div>
-
-                        <div class="news-content">
-                            <h3><a href="single-post-1.html">The Evolution of the B2B Buying Process</a></h3>
-                            <span class="author">By <a href="single-post-1.html">Admin</a></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a href="single-post-1.html" class="btn btn-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-12">
-                    <div class="single-news-post">
-                        <div class="news-image">
-                            <a href="single-post-1.html"><img src="/templates/Full/assets/img/blog-img4.jpg" alt="image"></a>
-                        </div>
-
-                        <div class="news-content">
-                            <h3><a href="single-post-1.html">The Best eCommerce Blogs for Online Retailers</a></h3>
-                            <span class="author">By <a href="single-post-1.html">Admin</a></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a href="single-post-1.html" class="btn btn-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-12 col-md-12">
-                    <div class="single-news-post">
-                        <div class="news-image">
-                            <a href="single-post-1.html"><img src="/templates/Full/assets/img/blog-img5.jpg" alt="image"></a>
-                        </div>
-
-                        <div class="news-content">
-                            <h3><a href="single-post-1.html">How to Do Social Media Customer Service</a></h3>
-                            <span class="author">By <a href="single-post-1.html">Admin</a></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a href="single-post-1.html" class="btn btn-light">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <section class="subscribe-area ptb-60">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="newsletter-content">
-                    <h3>Subscribe to our newsletter</h3>
-                    <p>A short sentence describing what someone will receive by subscribing</p>
+                    <h3>Подписаться на акции и спецпредложения</h3>
+                    <p>Мы рассылаем только актуальные и интересные предложения и акции</p>
                 </div>
             </div>
 
             <div class="col-lg-6">
                 <form class="newsletter-form" data-bs-toggle="validator">
-                    <input type="email" class="form-control" placeholder="Enter your email address" name="EMAIL" required autocomplete="off">
-                    <button type="submit">Subscribe</button>
+                    <input type="email" class="form-control" placeholder="Ваш email" name="EMAIL" required autocomplete="off">
+                    <button type="submit">Подписаться</button>
                     <div id="validator-newsletter" class="form-result"></div>
                 </form>
             </div>
