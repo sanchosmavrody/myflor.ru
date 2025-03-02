@@ -1,0 +1,156 @@
+.react_admin .btn-sm,
+.react_admin .btn-group-sm > .btn {
+    --bs-btn-padding-y: 0;
+    --bs-btn-padding-x: 0.2875rem;
+    --bs-btn-font-size: 0.65rem;
+}
+
+.react_admin .react_upload_img img {
+    width: 100%;
+    border-radius: 7px;
+    max-height: unset !important;
+}
+
+.react_admin .react_upload_img_gallery___ img {
+    width: 100%;
+    border-radius: 7px;
+    max-height: unset !important;
+}
+
+.react_admin .table_img_gallery img {
+    width: auto;
+}
+
+@keyframes spinner-animation {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.react_admin .spinner-element-animation {
+    -webkit-animation: spinner-animation .75s linear infinite;
+    animation: spinner-animation .75s linear infinite;
+}
+
+.react_admin .pulse-border-animation {
+    -webkit-animation: border-pulse-animation .75s linear infinite;
+    animation: border-pulse-animation .75s linear infinite;
+}
+
+@keyframes border-pulse-animation {
+    to {
+        border: 1px dashed;
+        opacity: 0.6;
+    }
+}
+
+.react_admin .modal-fullscreen {
+    padding: 30px;
+}
+
+.react_admin .modal-fullscreen .modal-content {
+    border-radius: 0.5rem !important;
+    box-shadow: 1px 1px 20px 20px #00000085;
+}
+
+.react_admin .react_field_module {
+    min-height: 600px;
+}
+
+.react_admin .modal-content {
+    background-color: #f4f5fb;
+}
+
+.react_admin .tab-content {
+    background-color: white;
+}
+
+.react_admin .react_field_module {
+    min-height: 600px;
+}
+
+.react_admin .modal-content {
+    background-color: #f4f5fb;
+}
+
+.react_admin .tab-content {
+    background-color: white;
+}
+
+.dark-style .react_admin .modal-content {
+    background-color: #232333;
+}
+
+.dark-style .react_admin .tab-content {
+    background-color: #2b2c40;
+}
+
+.react_admin .react_field_module {
+    min-height: 600px;
+}
+
+.react_admin .tab-content {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+
+.react_admin .nav-link.active {
+    border-radius: 7px 7px 0 0 !important;
+}
+
+.react_admin .nav-link {
+    border-radius: 7px 7px 0 0 !important;
+}
+
+.react_admin .tab-content {
+    border-radius: 0 0 0 0 !important;
+}
+
+.react_admin .filters .filter_item .filter_item_title {
+    border: 1px solid rgb(105, 106, 155);
+    border-radius: 3px;
+    right: -5px;
+    top: -7px;
+    white-space: nowrap;
+    font-size: 8px;
+    padding: 0 3px;
+    background-color: #2b2c40;
+    z-index: 1;
+}
+
+.react_admin .filters .filter_item .filter_item_title {
+    background-color: #eceef1;
+!important;
+}
+
+.dark-style .react_admin .filters .filter_item .filter_item_title {
+    background-color: #2b2c40;
+!important;
+}
+
+.react_admin .table th.sorted {
+    position: relative;
+}
+
+.react_admin .table th.sorted.asc,
+.react_admin .table th.sorted.desc {
+    background-color: rgba(106, 108, 255, 0.19);
+    border-radius: 3px;
+}
+
+.react_admin .table th.sorted::before {
+    content: "\f0dc";
+    position: absolute;
+    right: 1px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    bottom: 3px;
+}
+
+.react_admin .table th.asc::before {
+    content: '\f0de';
+}
+
+.react_admin .table th.desc::before {
+    content: '\f0dd';
+}

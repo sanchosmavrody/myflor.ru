@@ -1,7 +1,7 @@
 <?php
 
 require_once ROOT_DIR . '/engine/classes/smshop/include.php';
-$main_table = 'shop_catalog';
+$main_table = $module_name = 'shop_catalog';
 
 if ($_REQUEST['act'] == 'settings') {
 
@@ -10,23 +10,26 @@ if ($_REQUEST['act'] == 'settings') {
     $table_fields = DbHelper::load_table_fields($main_table);
     foreach ($table_fields as $table_field) {
         if ($table_field !== 'id')
-            $fields_form[] = ["name"        => $table_field,
-                              "field"       => $table_field,
-                              "type"        => "text",
-                              "layout_type" => "floating"];
+            $fields_form[] = [
+                "name"        => $table_field,
+                "field"       => $table_field,
+                "type"        => "text",
+                "layout_type" => "floating"
+            ];
         $fields_grid[] = ["name" => $table_field, "field" => $table_field];
     }
 
     $fields = FieldsHelper::get($main_table);
     foreach ($fields as $table_field) {
         if ($table_field['form'])
-            $fields_form[] = ["name"        => $table_field['label'],
-                              "field"       => $table_field['name'],
-                              "type"        => $table_field['control_type'],
-                              "layout_type" => (in_array($table_field['control_type'], ['text', 'input', 'textarea', 'select']) ? "floating" : "")
+            $fields_form[] = [
+                "name"        => $table_field['label'],
+                "field"       => $table_field['name'],
+                "type"        => $table_field['control_type'],
+                "layout_type" => (in_array($table_field['control_type'], ['text', 'input', 'textarea', 'select']) ? "floating" : "")
             ];
         if ($table_field['grid'])
-            $fields_grid[] = ["name" => $table_field['label'], "field" => $table_field['name']];
+            $fields_grid[] = ["name" => $table_field['label'], "field" => $table_field['name'], "type" => $table_field['control_type']];
     }
 
     $Res = [
@@ -59,23 +62,22 @@ if ($_REQUEST['act'] == 'settings') {
                 ],
             ]
         ],
-        "module"     => ['name' => 'main', 'title' => 'Каталог авто',],
+        "module"     => ['name' => $module_name, 'title' => 'Каталог',],
         "api_url"    => "/api/v2/index.php?mod=",
-        "upload_url" => 'https://' . $_SERVER['HTTP_HOST']
-            . "/engine/ajax/smshop/admin.php?mod=uploader",
+        "upload_url" => 'https://' . $_SERVER['HTTP_HOST'] . "/engine/ajax/smshop/admin.php?mod=uploader",
     ];
 }
 
 if ($_REQUEST['act'] === 'data') {
     $Res = [];
     if (!empty($req)) {
-        $Catalog = new Catalog('catalog_auto');
+        $Catalog = new Catalog($main_table);
         $Res = $Catalog->getList([], $req['pager']);
     }
 }
 
 if ($_REQUEST['act'] === 'item') {
-    $Catalog = new Catalog('catalog_auto');
+    $Catalog = new Catalog($main_table);
     $data = $Catalog->getItem($req['id']);
 
     $fields_group_ = [];
@@ -87,15 +89,8 @@ if ($_REQUEST['act'] === 'item') {
             "disabled"    => true,
             "layout_type" => "floating",
         ],
-        //        [
-        //            "name"        => 'Подмодуль',
-        //            "field"       => 'sub_module_test',
-        //            "type"        => "submodule",
-        //            "params"      => $sub_module_params,
-        //            "layout_type" => "floating",
-        //        ]
     ];
-    $rows = FieldsHelper::get('catalog_auto');
+    $rows = FieldsHelper::get($main_table);
     foreach ($rows as $field) {
         $item = [
             "name"        => $field['label'],

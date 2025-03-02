@@ -31,10 +31,9 @@ class Catalog extends Core
     {
         foreach ($data as &$item) {
             //костыли для справочников авто
-            $item['mark'] = DbHelper::get_row("SELECT * FROM mark WHERE id = '{$item['mark']}'");
-            $item['model'] = DbHelper::get_row("SELECT * FROM model WHERE id = '{$item['model']}'");
-            $item['generation'] = DbHelper::get_row("SELECT * FROM generation WHERE id = '{$item['generation']}'");
-
+            //$item['mark'] = DbHelper::get_row("SELECT * FROM mark WHERE id = '{$item['mark']}'");
+            //$item['model'] = DbHelper::get_row("SELECT * FROM model WHERE id = '{$item['model']}'");
+            //$item['generation'] = DbHelper::get_row("SELECT * FROM generation WHERE id = '{$item['generation']}'");
             //$item['mark'] = DbHelper::get_row("SELECT * FROM mark WHERE id = '{$item['mark']}'");
         }
 

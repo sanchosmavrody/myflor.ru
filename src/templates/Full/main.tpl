@@ -32,6 +32,12 @@
 {include file="/modules/bts_popup.tpl"}
 
 
+[group=1]
+[available=admin]
+{include file="/admin.tpl"}
+[/available]
+[/group]
+
 [available=main]
 {include file="/modules/_home.tpl"}
 [/available]

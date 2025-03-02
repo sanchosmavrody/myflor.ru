@@ -10,8 +10,10 @@ $fields_form = [
         "type"        => "select",
         "params"      => [
             "list" => [
-                ['value' => "unknown", 'name' => "Хз"],
-                ['value' => "catalog_auto", 'name' => "Каталог авто"]
+                ['value' => "unknown", 'name' => "-"],
+                ['value' => "shop_catalog", 'name' => "Каталог букетов"],
+                ['value' => "shop_category", 'name' => "Категории"],
+                ['value' => "shop_orders", 'name' => "Заказы"]
             ]
         ],
         "value"       => "catalog_auto",
