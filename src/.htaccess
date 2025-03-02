@@ -7,6 +7,8 @@ DirectoryIndex index.php
 
 RewriteEngine On
 
+RewriteRule ^(auto|cargo)/(.*)$ index.php?do=smshop&shop_catalog=$1&url=$2 [B,L]
+
 RewriteRule ^page/([0-9]+)(/?)$ index.php?cstart=$1 [L]
 
 RewriteRule ^demo/(.*).html$ index.php?file=$1&do=demo [L]
