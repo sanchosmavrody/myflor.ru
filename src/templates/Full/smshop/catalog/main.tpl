@@ -45,12 +45,10 @@
                 Каталог букетов
             </h2>
         </div>
-
         <div class="row">
             <div class="col-lg-3 col-md-12">
                 {include file="/smshop/catalog/filters.tpl"}
             </div>
-
             <div class="col-lg-9 col-md-12">
                 <div class="products-filter-options">
                     <div class="row align-items-center">
@@ -109,22 +107,7 @@
                 <div id="products-filter" class="products-collections-listing row products-col-three">
                     {items}
                 </div>
-                <nav class="woocommerce-pagination">
-                    <ul>
-                        <li><a href="#" class="page-numbers">1</a></li>
-                        <li>
-                            <span class="page-numbers current">2</span>
-                        </li>
-                        <li><a href="#" class="page-numbers">3</a></li>
-                        <li><a href="#" class="page-numbers">4</a></li>
-                        <li>
-                            <span class="page-numbers dots">…</span>
-                        </li>
-                        <li><a href="#" class="page-numbers">11</a></li>
-                        <li><a href="#" class="page-numbers">12</a></li>
-                        <li><a href="#" class="next page-numbers"><i class="fas fa-chevron-right"></i></a></li>
-                    </ul>
-                </nav>
+                {navigation}
             </div>
         </div>
     </div>
