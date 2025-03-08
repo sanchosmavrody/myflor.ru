@@ -1,63 +1,18 @@
 <?php
 
-if ($_REQUEST['act'] == 'mark') {
+if ($_REQUEST['act'] == 'category') {
     $WHERE = '';
     if (!empty($req['search']))
         $WHERE = "WHERE name LIKE '%{$req['search']}%'";
-    $Res = $db->super_query("SELECT DISTINCT id as `value`, name FROM mark {$WHERE} ORDER BY name", true);
-}
-if ($_REQUEST['act'] == 'model') {
-    if (!empty($req['form']['mark'])) {
-        $WHERE = "WHERE mark_id='{$req['form']['mark']}' ";
-        if (!empty($req['search']))
-            $WHERE .= " AND  name LIKE '{$req['search']}%'";
-        $Res = $db->super_query("SELECT DISTINCT id as `value`, name FROM model {$WHERE} ORDER BY name", true);
-    }
-}
-if ($_REQUEST['act'] == 'generation') {
-    if (!empty($req['form']['model'])) {
 
-        $WHERE = "WHERE  generation.model_id='{$req['form']['model']}' ";
-        if (!empty($req['search']))
-            $WHERE .= " AND  generation.name LIKE '{$req['search']}%'";
 
-        $Res = $db->super_query("SELECT DISTINCT id as `value`,
-                CONCAT(generation.name,' (',generation.`year-start`,'-',IFNULL(generation.`year-stop`,'произв.'),')') as name
-                FROM generation {$WHERE} ORDER BY generation.name", true);
-    }
+    $Catalog = new Category('shop_category');
+    $filter = $pager = $sorter = $params = [];
+    $filter['title'] = '';
+    $Res = $Catalog->getOptions($filter, $pager, $sorter, ['name' => 'title', 'value' => 'id']);
+
 }
-if ($_REQUEST['act'] == 'configuration') {
-    if (!empty($req['form']['generation'])) {
-        $WHERE = "WHERE generation_id='{$req['form']['generation']}'";
-        if (!empty($req['search']))
-            $WHERE .= " AND  name LIKE '{$req['search']}%'";
-        $Res = $db->super_query("SELECT DISTINCT id as `value`, `body-type` as name FROM configuration {$WHERE} ORDER BY name", true);
-    }
-}
-if ($_REQUEST['act'] == 'modification') {
-    $Res = [];
-    if (!empty($req['form']['configuration'])) {
-        $sql = <<<SQL
-SELECT DISTINCT 
-    MAX(modification.`complectation-id`) as `complectation-id`,
-    specifications.volume,
-    specifications.`horse-power`,
-    specifications.`engine-type`,
-    specifications.transmission,
-    specifications.drive
-FROM modification
-JOIN specifications ON modification.`complectation-id` = specifications.complectation_id
-WHERE modification.configuration_id =  '{$req['form']['configuration']}'
-GROUP BY specifications.volume,specifications.`horse-power`,specifications.`engine-type`,specifications.transmission,specifications.drive
-SQL;
-        $Rows = $db->super_query($sql, true);
-        foreach ($Rows as $row) {
-            $row['volume'] = number_format($row['volume'] / 1000, 1, '.', '');
-            $name = "{$row['volume']}/{$row['horse-power']} л.с./{$row['engine-type']}, {$row['transmission']} трансмиссия, {$row['drive']} привод";
-            $Res[] = ['value' => $row['complectation-id'], 'name' => $name];
-        }
-    }
-}
+
 
 if ($_REQUEST['act'] == 'load') {
 
@@ -154,6 +109,7 @@ SQL;
         'body'          => "SELECT DISTINCT mark.id, mark.name {$sql_BODY} WHERE " . get_sql_where(['mark', 'model', 'generation'], $WHERE) . "  ORDER BY mark.name",
         'state'         => $REQ['state'],
         'change_filter' => $REQ['change_filter'],
-        'state_lists'   => $state_lists];
+        'state_lists'   => $state_lists
+    ];
 
 }

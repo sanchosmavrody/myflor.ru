@@ -37,7 +37,7 @@ if (!empty($member_id['user_group']) and $member_id['user_group'] == 1 or TRUE) 
     }
 
     require_once ENGINE_DIR . '/classes/smshop/helpers.class.php';
-
+    require_once ROOT_DIR . '/engine/classes/smshop/include.php';
 
     $req = file_get_contents('php://input');
     if (!empty($req))

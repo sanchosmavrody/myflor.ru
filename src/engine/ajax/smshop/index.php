@@ -22,6 +22,7 @@ if (file_exists(__DIR__ . '/' . $_REQUEST['mod'] . '.php')) {
     require_once ENGINE_DIR . '/modules/sitelogin.php';
 
     require_once ENGINE_DIR . '/classes/smshop/helpers.class.php';
+    require_once ROOT_DIR . '/engine/classes/smshop/include.php';
 
     dle_session();
     $req = file_get_contents('php://input');

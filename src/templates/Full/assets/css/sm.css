@@ -1,7 +1,11 @@
-.fa  {
+.fa {
     font-size: 0.7em;
 }
 
-.cursor-pointer{
+.cursor-pointer {
     cursor: pointer;
+}
+
+.react_admin .form-control {
+    border: var(--bs-border-width) solid #d9dee3;
 }

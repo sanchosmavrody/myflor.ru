@@ -4,7 +4,8 @@ class Category extends Core
 {
     var string $table = '';
     var array $filters = [
-        'id' => ["where" => "id = '{value}'"],
+        'id'    => ["where" => "id = '{value}'"],
+        'title' => ["where" => "field_3.field_value = '{value}'"],
     ];
 
     public function __construct(string $table)
@@ -15,6 +16,21 @@ class Category extends Core
     function getList(array $filter = [], array $pager = [], array $sorter = [], array $params = []): array
     {
         return parent::get($filter, $pager, $sorter, $params);
+    }
+
+    function getOptions(array $filter = [], array $pager = [], array $sorter = [], array $params = []): array
+    {
+        $Res = [];
+        if (!empty($params['name']) and !empty($params['value'])) {
+            $Res = parent::get($filter, $pager, $sorter, $params);
+            foreach ($Res['data'] as &$item)
+                $item = [
+                    'name'  => $item[$params['name']],
+                    'value' => $item[$params['value']]
+                ];
+            return $Res['data'];
+        }
+        return $Res;
     }
 
     function getItem(int $id): array

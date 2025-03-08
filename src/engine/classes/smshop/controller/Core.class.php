@@ -63,11 +63,9 @@ class Core
         //}
     }
 
-    function processList(array &$data)
+    function processList(array &$data): void
     {
-        //foreach ($Res['data'] as &$row){
-        //
-        //}
+
     }
 
     function save(array $item): int
