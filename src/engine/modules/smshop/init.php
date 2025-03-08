@@ -6,7 +6,7 @@ $shop_catalog = $_REQUEST['shop_catalog'];
 require_once ROOT_DIR . '/engine/classes/smshop/include.php';
 
 
-$Catalog = new Catalog('catalog_' . $shop_catalog);
+$Catalog = new Catalog('shop_' . $shop_catalog);
 $Res = $Catalog->getList();
 
 //header('Content-Type: application/json; charset=UTF-8');
@@ -28,10 +28,7 @@ foreach ($Res['data'] as $item) {
         else
             $tpl->set('{' . $fields . '}', $value);
 
-
     $tpl->set('{' . $fields . '}', $value);
-    //photo_main
-
     $tpl->compile('items');
 }
 

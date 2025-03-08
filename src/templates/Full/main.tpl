@@ -38,6 +38,10 @@
 [/available]
 [/group]
 
+[available=smshop]
+{content}
+[/available]
+
 [available=main]
 {include file="/modules/_home.tpl"}
 [/available]
