@@ -39,10 +39,4 @@ class Catalog extends Core
 
     }
 
-    function processItem(array &$item): void
-    {
-
-    }
-
-
 }

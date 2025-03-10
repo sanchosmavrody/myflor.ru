@@ -26,13 +26,9 @@ class Core
         $sql_COLUMNS = '';
 
         ReqHelper::applyPager($pager, $LIMIT);
-
         ReqHelper::applySorter($sorter, $sql_ORDER);
-
         ReqHelper::applyFilter($this->filters, $filter, $sql_WHERE, $sql_JOIN);
-
         FieldsHelper::applySql($this->table, [], $sql_COLUMNS, $sql_JOIN);
-
         ReqHelper::glueSqlParts($sql_WHERE, $sql_JOIN);
 
         $sql_FROM = "FROM {$this->table} {$sql_JOIN}";

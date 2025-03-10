@@ -18679,11 +18679,10 @@ var Tr = (function (_super) {
             else
                 return React.createElement("a", { className: "cursor-pointer link-primary link-underline-opacity-25", href: "#/form/" + row['id'], dangerouslySetInnerHTML: { __html: val } });
         if (column.type == tableColumnTypeE.upload_img_gallery) {
-            if (typeof val !== "object") {
+            if (typeof val !== "object")
                 val = val.split(',').map(function (item) {
                     return { thumb: item, link: item };
                 });
-            }
             return React.createElement("div", { className: "table_img_gallery" }, val.map(function (item) { return React.createElement(react_medium_image_zoom_1.default, { image: { src: item.thumb, className: 'rounded', style: { maxHeight: '40px' } }, zoomImage: { src: item.link } }); }));
         }
         return React.createElement("span", { dangerouslySetInnerHTML: { __html: val } });
@@ -35432,30 +35431,42 @@ var SelectAjax = (function (_super) {
     function SelectAjax(props) {
         var _this = _super.call(this, props) || this;
         var settings = _this.props.settings;
-        _this.state = __assign({}, settings.params, { value: settings.value });
+        _this.state = __assign({}, settings.params, { value: settings.value, selected_option: null });
+        console.log('SelectAjax constructor');
         return _this;
     }
     SelectAjax.prototype.search = function (search) {
+        var selected_option = this.state.selected_option;
         var settings = this.props.settings;
         var url = (settings.params ? settings.params.url : '');
+        if (search == '') {
+            return new Promise(function (resolve, reject) {
+                var options = [];
+                if (selected_option)
+                    options.push(selected_option);
+                resolve({ options: options });
+            });
+        }
         return fetch(url, {
             method: 'POST', mode: 'cors', credentials: 'include',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ form: {}, search: search }),
         }).then(function (response) { return response.json(); }).then(function (data) {
-            return {
-                options: data.map(function (item) {
-                    return { value: item.value, label: item.name };
-                })
-            };
+            var options = data.map(function (item) {
+                return { value: item.value, label: item.name };
+            });
+            if (selected_option !== null)
+                options.push(selected_option);
+            return { options: options };
         });
     };
-    SelectAjax.prototype.change = function (field, option) {
+    SelectAjax.prototype.change = function (field, selected_option) {
+        console.log('SelectAjax change', field, selected_option);
         var value = '0';
-        if (option)
-            value = option.value;
+        if (selected_option)
+            value = selected_option.value;
         var _a = this.props, changeFilter = _a.changeFilter, settings = _a.settings;
-        this.setState({ value: value });
+        this.setState({ value: value, selected_option: selected_option });
         changeFilter(settings.target_field, value);
     };
     SelectAjax.prototype.get_control = function () {
@@ -35466,6 +35477,7 @@ var SelectAjax = (function (_super) {
     };
     SelectAjax.prototype.render = function () {
         var settings = this.props.settings;
+        console.log('SelectAjax render', settings);
         return (React.createElement("div", { className: "filter_item position-relative filter_type_" + settings.type },
             settings.title && React.createElement("div", { className: "filter_item_title position-absolute top-right" }, settings.title),
             this.get_control()));
@@ -36785,14 +36797,7 @@ var GridContainer = (function (_super) {
                     React.createElement("div", { className: "table-responsive" },
                         React.createElement(table_1.default, __assign({ changeSorter: changeSorter, data: data, totals: totals }, settings.grid, { sorter: sorter, form_callback: getItem }))),
                     (settings.grid.pager && data.length > 0) && React.createElement("div", { className: "pager float-end mt-3" },
-                        React.createElement(pager_1.default, { current: pager.current, total: Math.ceil(pager.filtered / pager.limit), visiblePages: 5, onPageChanged: this.changePager.bind(this), titles: {
-                                first: "В начало",
-                                prev: "Назад",
-                                prevSet: "<<<",
-                                nextSet: ">>>",
-                                next: "Далее",
-                                last: "Последняя"
-                            } }))))));
+                        React.createElement(pager_1.default, { current: pager.current, total: Math.ceil(pager.filtered / pager.limit), visiblePages: 5, onPageChanged: this.changePager.bind(this), titles: { first: "В начало", prev: "Назад", prevSet: "<<<", nextSet: ">>>", next: "Далее", last: "Последняя" } }))))));
     };
     return GridContainer;
 }(React.Component));

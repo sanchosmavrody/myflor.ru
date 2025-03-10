@@ -1,7 +1,7 @@
 <div class="col-lg-6 col-md-6 products-col-item">
     <div class="product-box">
         <div class="product-image">
-            <a href="/?do=item"><img src="{photo_main}" alt="image"></a>
+            <a href="/{shop_catalog}/id/{id}"><img src="{photo_main}" alt="image"></a>
 
             <ul>
                 <li><a href="#" data-tooltip="tooltip" data-placement="top" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
@@ -14,7 +14,7 @@
         </div>
 
         <div class="product-content">
-            <h3><a href="/?do=item">{title}</a></h3>
+            <h3><a href="/{shop_catalog}/id/{id}">{title}</a></h3>
 
             <div class="product-price">
                 <span class="new-price">{price}<i class="fa fa-ruble"></i></span>

@@ -9,3 +9,10 @@
 .react_admin .form-control {
     border: var(--bs-border-width) solid #d9dee3;
 }
+
+.products-page-gallery .product-page-gallery-main .slick-prev,
+.products-page-gallery .product-page-gallery-main .slick-next {
+    top: 50%;
+    position: absolute;
+    line-height: 48px;
+}

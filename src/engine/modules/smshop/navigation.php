@@ -8,10 +8,6 @@ $news_count = $cstart + count($Res['data']);
 $url_page = '/catalog';
 $tpl->load_template('navigation.tpl');
 
-//----------------------------------
-// Previous link
-//----------------------------------
-
 $no_prev = false;
 $no_next = false;
 
@@ -29,10 +25,6 @@ if (isset($cstart) and $cstart != "" and $cstart > 0) {
     $tpl->set_block("'\[prev-link\](.*?)\[/prev-link\]'si", "");
     $no_prev = TRUE;
 }
-
-//----------------------------------
-// Pages
-//----------------------------------
 if ($per_page) {
 
     $pages = [];
@@ -103,12 +95,6 @@ if ($per_page) {
     $tpl->set('{pages}', implode($pages));
 
 }
-
-//----------------------------------
-// Next link
-//----------------------------------
-
-
 if ($per_page and $per_page < $state['pager']['filtered'] and $news_count < $state['pager']['filtered']) {
     $next_page = ($news_count) / $per_page + 1;
 
@@ -119,7 +105,6 @@ if ($per_page and $per_page < $state['pager']['filtered'] and $news_count < $sta
     $tpl->set_block("'\[next-link\](.*?)\[/next-link\]'si", "");
     $no_next = TRUE;
 }
-
 
 $tpl->compile('navigation');
 $tpl->clear();
