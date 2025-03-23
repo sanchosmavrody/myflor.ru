@@ -18,7 +18,8 @@ if ($_REQUEST['act'] == 'settings') {
                 "name"        => $field['label'],
                 "field"       => $field['name'],
                 "type"        => $field['control_type'],
-                "layout_type" => (in_array($field['control_type'], ['text', 'input', 'textarea', 'select']) ? "floating" : "")
+                "layout_type" => (in_array($field['control_type'], ['text', 'input', 'textarea', 'select']) ? "floating" : ""),
+                "css_class"   => 'col-md-' . $field['size']
             ];
 
             if ($field['control_type'] === 'select') {
