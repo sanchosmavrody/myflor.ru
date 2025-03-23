@@ -18,21 +18,6 @@ class Category extends Core
         return parent::get($filter, $pager, $sorter, $params);
     }
 
-    function getOptions(array $filter = [], array $pager = [], array $sorter = [], array $params = []): array
-    {
-        $Res = [];
-        if (!empty($params['name']) and !empty($params['value'])) {
-            $Res = parent::get($filter, $pager, $sorter, $params);
-            foreach ($Res['data'] as &$item)
-                $item = [
-                    'name'  => $item[$params['name']],
-                    'value' => $item[$params['value']]
-                ];
-            return $Res['data'];
-        }
-        return $Res;
-    }
-
     function getItem(int $id): array
     {
         return parent::get(['id' => $id], [], [], ['item']);

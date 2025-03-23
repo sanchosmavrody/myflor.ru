@@ -77,7 +77,7 @@ if ($_REQUEST['act'] === 'settings') {
                 ],
             ]
         ],
-        "module"     => ['name' => $module_name, 'title' => 'Каталог',],
+        "module"     => ['name' => $module_name, 'title' => 'Составляющие',],
         "api_url"    => "/api/v2/index.php?mod=",
         "upload_url" => 'https://' . $_SERVER['HTTP_HOST'] . "/engine/ajax/smshop/admin.php?mod=uploader",
     ];
@@ -86,13 +86,13 @@ if ($_REQUEST['act'] === 'settings') {
 if ($_REQUEST['act'] === 'data') {
     $Res = [];
     if (!empty($req)) {
-        $Catalog = new Catalog($main_table);
+        $Catalog = new Composition($main_table);
         $Res = $Catalog->getList([], $req['pager']);
     }
 }
 
 if ($_REQUEST['act'] === 'item') {
-    $Catalog = new Catalog($main_table);
+    $Catalog = new Composition($main_table);
     $data = $Catalog->getItem($req['id']);
 
     $fields_form = [];
@@ -135,7 +135,7 @@ if ($_REQUEST['act'] === 'item') {
 if ($_REQUEST['act'] == 'save') {
     $Res = [];
     if (!empty($req) and !empty($req['item'])) {
-        $Catalog = new Catalog($main_table);
+        $Catalog = new Composition($main_table);
         $Res[] = $Catalog->save($req['item']);
     }
 }

@@ -44,9 +44,14 @@ class ReqHelper
         else $sql_JOIN = '';
     }
 
-    static function glueSqlParts(array &$sql_WHERE, array &$sql_JOIN)
+    static function compilePager(string $sql_pager, $req_pager)
     {
-        self::compileParts($sql_WHERE, $sql_JOIN);
+        if (empty($req_pager))
+            return false;
+        $pager = DbHelper::get_row($sql_pager);
+        $pager['current'] = $req_pager['current'];
+        $pager['limit'] = $req_pager['limit'];
+        return $pager;
     }
 }
 

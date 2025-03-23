@@ -5,12 +5,22 @@ if ($_REQUEST['act'] == 'category') {
     if (!empty($req['search']))
         $WHERE = "WHERE name LIKE '%{$req['search']}%'";
 
-
     $Catalog = new Category('shop_category');
-    $filter = $pager = $sorter = $params = [];
+    $filter = $sorter = $params = [];
     $filter['title'] = '';
-    $Res = $Catalog->getOptions($filter, $pager, $sorter, ['name' => 'title', 'value' => 'id']);
+    $Res = $Catalog->getAsOptions($filter, ['current' => 0, 'limit' => 100], $sorter, ['name' => 'title', 'value' => 'id']);
+}
 
+if ($_REQUEST['act'] == 'composition') {
+    $Res = [];
+    $filter = $sorter = $params = [];
+    $Composition = new Composition('shop_composition');
+    if (!empty($req['search']))
+        $filter['search_query'] = $req['search'];
+    elseif (!empty($req['form']['composition_id']))
+        $filter['id'] = $req['form']['composition_id'];
+
+    $Res = $Composition->getAsOptions($filter, ['current' => 0, 'limit' => 15], $sorter, ['name' => 'title', 'value' => 'id']);
 }
 
 
@@ -24,7 +34,6 @@ if ($_REQUEST['act'] == 'load') {
 
         return $res;
     }
-
 
     $req_body = file_get_contents('php://input');
     $REQ = json_decode($req_body, true);

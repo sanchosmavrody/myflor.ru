@@ -7,6 +7,8 @@ class Core
         'id' => ["where" => "id = '{value}'"],
     ];
 
+    var array $debug = [];
+
     /**
      * Получить данные
      * var @array $filter
@@ -29,9 +31,13 @@ class Core
         ReqHelper::applySorter($sorter, $sql_ORDER);
         ReqHelper::applyFilter($this->filters, $filter, $sql_WHERE, $sql_JOIN);
         FieldsHelper::applySql($this->table, [], $sql_COLUMNS, $sql_JOIN);
-        ReqHelper::glueSqlParts($sql_WHERE, $sql_JOIN);
+        ReqHelper::compileParts($sql_WHERE, $sql_JOIN);
 
         $sql_FROM = "FROM {$this->table} {$sql_JOIN}";
+
+        $this->debug['sql_JOIN'] = $sql_JOIN;
+        $this->debug['sql_WHERE'] = $sql_WHERE;
+        $this->debug['table'] = $this->table;
 
         if (in_array('item', $params)) {
             $Res['item'] = DbHelper::get_row("SELECT {$this->table}.* {$sql_COLUMNS} {$sql_FROM} {$sql_WHERE} LIMIT 1");
@@ -39,16 +45,34 @@ class Core
             return $Res;
         }
 
-        $Res['pager'] = DbHelper::get_row("SELECT (SELECT COUNT({$this->table}.id) as total {$sql_FROM}) as total, (SELECT COUNT({$this->table}.id) as filtered {$sql_FROM} {$sql_WHERE}) as filtered");
-        $Res['pager']['current'] = $pager['current'];
-        $Res['pager']['limit'] = $pager['limit'];
+        $Res['pager'] = ReqHelper::compilePager("SELECT (SELECT COUNT({$this->table}.id) as total {$sql_FROM}) as total, 
+        (SELECT COUNT({$this->table}.id) as filtered {$sql_FROM} {$sql_WHERE}) as filtered", $pager);
         $Res['totals'] = false;
 
         $Res['data'] = [];
         if (!empty($Res['pager']['filtered']))
             $Res['data'] = DbHelper::get("SELECT {$this->table}.* {$sql_COLUMNS} {$sql_FROM} {$sql_WHERE} {$sql_ORDER} LIMIT {$LIMIT}");
 
+        $this->debug['pager'] = $pager;
+
         $this->processList($Res['data']);
+        return $Res;
+    }
+
+    function getAsOptions(array $filter = [], array $pager = [], array $sorter = [], array $params = []): array
+    {
+        $Res = [1];
+
+        if (!empty($params['name']) and !empty($params['value'])) {
+            $Res = self::get($filter, $pager, $sorter, $params);
+            foreach ($Res['data'] as &$item)
+                $item = [
+                    'name'  => $item[$params['name']],
+                    'value' => $item[$params['value']]
+                ];
+
+            return $Res['data'];
+        }
         return $Res;
     }
 

@@ -3,20 +3,20 @@
 require_once ROOT_DIR . '/engine/classes/smshop/include.php';
 $main_table = 'fields';
 
+$item_type_list = [
+    ['value' => "shop_catalog", 'name' => "Каталог букетов"],
+    ['value' => "shop_catalog_composition", 'name' => "Состав букета"],
+    ['value' => "shop_composition", 'name' => "Каталог составляющих"],
+    ['value' => "shop_category", 'name' => "Категории"],
+    ['value' => "shop_orders", 'name' => "Заказы"]
+];
 $fields_form = [
     [
         "name"        => "Объект",
         "field"       => "item_type",
         "type"        => "select",
         "params"      => [
-            "list" => [
-                ['value' => "unknown", 'name' => "-"],
-                ['value' => "shop_catalog", 'name' => "Каталог букетов"],
-                ['value' => "shop_catalog_composition", 'name' => "Состав букета"],
-                ['value' => "shop_composition", 'name' => "Каталог составляющих"],
-                ['value' => "shop_category", 'name' => "Категории"],
-                ['value' => "shop_orders", 'name' => "Заказы"]
-            ]
+            "list" => $item_type_list
         ],
         "value"       => "catalog_auto",
         "layout_type" => "floating",
@@ -154,9 +154,16 @@ if ($_REQUEST['act'] == 'settings') {
                     "target_field" => "search_query",
                     "css_class"    => "col-4"
                 ],
+                [
+                    "title"        => "Объект",
+                    "type"         => "select",
+                    "target_field" => "item_type",
+                    "params"       => ['list' => array_merge([['value' => "", 'name' => "Все"]], $item_type_list)],
+                    "css_class"    => "col-4"
+                ],
             ]
         ],
-        "module"   => ['name' => $main_table, 'title' => 'Поля каталогов',],
+        "module"   => ['name' => $main_table, 'title' => 'Поля объектов',],
         "api_url"  => "/api/v2/index.php?mod="
     ];
 }
@@ -165,7 +172,8 @@ if ($_REQUEST['act'] === 'data') {
     $Res = [];
     if (!empty($req)) {
         $Fields = new Fields();
-        $Res = $Fields->getList([], $req['pager'], $req['sorter']);
+        $Res = $Fields->getList($req['filter'], $req['pager'], $req['sorter']);
+        //$Res['debug'] = $Fields->debug;
     }
 }
 
@@ -176,6 +184,7 @@ if ($_REQUEST['act'] === 'item') {
 
 
     $Res = [
+        'req'  => $req,
         'data' => [
             'item'          => $data['item'],
             'item_settings' => [

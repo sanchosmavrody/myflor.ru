@@ -31,6 +31,8 @@ if ($_REQUEST['act'] == 'settings') {
 
             if ($field['control_type'] === 'select_ajax')
                 $item['params'] = ['url' => $field['control_params']];
+            if ($field['control_type'] == 'module')
+                $item['params'] = ["module_name" => $field['control_params']];
 
             if ($field['group_name'])
                 $fields_group[$field['group_name']][] = $item;

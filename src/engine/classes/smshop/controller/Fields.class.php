@@ -1,11 +1,12 @@
 <?php
 
-
 class Fields extends Core
 {
     var string $table = 'fields';
     var array $filters = [
-        'id' => ["where" => "id = '{value}'"],
+        'id'           => ["where" => "id = '{value}'"],
+        'search_query' => ["where" => "item_type LIKE '%{value}%' OR name LIKE '%{value}%' OR group_name LIKE '%{value}%' OR label LIKE '%{value}%' "],
+        'item_type'    => ["where" => "item_type = '{value}'  "],
     ];
 
     public function __construct()
