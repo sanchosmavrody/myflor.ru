@@ -12,6 +12,8 @@ $fields_form = [
             "list" => [
                 ['value' => "unknown", 'name' => "-"],
                 ['value' => "shop_catalog", 'name' => "Каталог букетов"],
+                ['value' => "shop_catalog_composition", 'name' => "Состав букета"],
+                ['value' => "shop_composition", 'name' => "Каталог составляющих"],
                 ['value' => "shop_category", 'name' => "Категории"],
                 ['value' => "shop_orders", 'name' => "Заказы"]
             ]
@@ -62,6 +64,7 @@ $fields_form = [
                 ['value' => "select_ajax", 'name' => "Список ajax"],
                 ['value' => "upload_img", 'name' => "Изображение"],
                 ['value' => "upload_img_gallery", 'name' => "Несколько изображений"],
+                ["value" => "module", "name" => "Модуль",],
             ]
         ],
         "layout_type" => "",

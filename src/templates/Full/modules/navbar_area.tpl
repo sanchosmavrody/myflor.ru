@@ -173,6 +173,17 @@
                             </ul>
                         </li>
 
+                        [group=1]
+                        <li class="nav-item p-relative">
+                            <a href="#" class="nav-link"><i class="fa fa-gear fa-lg"></i> <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a href="gallery-1.html" class="nav-link">Букет невесты</a></li>
+                                <li class="nav-item"><a href="gallery-2.html" class="nav-link">Арки и фотозоны</a></li>
+                                <li class="nav-item"><a href="gallery-3.html" class="nav-link">Оформление столов</a></li>
+                            </ul>
+                        </li>
+                        [/group]
+
 
                     </ul>
 
