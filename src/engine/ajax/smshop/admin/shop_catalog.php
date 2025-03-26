@@ -23,11 +23,18 @@ if ($_REQUEST['act'] == 'settings') {
                 "css_class"   => 'col-md-' . $field['size']
             ];
 
-            if ($field['control_type'] === 'select') {
-                $list_rows = explode(PHP_EOL, $field['control_params']);
-                $list = [];
-                foreach ($list_rows as $list_row)
-                    $list[] = ['name' => trim($list_row), 'value' => trim($list_row)];
+            if ($field['control_type'] === 'select' or $field['control_type'] === 'select_multi') {
+                $name = explode('_', $field['name']);
+                if ($name[0] == 'category') {
+                    $Category = new Category('shop_category');
+                    $list = $Category->getAsOptions(['parent_id' => (int)$name[1]], ['current' => 0, 'limit' => 100], [], ['name' => 'title', 'value' => 'id']);
+                } else {
+                    $list_rows = explode(PHP_EOL, $field['control_params']);
+                    $list = [];
+                    foreach ($list_rows as $list_row)
+                        $list[] = ['name' => trim($list_row), 'value' => trim($list_row)];
+                }
+
                 $item['params'] = ["list" => $list];
             }
 

@@ -32,6 +32,10 @@ if ($_REQUEST['act'] == 'settings') {
             $fields_grid[] = ["name" => $table_field['label'], "field" => $table_field['name'], "type" => $table_field['control_type']];
     }
 
+    $Category = new Category('shop_category');
+    $parent_category_list = $Category->getAsOptions(['parent_id' => 0], ['current' => 0, 'limit' => 100], [], ['name' => 'title', 'value' => 'id']);
+
+
     $Res = [
         "stats"      => [],
         "informer"   => [],
@@ -60,6 +64,13 @@ if ($_REQUEST['act'] == 'settings') {
                     "target_field" => "search_query",
                     "css_class"    => "col-4"
                 ],
+                [
+                    "title"        => "Родительская категория",
+                    "type"         => "select",
+                    "target_field" => "parent_id",
+                    "params"       => ['list' => array_merge([['value' => "", 'name' => "Все"]], $parent_category_list)],
+                    "css_class"    => "col-4"
+                ],
             ]
         ],
         "module"     => ['name' => $module_name, 'title' => 'Категории каталога',],
@@ -72,13 +83,13 @@ if ($_REQUEST['act'] === 'data') {
     $Res = [];
     if (!empty($req)) {
         $Catalog = new Category($main_table);
-        $Res = $Catalog->getList([], $req['pager']);
+        $Res = $Catalog->getList($req['filter'], $req['pager']);
     }
 }
 
 if ($_REQUEST['act'] === 'item') {
-    $Catalog = new Category($main_table);
-    $data = $Catalog->getItem($req['id']);
+    $Category = new Category($main_table);
+    $data = $Category->getItem($req['id']);
 
     $fields_group_ = [];
     $fields = [

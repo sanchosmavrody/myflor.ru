@@ -16,7 +16,7 @@ $fields_form = [
         "field"       => "item_type",
         "type"        => "select",
         "params"      => [
-            "list" => $item_type_list
+            "list" =>  ['list' => array_merge([['value' => "UNK", 'name' => "-"]], $item_type_list)]
         ],
         "value"       => "catalog_auto",
         "layout_type" => "floating",
@@ -61,6 +61,7 @@ $fields_form = [
                 ['value' => "radio", 'name' => "Радио"],
                 ['value' => "checkbox", 'name' => "Чекбоксы"],
                 ['value' => "select", 'name' => "Список"],
+                ['value' => "select_multi", 'name' => "Список мульти"],
                 ['value' => "select_ajax", 'name' => "Список ajax"],
                 ['value' => "upload_img", 'name' => "Изображение"],
                 ['value' => "upload_img_gallery", 'name' => "Несколько изображений"],

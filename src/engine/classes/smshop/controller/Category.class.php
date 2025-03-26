@@ -4,9 +4,10 @@ class Category extends Core
 {
     var string $table = '';
     var array $filters = [
-        'id'        => ["where" => "id = '{value}'"],
-        'title'     => ["where" => "field_3.field_value = '{value}'"],
-        'parent_id' => ["where" => "field_4.field_value = '{value}'"],
+        'id'           => ["where" => "id = '{value}'"],
+        'title'        => ["where" => "field_3.field_value = '{value}'"],
+        'search_query' => ["where" => "field_3.field_value = '{value}'"],
+        'parent_id'    => ["where" => "field_4.field_value = '{value}'"],
     ];
 
     public function __construct(string $table)
@@ -32,7 +33,7 @@ class Category extends Core
             //$item['mark'] = DbHelper::get_row("SELECT * FROM mark WHERE id = '{$item['mark']}'");
             //$item['model'] = DbHelper::get_row("SELECT * FROM model WHERE id = '{$item['model']}'");
             //$item['generation'] = DbHelper::get_row("SELECT * FROM generation WHERE id = '{$item['generation']}'");
-            //$item['mark'] = DbHelper::get_row("SELECT * FROM mark WHERE id = '{$item['mark']}'");
+            $item['parent_id'] = DbHelper::get_row("SELECT field_value FROM shop_category_fields WHERE shop_category = '{$item['parent_id']}' and field = 3;")['field_value'];
         }
 
     }
