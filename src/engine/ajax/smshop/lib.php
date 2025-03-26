@@ -8,6 +8,10 @@ if ($_REQUEST['act'] == 'category') {
     $Catalog = new Category('shop_category');
     $filter = $sorter = $params = [];
     $filter['title'] = '';
+
+
+    $filter['parent_id'] = $_REQUEST['parent_id'];
+
     $Res = $Catalog->getAsOptions($filter, ['current' => 0, 'limit' => 100], $sorter, ['name' => 'title', 'value' => 'id']);
 }
 

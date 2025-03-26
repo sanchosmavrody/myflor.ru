@@ -4,8 +4,9 @@ class Category extends Core
 {
     var string $table = '';
     var array $filters = [
-        'id'    => ["where" => "id = '{value}'"],
-        'title' => ["where" => "field_3.field_value = '{value}'"],
+        'id'        => ["where" => "id = '{value}'"],
+        'title'     => ["where" => "field_3.field_value = '{value}'"],
+        'parent_id' => ["where" => "field_4.field_value = '{value}'"],
     ];
 
     public function __construct(string $table)

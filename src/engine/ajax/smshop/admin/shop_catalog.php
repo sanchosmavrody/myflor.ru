@@ -14,6 +14,7 @@ if ($_REQUEST['act'] == 'settings') {
     $fields = FieldsHelper::get($main_table);
     foreach ($fields as $field) {
         if ($field['form']) {
+            //select_multi
             $item = [
                 "name"        => $field['label'],
                 "field"       => $field['name'],
