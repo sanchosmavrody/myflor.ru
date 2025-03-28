@@ -4,7 +4,8 @@ class CatalogComposition extends Core
 {
     var string $table = '';
     var array $filters = [
-        'id' => ["where" => "id = '{value}'"],
+        'id'        => ["where" => "id = '{value}'"],
+        'parent_id' => ["where" => "parent_id = '{value}'"],
     ];
 
     public function __construct(string $table)
@@ -32,6 +33,19 @@ class CatalogComposition extends Core
             $item['price'] = $Res['item']['price'];
             $item['total'] = $Res['item']['price'] * $item['count'];
         }
+    }
+
+    function recalculatePrice(int $parent_id): void
+    {
+
+        $Res = $this->getList(['parent_id' => $parent_id], [0, 100]);
+
+        $totals=0;
+        foreach ($Res['data'] as $item)
+            $totals += $item['total'];
+
+
+
     }
 
 }

@@ -14,7 +14,6 @@ if ($_REQUEST['act'] == 'settings') {
     $fields = FieldsHelper::get($main_table);
     foreach ($fields as $field) {
         if ($field['form']) {
-            //select_multi
             $item = [
                 "name"        => $field['label'],
                 "field"       => $field['name'],
@@ -22,6 +21,9 @@ if ($_REQUEST['act'] == 'settings') {
                 "layout_type" => (in_array($field['control_type'], ['text', 'input', 'textarea', 'select']) ? "floating" : ""),
                 "css_class"   => 'col-md-' . $field['size']
             ];
+
+            if ($field['name'] == 'price')
+                $item["disabled"] = true;
 
             if ($field['control_type'] === 'select' or $field['control_type'] === 'select_multi') {
                 $name = explode('_', $field['name']);
@@ -55,6 +57,8 @@ if ($_REQUEST['act'] == 'settings') {
     foreach ($fields_group as $name => &$items)
         $items = ['name' => $name, 'fields' => $items];
 
+    $Category = new Category('shop_category');
+
     $Res = [
         "stats"      => [],
         "informer"   => [],
@@ -86,6 +90,43 @@ if ($_REQUEST['act'] == 'settings') {
                     "target_field" => "search_query",
                     "css_class"    => "col-4"
                 ],
+                [
+                    "title"        => "Тип композиции",
+                    "type"         => "select",
+                    "target_field" => "category_2",
+                    "params"       => [
+                        'list' => array_merge([['value' => "", 'name' => "Все"]],
+                            $Category->getAsOptions(['parent_id' => 2], ['current' => 0, 'limit' => 100], [])
+                        )
+                    ],
+                    "css_class"    => "col-2"
+                ],
+                [
+                    "title"        => "Разбит",
+                    "type"         => "select",
+                    "target_field" => "composition_added",
+                    "params"       => [
+                        'list' => [
+                            ['value' => "", 'name' => "Все"],
+                            ['value' => "1", 'name' => "Да"],
+                            ['value' => "-1", 'name' => "Нет"],
+                        ]
+                    ],
+                    "css_class"    => "col-1"
+                ],
+                [
+                    "title"        => "Опубликован",
+                    "type"         => "select",
+                    "target_field" => "composition_added",
+                    "params"       => [
+                        'list' => [
+                            ['value' => "", 'name' => "Все"],
+                            ['value' => "1", 'name' => "Да"],
+                            ['value' => "-1", 'name' => "Нет"],
+                        ]
+                    ],
+                    "css_class"    => "col-1"
+                ],
             ]
         ],
         "module"     => ['name' => $module_name, 'title' => 'Каталог',],
@@ -98,7 +139,7 @@ if ($_REQUEST['act'] === 'data') {
     $Res = [];
     if (!empty($req)) {
         $Catalog = new Catalog($main_table);
-        $Res = $Catalog->getList([], $req['pager']);
+        $Res = $Catalog->getList($req['filter'], $req['pager']);
     }
 }
 
@@ -155,7 +196,7 @@ if ($_REQUEST['act'] == 'delete') {
     $Res = [];
     if (!empty($req))
         if (!empty($req['id'])) {
-            $req['id'] = DbHelper::delete($main_table, "id='{$req['id']}'");
+            DbHelper::delete($main_table, "id='{$req['id']}'");
             $Res = ['id' => $req['id']];
         }
 }

@@ -59,7 +59,7 @@ class Core
         return $Res;
     }
 
-    function getAsOptions(array $filter = [], array $pager = [], array $sorter = [], array $params = []): array
+    function getAsOptions(array $filter = [], array $pager = [], array $sorter = [], array $params = ['name' => 'title', 'value' => 'id']): array
     {
         $Res = [1];
 

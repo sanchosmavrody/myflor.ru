@@ -8,7 +8,7 @@ if ($_REQUEST['act'] === 'settings') {
     $fields_grid = [];
     $table_fields = DbHelper::load_table_fields($main_table);
     foreach ($table_fields as $table_field) {
-        if ($table_field == 'date')
+        if (in_array($table_field, ['date', 'sort', 'parent_id']))
             continue;
         $fields_grid[] = ["name" => $table_field, "field" => $table_field];
     }
@@ -95,7 +95,7 @@ if ($_REQUEST['act'] === 'data') {
     $Res = [];
     if (!empty($req)) {
         $CatalogComposition = new CatalogComposition($main_table);
-        $Res = $CatalogComposition->getList([], $req['pager']);
+        $Res = $CatalogComposition->getList(['parent_id' => $req['parent_id']], $req['pager']);
 
         $Res['totals'] = ['total' => 0];
         foreach ($Res['data'] as $item)
@@ -148,8 +148,9 @@ if ($_REQUEST['act'] === 'item') {
 if ($_REQUEST['act'] === 'save') {
     $Res = [];
     if (!empty($req) and !empty($req['item'])) {
-        $Catalog = new Catalog($main_table);
-        $Res[] = $Catalog->save($req['item']);
+        $req['item']['parent_id'] = $req['parent_id'];
+        $CatalogComposition = new CatalogComposition($main_table);
+        $Res[] = $CatalogComposition->save($req['item']);
     }
 }
 

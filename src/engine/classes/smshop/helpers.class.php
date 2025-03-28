@@ -216,7 +216,7 @@ HTML;
 
             if ((!isset($item[$field['name']]) and empty($files_to_upload[$field['name']])) or empty($item['id'])) continue;
 
-            if (in_array($field['control_type'], ['input', 'text', 'select', 'select_ajax', 'radio', 'checkbox', 'textarea', 'upload_img', 'upload_img_gallery'])) {
+            if (in_array($field['control_type'], ['input', 'text', 'select','select_multi', 'select_ajax', 'radio', 'checkbox', 'textarea', 'upload_img', 'upload_img_gallery'])) {
                 DbHelper::query("INSERT INTO {$item_type}_fields (`{$item_type}`,field,field_value)
                     VALUES ('{$item['id']}','{$field['id']}','{$item[$field['name']]}')
                     ON DUPLICATE KEY UPDATE field_value = '{$item[$field['name']]}';");
