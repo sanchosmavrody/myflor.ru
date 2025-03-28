@@ -29,13 +29,8 @@ class Category extends Core
     function processList(array &$data): void
     {
         foreach ($data as &$item) {
-            //костыли для справочников авто
-            //$item['mark'] = DbHelper::get_row("SELECT * FROM mark WHERE id = '{$item['mark']}'");
-            //$item['model'] = DbHelper::get_row("SELECT * FROM model WHERE id = '{$item['model']}'");
-            //$item['generation'] = DbHelper::get_row("SELECT * FROM generation WHERE id = '{$item['generation']}'");
             $item['parent_id'] = DbHelper::get_row("SELECT field_value FROM shop_category_fields WHERE shop_category = '{$item['parent_id']}' and field = 3;")['field_value'];
         }
-
     }
 
     function processItem(array &$item): void

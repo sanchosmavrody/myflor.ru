@@ -16,7 +16,7 @@ $fields_form = [
         "field"       => "item_type",
         "type"        => "select",
         "params"      => [
-            "list" =>  ['list' => array_merge([['value' => "UNK", 'name' => "-"]], $item_type_list)]
+            "list" => array_merge([['value' => "UNK", 'name' => "-"]], $item_type_list)
         ],
         "value"       => "catalog_auto",
         "layout_type" => "floating",

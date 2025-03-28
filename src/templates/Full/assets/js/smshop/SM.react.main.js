@@ -35763,7 +35763,7 @@ var Module = (function (_super) {
             grouper: grouper,
             parent_id: item.id,
             parent_module_name: this.props.settings.module.name
-        }).then(function (res) { return _this.setState({ data: res[0].data, pager: res[0].pager }); });
+        }).then(function (res) { return _this.setState({ data: res[0].data, totals: res[0]['totals'], pager: res[0].pager }); });
     };
     Module.prototype.changeFilter = function (field, value) {
         var filter = this.state.filter;
@@ -35810,6 +35810,14 @@ var Module = (function (_super) {
         });
     };
     Module.prototype.deleteItem = function () {
+        var _this = this;
+        var _a = this.state, settings = _a.settings, item = _a.item;
+        var api = new api_class_1.ApiClass('');
+        var data = { item: { id: item.id }, parent_id: this.props.item.id, parent_module_name: this.props.settings.module.name };
+        api.req(settings.module.name, 'delete', data)
+            .then(function (res) {
+            _this.setState({ item: null, item_changed_fields: [] }, _this.getData.bind(_this));
+        });
     };
     Module.prototype.cancelSaveItem = function () {
         this.setState({ item: null, item_changed_fields: [] });

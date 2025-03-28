@@ -7,12 +7,15 @@ if ($_REQUEST['act'] === 'settings') {
     $fields_group = $fields_form = [];
     $fields_grid = [];
     $table_fields = DbHelper::load_table_fields($main_table);
-    foreach ($table_fields as $table_field)
+    foreach ($table_fields as $table_field) {
+        if ($table_field == 'date')
+            continue;
         $fields_grid[] = ["name" => $table_field, "field" => $table_field];
-
+    }
 
     $fields = FieldsHelper::get($main_table);
     foreach ($fields as $field) {
+
         if ($field['form']) {
             $item = [
                 "name"        => $field['label'],
@@ -41,6 +44,10 @@ if ($_REQUEST['act'] === 'settings') {
         if ($field['grid'])
             $fields_grid[] = ["name" => $field['label'], "field" => $field['name'], "type" => $field['control_type']];
     }
+
+    $fields_grid[] = ["name" => 'Цена', "field" => 'price'];
+    $fields_grid[] = ["name" => 'Итого', "field" => 'total'];
+
 
     foreach ($fields_group as $name => &$items)
         $items = ['name' => $name, 'fields' => $items];
@@ -89,6 +96,11 @@ if ($_REQUEST['act'] === 'data') {
     if (!empty($req)) {
         $CatalogComposition = new CatalogComposition($main_table);
         $Res = $CatalogComposition->getList([], $req['pager']);
+
+        $Res['totals'] = ['total' => 0];
+        foreach ($Res['data'] as $item)
+            $Res['totals']['total'] += $item['total'];
+
     }
 }
 
@@ -145,7 +157,7 @@ if ($_REQUEST['act'] === 'delete') {
     $Res = [];
     if (!empty($req))
         if (!empty($req['id'])) {
-            $req['id'] = DbHelper::delete($main_table, "id='{$req['id']}'");
+            DbHelper::delete($main_table, "id='{$req['id']}'");
             $Res = ['id' => $req['id']];
         }
 }
