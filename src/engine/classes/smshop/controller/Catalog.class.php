@@ -25,9 +25,12 @@ class Catalog extends Core
 
     function save(array $item): int
     {
+        global $member_id;
+        //if ($item['id'] == 0)
+        $item['user_id'] = $member_id['user_id'];
+
         $id = parent::save($item);
         if ($item['id'] == 0) {
-            global $member_id;
             DbHelper::query("UPDATE shop_catalog_composition SET parent_id = '{$id}' WHERE user_id = '{$member_id['user_id']}' AND parent_id = 0; ");
         }
         return $id;
@@ -37,14 +40,10 @@ class Catalog extends Core
     {
         foreach ($data as &$item) {
             //костыли для справочников авто
-
+            $item['user_id'] = DbHelper::get_row("SELECT name FROM dle_users WHERE user_id = '{$item['user_id']}' ")['name'];
             $item['category_2'] = DbHelper::get_row("SELECT field_value FROM shop_category_fields WHERE shop_category = '{$item['category_2']}' and field = 3;")['field_value'];
-
             $item['active_site'] = $item['active_site'] == 1 ? 'Да' : 'Нет';
             $item['active_main'] = $item['active_main'] == 1 ? 'Да' : 'Нет';
-
         }
-
     }
-
 }

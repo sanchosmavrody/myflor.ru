@@ -106,19 +106,6 @@ if ($_REQUEST['act'] == 'settings') {
                     "css_class"    => "col-2"
                 ],
                 [
-                    "title"        => "Разбит",
-                    "type"         => "select",
-                    "target_field" => "composition_added",
-                    "params"       => [
-                        'list' => [
-                            ['value' => "", 'name' => "Все"],
-                            ['value' => "1", 'name' => "Да"],
-                            ['value' => "-1", 'name' => "Нет"],
-                        ]
-                    ],
-                    "css_class"    => "col-1"
-                ],
-                [
                     "title"        => "Опубликован",
                     "type"         => "select",
                     "target_field" => "composition_added",
