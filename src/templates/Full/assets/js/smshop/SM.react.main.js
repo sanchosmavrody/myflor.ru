@@ -11401,7 +11401,12 @@ function openAddForm() {
         var item = { id: 0 };
         var item_changed_fields = [];
         var settings = getState().settings;
-        settings.form.fields.map(function (field) {
+        var fields = settings.form.fields.slice();
+        if (settings.form.fields_group)
+            settings.form.fields_group.map(function (field_group) {
+                fields = fields.concat(field_group.fields);
+            });
+        fields.map(function (field) {
             if (typeof field.value === 'string' || typeof field.value === 'number') {
                 item[field.field] = field.value;
                 item_changed_fields.push(field.field);

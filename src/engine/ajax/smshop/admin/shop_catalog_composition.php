@@ -150,7 +150,7 @@ if ($_REQUEST['act'] === 'save') {
     if (!empty($req) and !empty($req['item'])) {
         $req['item']['parent_id'] = $req['parent_id'];
         $CatalogComposition = new CatalogComposition($main_table);
-        $Res[] = $CatalogComposition->save($req['item']);
+        $CatalogComposition->save($req['item']);
     }
 }
 

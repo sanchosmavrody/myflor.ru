@@ -37,15 +37,12 @@ class CatalogComposition extends Core
 
     function recalculatePrice(int $parent_id): void
     {
-
         $Res = $this->getList(['parent_id' => $parent_id], [0, 100]);
-
-        $totals=0;
+        $totals = 0;
         foreach ($Res['data'] as $item)
             $totals += $item['total'];
 
-
-
+        $Catalog = new Catalog('shop_catalog');
+        $Catalog->save(['id' => $parent_id, 'price' => $totals]);
     }
-
 }

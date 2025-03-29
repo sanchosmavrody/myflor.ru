@@ -22,6 +22,10 @@ if ($_REQUEST['act'] == 'settings') {
                 "css_class"   => 'col-md-' . $field['size']
             ];
 
+            if ($field['default_value'] !== '')
+                $item['value'] = $field['default_value'];
+
+
             if ($field['name'] == 'price')
                 $item["disabled"] = true;
 
