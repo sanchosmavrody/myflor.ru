@@ -23,10 +23,15 @@ class Catalog extends Core
         return parent::get(['id' => $id], [], [], ['item']);
     }
 
-//    function save(array $item): int
-//    {
-//        return parent::save($item);
-//    }
+    function save(array $item): int
+    {
+        $id = parent::save($item);
+        if ($item['id'] == 0) {
+            global $member_id;
+            DbHelper::query("UPDATE shop_catalog_composition SET parent_id = '{$id}' WHERE user_id = '{$member_id['user_id']}' AND parent_id = 0; ");
+        }
+        return $id;
+    }
 
     function processList(array &$data): void
     {

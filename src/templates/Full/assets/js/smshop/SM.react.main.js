@@ -18684,6 +18684,8 @@ var Tr = (function (_super) {
             else
                 return React.createElement("a", { className: "cursor-pointer link-primary link-underline-opacity-25", href: "#/form/" + row['id'], dangerouslySetInnerHTML: { __html: val } });
         if (column.type == tableColumnTypeE.upload_img_gallery) {
+            if (val === null)
+                return React.createElement("div", null);
             if (typeof val !== "object")
                 val = val.split(',').map(function (item) {
                     return { thumb: item, link: item };
@@ -35818,7 +35820,7 @@ var Module = (function (_super) {
         var _this = this;
         var _a = this.state, settings = _a.settings, item = _a.item;
         var api = new api_class_1.ApiClass('');
-        var data = { item: { id: item.id }, parent_id: this.props.item.id, parent_module_name: this.props.settings.module.name };
+        var data = { id: item.id, parent_id: this.props.item.id, parent_module_name: this.props.settings.module.name };
         api.req(settings.module.name, 'delete', data)
             .then(function (res) {
             _this.setState({ item: null, item_changed_fields: [] }, _this.getData.bind(_this));

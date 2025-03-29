@@ -192,7 +192,7 @@ if ($_REQUEST['act'] == 'save') {
     $Res = [];
     if (!empty($req) and !empty($req['item'])) {
         $Catalog = new Catalog($main_table);
-        $Res[] = $Catalog->save($req['item']);
+        $Catalog->save($req['item']);
     }
 }
 
@@ -201,6 +201,7 @@ if ($_REQUEST['act'] == 'delete') {
     if (!empty($req))
         if (!empty($req['id'])) {
             DbHelper::delete($main_table, "id='{$req['id']}'");
+            DbHelper::delete('shop_catalog_composition', "parent_id='{$req['id']}'");
             $Res = ['id' => $req['id']];
         }
 }

@@ -6,6 +6,7 @@ class CatalogComposition extends Core
     var array $filters = [
         'id'        => ["where" => "id = '{value}'"],
         'parent_id' => ["where" => "parent_id = '{value}'"],
+        'user_id'   => ["where" => "user_id = '{value}'"],
     ];
 
     public function __construct(string $table)
@@ -44,5 +45,14 @@ class CatalogComposition extends Core
 
         $Catalog = new Catalog('shop_catalog');
         $Catalog->save(['id' => $parent_id, 'price' => $totals]);
+    }
+
+    function save(array $item): int
+    {
+        if (empty($item['id'])) {
+            global $member_id;
+            $item['user_id'] = $member_id['user_id'];
+        }
+        return parent::save($item);
     }
 }
