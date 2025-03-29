@@ -29,7 +29,7 @@ if ($_REQUEST['act'] == 'settings') {
                 $name = explode('_', $field['name']);
                 if ($name[0] == 'category') {
                     $Category = new Category('shop_category');
-                    $list = $Category->getAsOptions(['parent_id' => (int)$name[1]], ['current' => 0, 'limit' => 100], [], ['name' => 'title', 'value' => 'id']);
+                    $list = $Category->getAsOptions(['parent_id' => (int)$name[1]], ['current' => 0, 'limit' => 100]);
                 } else {
                     $list_rows = explode(PHP_EOL, $field['control_params']);
                     $list = [];
