@@ -25,7 +25,7 @@ HTML;
 
 } else {
 
-    $state = ['pager' => ['current' => 0, 'limit' => 2], 'sorter' => [], 'filter' => [], 'grouper' => []];
+    $state = ['pager' => ['current' => 0, 'limit' => 20], 'sorter' => [], 'filter' => [], 'grouper' => []];
     $link_parts = explode('page/', $_REQUEST['url']);
     if (!empty($link_parts[1])) {
         $state['pager']['current'] = (int)$link_parts[1] - 1;
