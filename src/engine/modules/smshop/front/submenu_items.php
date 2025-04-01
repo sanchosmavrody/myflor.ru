@@ -8,11 +8,8 @@ if (!empty($parent_id)) {
     $parent_category = $Category->getItem($parent_id)['item'];
     $Res = $Category->getList(['parent_id' => $parent_id], [0, 100]);
 
-
     $echo = [];
     foreach ($Res['data'] as $category) {
-
-
         if (empty($parent_category['alt_name']))
             $parent_category['alt_name'] = $parent_category['title'];
 

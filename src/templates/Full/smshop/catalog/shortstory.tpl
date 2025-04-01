@@ -17,7 +17,9 @@
             <h3><a href="/{shop_catalog}/id/{id}">{title}</a></h3>
 
             <div class="product-price">
-                <span class="new-price">{price}<i class="fa fa-ruble"></i></span>
+                <span class="new-price">
+                    {price}
+                    <i class="fa fa-ruble"></i></span>
             </div>
 
             <a href="cart.html" class="btn btn-light">В корзину</a>
