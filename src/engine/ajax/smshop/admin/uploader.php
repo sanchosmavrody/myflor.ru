@@ -11,7 +11,7 @@ if (!empty($_FILES['file'])) {
             $filePath = FilesHelper::$upload_dir . "/{$_REQUEST['module_name']}/" . date('Y-m-d') . "/";
 
             if (FilesHelper::save($_FILES['file']['tmp_name'], $filePath, $fileName))
-                $Res = ['link' => 'https://' . $_SERVER['HTTP_HOST'] . $filePath . $fileName];
+                $Res = ['link' => $filePath . $fileName];
             else
                 $Res = ['messages' => ['Ошибка 2 #']];
         } else
@@ -29,7 +29,7 @@ if (!empty($_FILES['file'])) {
                 $fileName = $_REQUEST['id'] . "_" . $_REQUEST['field'] . "_" . time() . $index . "." . $type;
                 $filePath = FilesHelper::$upload_dir . "/{$_REQUEST['module_name']}/" . date('Y-m-d') . "/";
                 if (FilesHelper::save($_FILES['files']['tmp_name'][$index], $filePath, $fileName))
-                    $links[] = 'https://' . $_SERVER['HTTP_HOST'] . $filePath . $fileName;
+                    $links[] = $filePath . $fileName;
                 else
                     $Errors[] = 'Ошибка 2 #';
             } else
