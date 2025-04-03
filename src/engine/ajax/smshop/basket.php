@@ -3,6 +3,7 @@ $Basket = new Basket('shop_basket');
 if($_REQUEST['act'] == 'get') {
 
 }
+
 if ($_REQUEST['act'] == 'add' OR $_REQUEST['act'] == 'remove') {
 
 
@@ -17,6 +18,5 @@ if ($_REQUEST['act'] == 'add' OR $_REQUEST['act'] == 'remove') {
 
     $filter['parent_id'] = $_REQUEST['parent_id'];
 
-    $Res = $Basket->getAsOptions($filter, ['current' => 0, 'limit' => 100],
-        $sorter, ['name' => 'title', 'value' => 'id']);
+    $Res = $Basket->getAsOptions($filter, ['current' => 0, 'limit' => 100],        $sorter);
 }
