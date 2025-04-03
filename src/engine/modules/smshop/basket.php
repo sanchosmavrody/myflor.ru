@@ -1,15 +1,15 @@
 <?php
 
-$Catalog = new Catalog('shop_basket' );
+$Basket = new Basket('shop_basket' );
 
-$state = ['pager' => ['current' => 0, 'limit' => 20], 'sorter' => [], 'filter' => [], 'grouper' => []];
+$state = ['pager' => ['current' => 0, 'limit' => 100], 'sorter' => [], 'filter' => [], 'grouper' => []];
 
-$Res = $Catalog->getList($state['filter'], $state['pager']);
+$Res = $Basket->getList($state['filter'], $state['pager']);
 
 $state['pager']['filtered'] = $state['pager']['total'] = $Res['pager']['filtered'];
 
 
-$tpl->load_template('/smshop/catalog/shortstory.tpl');
+$tpl->load_template('/smshop/basket/shortstory.tpl');
 
 foreach ($Res['data'] as &$item) {
     $item['photos'] = explode(',', $item['photos']);
@@ -29,7 +29,7 @@ foreach ($Res['data'] as &$item) {
 
 include 'navigation.php';
 
-$tpl->load_template('/smshop/catalog/main.tpl');
+$tpl->load_template('/smshop/basket/main.tpl');
 $tpl->set('{shop_catalog}', $shop_catalog);
 $tpl->set('{items}', $tpl->result['items']);
 $tpl->set('{navigation}', $tpl->result['navigation']);
