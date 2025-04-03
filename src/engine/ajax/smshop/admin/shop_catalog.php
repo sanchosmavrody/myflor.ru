@@ -26,7 +26,7 @@ if ($_REQUEST['act'] == 'settings') {
                 $item['value'] = $field['default_value'];
 
 
-            if ($field['name'] == 'price')
+            if (in_array($field['name'], ['price', 'profit', 'cost']))
                 $item["disabled"] = true;
 
             if ($field['control_type'] === 'select' or $field['control_type'] === 'select_multi') {

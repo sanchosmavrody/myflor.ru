@@ -38,9 +38,8 @@ if (!empty($_FILES['file'])) {
         if (empty($Errors))
             $Res = ['link' => implode(',', $links)];
         else
-            $Res = ['messages' => $Errors];
-
+            $Res = ['messages' => $Errors, '_FILES' => var_export($_FILES)];
     }
 
 } else
-    $Res = ['messages' => ['Ошибка 0', var_export($_FILES)]];
+    $Res = ['messages' => ['Ошибка 0', '_FILES' => var_export($_FILES)]];

@@ -31,20 +31,30 @@ class CatalogComposition extends Core
             $Res = $Composition->getItem($item['composition_id']);
             $item['composition'] = $Res['item'];
             $item['composition_id'] = $Res['item']['title'];
+            $item['category_name'] = $Res['item']['category_name'];
+
+            $item['cost'] = $Res['item']['cost'];
+            $item['total_cost'] = $Res['item']['cost'] * $item['count'];
+
             $item['price'] = $Res['item']['price'];
             $item['total'] = $Res['item']['price'] * $item['count'];
+
+            $item['total_profit'] = ($Res['item']['price'] - $Res['item']['cost']) * $item['count'];
         }
     }
 
     function recalculatePrice(int $parent_id): void
     {
         $Res = $this->getList(['parent_id' => $parent_id], [0, 100]);
-        $totals = 0;
-        foreach ($Res['data'] as $item)
+        $totals = $totals_cost = $totals_profit = 0;
+        foreach ($Res['data'] as $item) {
             $totals += $item['total'];
+            $totals_cost += $item['total_cost'];
+            $totals_profit += $item['total_profit'];
+        }
 
         $Catalog = new Catalog('shop_catalog');
-        $Catalog->save(['id' => $parent_id, 'price' => $totals]);
+        $Catalog->save(['id' => $parent_id, 'price' => $totals, 'cost' => $totals_cost, 'profit' => $totals_profit]);
     }
 
     function save(array $item): int
@@ -53,6 +63,8 @@ class CatalogComposition extends Core
             global $member_id;
             $item['user_id'] = $member_id['user_id'];
         }
-        return parent::save($item);
+        parent::save($item);
+        $this->recalculatePrice($item['parent_id']);
+        return $item['id'];
     }
 }

@@ -46,6 +46,7 @@ if ($_REQUEST['act'] === 'settings') {
     }
 
     $fields_grid[] = ["name" => 'Цена', "field" => 'price'];
+    $fields_grid[] = ["name" => 'c/c', "field" => 'total_cost'];
     $fields_grid[] = ["name" => 'Итого', "field" => 'total'];
 
 
@@ -102,9 +103,11 @@ if ($_REQUEST['act'] === 'data') {
 
         $Res = $CatalogComposition->getList($filter, $req['pager']);
 
-        $Res['totals'] = ['total' => 0];
-        foreach ($Res['data'] as $item)
+        $Res['totals'] = ['total' => 0, 'total_cost' => 0];
+        foreach ($Res['data'] as $item) {
             $Res['totals']['total'] += $item['total'];
+            $Res['totals']['total_cost'] += $item['total_cost'];
+        }
 
     }
 }
