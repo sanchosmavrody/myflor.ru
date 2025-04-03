@@ -104,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="products-filter" class="products-collections-listing row products-col-three">
+                <div id="products-filter" class="products-collections-listing row products-col-two">
                     {items}
                 </div>
                 {navigation}
