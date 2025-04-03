@@ -1,6 +1,6 @@
 <?php
 $Basket = new Basket('shop_basket');
-if($_REQUEST['act'] == 'get') {
+if($_REQUEST['act'] == 'generateBasketId') {
 
 }
 
