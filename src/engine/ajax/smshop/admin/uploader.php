@@ -1,5 +1,6 @@
 <?php
 
+
 if (!empty($_FILES['file'])) {
     if (empty($_FILES['file']['tmp_name']) or empty($_FILES['file']['name']))
         $Res = ['messages' => ['Ошибка 1']];
@@ -38,8 +39,8 @@ if (!empty($_FILES['file'])) {
         if (empty($Errors))
             $Res = ['link' => implode(',', $links)];
         else
-            $Res = ['messages' => $Errors, '_FILES' => var_export($_FILES)];
+            $Res = ['messages' => $Errors, '_FILES' => $_FILES];
     }
 
 } else
-    $Res = ['messages' => ['Ошибка 0', '_FILES' => var_export($_FILES)]];
+    $Res = ['messages' => ['Ошибка 0', '_FILES' => $_FILES]];
