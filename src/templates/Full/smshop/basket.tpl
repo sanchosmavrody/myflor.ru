@@ -15,9 +15,7 @@
                             </tr>
                             </thead>
 
-                            <tbody id="basket_full_grid">
-                            {items}
-                            </tbody>
+                            <tbody id="basket_full_grid"></tbody>
                         </table>
                     </div>
                     <div class="cart-buttons">
