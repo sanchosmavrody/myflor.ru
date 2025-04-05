@@ -131,12 +131,18 @@ if ($_REQUEST['act'] === 'data') {
     if (!empty($req)) {
         $Catalog = new Catalog($main_table);
         $Res = $Catalog->getList($req['filter'], $req['pager']);
+
+        foreach ($Res['data'] as &$item)
+            $item['photos'] = implode(",", $item['photos']);
+
     }
 }
 
 if ($_REQUEST['act'] === 'item') {
     $Catalog = new Catalog($main_table);
     $data = $Catalog->getItem($req['id']);
+
+    $data['item']['photos'] = implode(",", $data['item']['photos']);
 
     $fields_form = [];
     $fields_group_ = [];

@@ -40,7 +40,7 @@ class Catalog extends Core
     {
         foreach ($Res['data'] as &$item) {
             $this->processItem($item);
-            unset($item['photos']);
+            // unset($item['photos']);
         }
     }
 

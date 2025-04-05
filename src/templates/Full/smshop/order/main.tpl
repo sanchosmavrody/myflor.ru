@@ -131,10 +131,7 @@
                                     <th scope="col">Итого</th>
                                 </tr>
                                 </thead>
-
-                                <tbody id="basket_full_grid">
-
-                                </tbody>
+                                <tbody id="basket_full_grid"></tbody>
                                 <tfoot>
                                 <tr>
                                     <td class="order-shipping">

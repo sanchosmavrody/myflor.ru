@@ -20,6 +20,8 @@ $tpl->load_template('/smshop/catalog/shortstory.tpl');
 
 foreach ($Res['data'] as &$item) {
 
+    unset($item['photos']);
+
     foreach ($item as $field => $value)
         $tpl->set('{' . $field . '}', $value);
 

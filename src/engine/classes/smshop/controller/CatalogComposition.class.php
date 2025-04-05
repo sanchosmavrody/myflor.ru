@@ -28,18 +28,18 @@ class CatalogComposition extends Core
     {
         $Composition = new Composition('shop_composition');
         foreach ($Res['data'] as &$item) {
-            $Res = $Composition->getItem($item['composition_id']);
-            $item['composition'] = $Res['item'];
-            $item['composition_id'] = $Res['item']['title'];
-            $item['category_name'] = $Res['item']['category_name'];
+            $composition_item = $Composition->getItem($item['composition_id']);
+            $item['composition'] = $composition_item['item'];
+            $item['composition_id'] = $composition_item['item']['title'];
+            $item['category_name'] = $composition_item['item']['category_name'];
 
-            $item['cost'] = $Res['item']['cost'];
-            $item['total_cost'] = $Res['item']['cost'] * $item['count'];
+            $item['cost'] = $composition_item['item']['cost'];
+            $item['total_cost'] = $composition_item['item']['cost'] * $item['count'];
 
-            $item['price'] = $Res['item']['price'];
-            $item['total'] = $Res['item']['price'] * $item['count'];
+            $item['price'] = $composition_item['item']['price'];
+            $item['total'] = $composition_item['item']['price'] * $item['count'];
 
-            $item['total_profit'] = ($Res['item']['price'] - $Res['item']['cost']) * $item['count'];
+            $item['total_profit'] = ($composition_item['item']['price'] - $composition_item['item']['cost']) * $item['count'];
         }
     }
 
