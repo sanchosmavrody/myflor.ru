@@ -55,7 +55,7 @@ class Core
 
         $this->debug['pager'] = $pager;
 
-        $this->processList($Res['data']);
+        $this->processList($Res);
         return $Res;
     }
 
@@ -83,7 +83,7 @@ class Core
         //}
     }
 
-    function processList(array &$data): void
+    function processList(array &$Res): void
     {
 
     }

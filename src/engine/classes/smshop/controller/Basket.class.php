@@ -4,8 +4,9 @@ class Basket extends Core
 {
     var string $table = '';
     var array $filters = [
-        'id'         => ["where" => "id = '{value}'"],
-        //'category_2' => ["where" => "field_17.field_value = '{value}'"],
+        'id'      => ["where" => "id = '{value}'"],
+        'uid'     => ["where" => "uid = '{value}'"],
+        'item_id' => ["where" => "item_id = '{value}'"],
     ];
 
     public function __construct(string $table)
@@ -28,14 +29,23 @@ class Basket extends Core
         global $member_id;
         //if ($item['id'] == 0)
         $item['user_id'] = $member_id['user_id'];
-        $id = parent::save($item);
-        return $id;
+        $item['count'] = (int)$item['count'];
+        if (empty($item['count']))
+            $item['count'] = 1;
+        return parent::save($item);
     }
 
-    function processList(array &$data): void
+    function processList(array &$Res): void
     {
-        foreach ($data as &$item) {
-             $item['category_2'] = DbHelper::get_row("SELECT field_value FROM shop_category_fields WHERE shop_category = '{$item['category_2']}' and field = 3;")['field_value'];
+        $Catalog = new Catalog('shop_catalog');
+        $total = 0;
+        foreach ($Res['data'] as &$item) {
+            $catalog_item = $Catalog->getItem($item['item_id'])['item'];
+            foreach (['title', 'price', 'category_2', 'photo_main',] as $field_to_map)
+                $item[$field_to_map] = $catalog_item[$field_to_map];
+            $total += $item['count'] * $item['price'];
         }
+
+        $Res['totals'] = ['total' => $total];
     }
 }

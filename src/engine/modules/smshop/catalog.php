@@ -19,10 +19,7 @@ $state['pager']['filtered'] = $state['pager']['total'] = $Res['pager']['filtered
 $tpl->load_template('/smshop/catalog/shortstory.tpl');
 
 foreach ($Res['data'] as &$item) {
-    $item['photos'] = explode(',', $item['photos']);
-    $item['photo_main'] = empty($item['photos'][0]) ? '/templates/Full/images/catalog_auto_no_photo.png' : $item['photos'][0];
 
-    unset($item['photos']);
     foreach ($item as $field => $value)
         $tpl->set('{' . $field . '}', $value);
 

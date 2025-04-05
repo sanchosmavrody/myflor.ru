@@ -24,10 +24,10 @@ class CatalogComposition extends Core
         return parent::get(['id' => $id], [], [], ['item']);
     }
 
-    function processList(array &$data): void
+    function processList(array &$Res): void
     {
         $Composition = new Composition('shop_composition');
-        foreach ($data as &$item) {
+        foreach ($Res['data'] as &$item) {
             $Res = $Composition->getItem($item['composition_id']);
             $item['composition'] = $Res['item'];
             $item['composition_id'] = $Res['item']['title'];

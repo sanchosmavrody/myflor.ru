@@ -24,14 +24,4 @@ class Fields extends Core
         return parent::get(['id' => $id], [], [], ['item']);
     }
 
-    function processList(array &$data): void
-    {
-
-    }
-
-    function processItem(array &$item): void
-    {
-
-    }
-
 }

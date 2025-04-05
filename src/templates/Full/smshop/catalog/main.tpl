@@ -167,67 +167,26 @@
             </button>
 
             <div class="modal-body">
-                <h3>My Cart (3)</h3>
+                <h3>Корзина (<span data-basket-count></span>)</h3>
 
                 <div class="product-cart-content">
                     <div class="product-cart">
-                        <div class="product-image">
-                            <img src="/templates/Full/assets/img/img2.jpg" alt="image">
-                        </div>
-
                         <div class="product-content">
-                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
-                            <span>Blue / XS</span>
-                            <div class="product-price">
-                                <span>1</span>
-                                <span>x</span>
-                                <span class="price">$191.00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-cart">
-                        <div class="product-image">
-                            <img src="/templates/Full/assets/img/img3.jpg" alt="image">
-                        </div>
-
-                        <div class="product-content">
-                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
-                            <span>Blue / XS</span>
-                            <div class="product-price">
-                                <span>1</span>
-                                <span>x</span>
-                                <span class="price">$191.00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-cart">
-                        <div class="product-image">
-                            <img src="/templates/Full/assets/img/img4.jpg" alt="image">
-                        </div>
-
-                        <div class="product-content">
-                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
-                            <span>Blue / XS</span>
-                            <div class="product-price">
-                                <span>1</span>
-                                <span>x</span>
-                                <span class="price">$191.00</span>
-                            </div>
+                            <h3>Корзина пуста</h3>
                         </div>
                     </div>
                 </div>
 
                 <div class="product-cart-subtotal">
-                    <span>Subtotal</span>
-
-                    <span class="subtotal">$500.00</span>
+                    <span>Итого по товару</span>
+                    <span class="subtotal">
+                       <span data-basket-total></span> <i class="fa fa-rub"></i>
+                    </span>
                 </div>
 
                 <div class="product-cart-btn">
-                    <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
-                    <a href="cart.html" class="btn btn-light">View Shopping Cart</a>
+                    <a href="checkout.html" class="btn btn-primary">Быстрый заказ</a>
+                    <a href="cart.html" class="btn btn-light">Оформить</a>
                 </div>
             </div>
         </div>

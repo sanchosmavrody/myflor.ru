@@ -189,7 +189,9 @@
                     <div class="others-option">
                         <div class="option-item"><a href="#">Оплата <i class="fa-regular fa-credit-card"></i></a></div>
                         <div class="option-item"><a href="#">Доставка <i class="fa-solid fa-truck-fast"></i></a></div>
-                        <div class="option-item"><a href="#" data-bs-toggle="modal" data-bs-target="#shoppingCartModal">Корзина(3) <i class="fas fa-shopping-bag"></i></a></div>
+                        <div class="option-item"><a href="#" data-bs-toggle="modal" data-bs-target="#shoppingCartModal">
+                                Корзина(<span data-basket-count>0</span>)
+                                <i class="fas fa-shopping-bag"></i></a></div>
                     </div>
                 </div>
             </nav>

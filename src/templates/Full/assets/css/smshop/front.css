@@ -1,0 +1,7 @@
+[data-basket-btn="add"] .basket_btn_remove {
+    display: none;
+}
+
+[data-basket-btn="remove"] .basket_btn_add {
+    display: none;
+}

@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/templates/Full/assets/css/responsive.css">
     <link rel="icon" type="image/png" href="/templates/Full/assets/img/favicon.png">
     <link rel="stylesheet" href="/templates/Full/assets/css/sm.css">
+    <link rel="stylesheet" href="/templates/Full/assets/css/smshop/front.css">
 </head>
 <body>
 
@@ -159,6 +160,8 @@
 <script src="/templates/Full/assets/js/jquery.ajaxchimp.min.js"></script>
 <!-- Main JS -->
 <script src="/templates/Full/assets/js/main.js"></script>
+
+<script src="/templates/Full/assets/js/smshop/front.js"></script>
 </body>
 </html>
 [/not-available]

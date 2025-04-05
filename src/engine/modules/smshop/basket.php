@@ -1,6 +1,6 @@
 <?php
 
-$Basket = new Basket('shop_basket' );
+$Basket = new Basket('shop_basket');
 
 $state = ['pager' => ['current' => 0, 'limit' => 100], 'sorter' => [], 'filter' => [], 'grouper' => []];
 
@@ -13,7 +13,7 @@ $tpl->load_template('/smshop/basket/shortstory.tpl');
 
 foreach ($Res['data'] as &$item) {
     $item['photos'] = explode(',', $item['photos']);
-    $item['photo_main'] = empty($item['photos'][0]) ? '/templates/Full/images/catalog_auto_no_photo.png' : $item['photos'][0];
+    $item['photo_main'] = empty($item['photos'][0]) ? '/templates/Full/assets/img/catalog_no_photo.png' : $item['photos'][0];
 
     unset($item['photos']);
     foreach ($item as $field => $value)

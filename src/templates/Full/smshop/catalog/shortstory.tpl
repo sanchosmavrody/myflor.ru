@@ -22,7 +22,11 @@
                     <i class="fa fa-ruble"></i></span>
             </div>
 
-            <a href="cart.html" class="btn btn-light">В корзину</a>
+            <button class="btn btn-light" data-basket-btn="add" data-item-id="{id}">
+                <span class="basket_btn_add">В корзину</span>
+                <span class="basket_btn_remove">Убрать из корзины</span>
+            </button>
+
         </div>
     </div>
 </div>

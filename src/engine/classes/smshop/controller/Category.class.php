@@ -26,11 +26,11 @@ class Category extends Core
     }
 
 
-    function processList(array &$data): void
+    function processList(array &$Res): void
     {
-        foreach ($data as &$item) {
+        foreach ($Res['data'] as &$item)
             $item['parent_id'] = DbHelper::get_row("SELECT field_value FROM shop_category_fields WHERE shop_category = '{$item['parent_id']}' and field = 3;")['field_value'];
-        }
+
     }
 
     function processItem(array &$item): void

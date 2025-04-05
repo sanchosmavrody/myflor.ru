@@ -36,14 +36,22 @@ class Catalog extends Core
         return $id;
     }
 
-    function processList(array &$data): void
+    function processList(array &$Res): void
     {
-        foreach ($data as &$item) {
-            //костыли для справочников авто
-            $item['user_id'] = DbHelper::get_row("SELECT name FROM dle_users WHERE user_id = '{$item['user_id']}' ")['name'];
-            $item['category_2'] = DbHelper::get_row("SELECT field_value FROM shop_category_fields WHERE shop_category = '{$item['category_2']}' and field = 3;")['field_value'];
-            $item['active_site'] = $item['active_site'] == 1 ? 'Да' : 'Нет';
-            $item['active_main'] = $item['active_main'] == 1 ? 'Да' : 'Нет';
+        foreach ($Res['data'] as &$item) {
+            $this->processItem($item);
+            unset($item['photos']);
         }
+    }
+
+    function processItem(array &$item): void
+    {
+        $item['user_id'] = DbHelper::get_row("SELECT name FROM dle_users WHERE user_id = '{$item['user_id']}' ")['name'];
+        $item['category_2'] = DbHelper::get_row("SELECT field_value FROM shop_category_fields WHERE shop_category = '{$item['category_2']}' and field = 3;")['field_value'];
+        $item['active_site'] = $item['active_site'] == 1 ? 'Да' : 'Нет';
+        $item['active_main'] = $item['active_main'] == 1 ? 'Да' : 'Нет';
+
+        $item['photos'] = explode(',', $item['photos']);
+        $item['photo_main'] = empty($item['photos'][0]) ? '/templates/Full/assets/img/catalog_no_photo.png' : $item['photos'][0];
     }
 }
