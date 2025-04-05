@@ -1,7 +1,6 @@
 [available=demo]
 {include file="/engine/modules/demo.php"}
-[/available][not-available=demo]
-<!DOCTYPE html>
+[/available]<!DOCTYPE html>
 <html lang="zxx">
 <head>
     <!-- Required meta tags -->
@@ -164,4 +163,3 @@
 <script src="/templates/Full/assets/js/smshop/front.js"></script>
 </body>
 </html>
-[/not-available]
