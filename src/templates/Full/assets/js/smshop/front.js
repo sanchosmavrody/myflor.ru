@@ -1,27 +1,3 @@
-const SMSHOPTPL = {
-    basket: {
-        count_target: $('[data-basket-count]'),
-        total_target: $('[data-basket-total]'),
-        short_target: $('#shoppingCartModal .product-cart-content'),
-        short_item: function (item) {
-            return `<div class="product-cart position-relative">
-                        <div class="product-image">
-                            <img src="${item['photo_main']}" alt="image">
-                        </div>
-                        <div class="product-content">
-                            <h3><a href="/id/${item['item_id']}">${item['title']}</a></h3>
-                            <span>${item['category_2']}</span>
-                            <div class="product-price">
-                                <span>${item['count']}</span>
-                                <span>x</span>
-                                <span class="price">${item['price']} <i class="fa fa-rub"></i> </span>
-                            </div>
-                        </div>
-                        <span class="position-absolute top-0 end-0 text-danger cursor-pointer" data-basket-btn="remove" data-item-id="${item['item_id']}" ><i class="fa fa-remove"></i></span>
-                    </div>`
-        },
-    }
-}
 const SMSHOP = {
     init: function () {
         this.basket.init()
@@ -38,8 +14,25 @@ const SMSHOP = {
         uid: localStorage.getItem('basket_uid') ? localStorage.getItem('basket_uid') : '',
         init: function () {
             $('body').on('click', '[data-basket-btn]', (function (e) {
-                this.req($(e.currentTarget).attr('data-basket-btn'), {'item_id': $(e.currentTarget).data('item-id').toString()})
+                let count = 1
+                if ($('[data-basket-count][data-item-id="' + $(e.currentTarget).data('item-id') + '"]').length)
+                    count = $('[data-basket-count][data-item-id="' + $(e.currentTarget).data('item-id') + '"]').val()
+                this.req($(e.currentTarget).attr('data-basket-btn'), {'count': count, 'item_id': $(e.currentTarget).data('item-id').toString()})
             }).bind(this));
+
+            $('body').on('click', '[data-basket-change-count]', (function (e) {
+                this.req($(e.currentTarget).attr('data-basket-change-count'), {
+                    'item_id': $(e.currentTarget).data('item-id').toString()
+                })
+            }).bind(this));
+
+            $('body').on('change', '[data-basket-count]', (function (e) {
+                this.req('set_count', {
+                    'count': $(e.currentTarget).val(),
+                    'item_id': $(e.currentTarget).data('item-id').toString()
+                })
+            }).bind(this));
+
             this.req()
         },
         req: function (action = 'get', data = {}) {

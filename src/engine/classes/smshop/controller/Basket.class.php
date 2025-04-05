@@ -30,7 +30,7 @@ class Basket extends Core
         //if ($item['id'] == 0)
         $item['user_id'] = $member_id['user_id'];
         $item['count'] = (int)$item['count'];
-        if (empty($item['count']))
+        if ($item['count'] < 1)
             $item['count'] = 1;
         return parent::save($item);
     }
@@ -43,7 +43,8 @@ class Basket extends Core
             $catalog_item = $Catalog->getItem($item['item_id'])['item'];
             foreach (['title', 'price', 'category_2', 'photo_main',] as $field_to_map)
                 $item[$field_to_map] = $catalog_item[$field_to_map];
-            $total += $item['count'] * $item['price'];
+            $item['total'] = $item['count'] * $item['price'];
+            $total += $item['total'];
         }
 
         $Res['totals'] = ['total' => $total];

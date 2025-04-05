@@ -755,3 +755,31 @@
     </div>
 </div>
 <!-- End Products Filter Modal Area -->
+
+
+<script>
+    const SMSHOPTPL = {
+        basket: {
+            count_target: $('[data-basket-count]'),
+            total_target: $('[data-basket-total]'),
+            short_target: $('#shoppingCartModal .product-cart-content'),
+            short_item: function (item) {
+                return `<div class="product-cart position-relative">
+                        <div class="product-image">
+                            <img src="${item['photo_main']}" alt="image">
+                        </div>
+                        <div class="product-content">
+                            <h3><a href="/id/${item['item_id']}">${item['title']}</a></h3>
+                            <span>${item['category_2']}</span>
+                            <div class="product-price">
+                                <span>${item['count']}</span>
+                                <span>x</span>
+                                <span class="price">${item['price']} <i class="fa fa-rub"></i> </span>
+                            </div>
+                        </div>
+                        <span class="position-absolute top-0 end-0 text-danger cursor-pointer" data-basket-btn="remove" data-item-id="${item['item_id']}" ><i class="fa fa-remove"></i></span>
+                    </div>`
+            },
+        }
+    }
+</script>
