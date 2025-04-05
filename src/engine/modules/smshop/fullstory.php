@@ -6,7 +6,6 @@ $Res = $Catalog->getItem($item_id);
 
 $tpl->load_template('/smshop/catalog/fullstory.tpl');
 
-$Res['item']['photos'] = explode(',', $Res['item']['photos']);
 foreach ($Res['item']['photos'] as &$photo)
     $photo = <<<HTML
 <div class="item"><img src="{$photo}" alt="image"></div>
