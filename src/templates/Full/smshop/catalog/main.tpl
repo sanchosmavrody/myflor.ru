@@ -185,8 +185,8 @@
                 </div>
 
                 <div class="product-cart-btn">
-                    <a href="checkout.html" class="btn btn-primary">Быстрый заказ</a>
-                    <a href="cart.html" class="btn btn-light">Оформить</a>
+                    <a href="/order/" class="btn btn-primary">Быстрый заказ</a>
+                    <a href="/order/" class="btn btn-light">Оформить</a>
                 </div>
             </div>
         </div>

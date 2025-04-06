@@ -4,116 +4,88 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="billing-details">
-                        <h3 class="title">Billing Details</h3>
+                        <h3 class="title">Оформление заказа</h3>
 
                         <div class="row">
-                            <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label>Country <span class="required">*</span></label>
-
-                                    <div class="select-box">
-                                        <select class="form-control" style="display: none;">
-                                            <option value="5">United Arab Emirates</option>
-                                            <option value="1">China</option>
-                                            <option value="2">United Kingdom</option>
-                                            <option value="0">Germany</option>
-                                            <option value="3">France</option>
-                                            <option value="4">Japan</option>
-                                        </select>
-                                        <div class="nice-select form-control" tabindex="0"><span class="current">China</span>
-                                            <ul class="list">
-                                                <li data-value="5" class="option focus">United Arab Emirates</li>
-                                                <li data-value="1" class="option selected">China</li>
-                                                <li data-value="2" class="option">United Kingdom</li>
-                                                <li data-value="0" class="option">Germany</li>
-                                                <li data-value="3" class="option">France</li>
-                                                <li data-value="4" class="option">Japan</li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                    <label>Дата доставки <span class="required">*</span></label>
+                                    <input type="date" class="form-control">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label>First Name <span class="required">*</span></label>
-                                    <input type="text" class="form-control">
+                                    <label>Интервал времени <span class="required">*</span></label>
+                                    <select class="form-control">
+                                        <option value="" selected="selected">Выберите время</option>
+                                        <option value="00.00-00.00" data-end="0">Согласовать с получателем</option>
+                                        <option value="11.00-13.00" data-end="11">09.00-11.00</option>
+                                        <option value="13.00-15.00" data-end="13">11.00-13.00</option>
+                                        <option value="15.00-17.00" data-end="15">13.00-15.00</option>
+                                        <option value="17.00-19.00" data-end="17">15.00-17.00</option>
+                                        <option value="19.00-21.00" data-end="19">17.00-19.00</option>
+                                        <option value="21.00-23.00" data-end="21">19.00-21.00</option>
+                                        <option value="21.00-23.00" data-end="23">21.00-23.00</option>
+                                        <option value="23.00-09.00" data-end="99">23.00-09.00</option>
+                                    </select>
                                 </div>
                             </div>
+
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label>Last Name <span class="required">*</span></label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <label>Company Name</label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-6">
-                                <div class="form-group">
-                                    <label>Address <span class="required">*</span></label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12 col-md-6">
-                                <div class="form-group">
-                                    <label>Town / City <span class="required">*</span></label>
+                                    <label>Ваше имя <span class="required">*</span></label>
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label>State / County <span class="required">*</span></label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label>Postcode / Zip <span class="required">*</span></label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label>Email Address <span class="required">*</span></label>
-                                    <input type="email" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label>Phone <span class="required">*</span></label>
-                                    <input type="text" class="form-control">
+                                    <label>Ваш телефон <span class="required">*</span></label>
+                                    <input type="tel" class="form-control"/>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="create-an-account">
-                                    <label class="form-check-label" for="create-an-account">Create an account?</label>
+                                    <input checked="checked" type="checkbox" class="form-check-input" id="recipient_other">
+                                    <label class="form-check-label" for="recipient_other">Получатель другой человек (доставим сюрпризом)</label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Имя получателя <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
                                 </div>
                             </div>
 
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="ship-different-address">
-                                    <label class="form-check-label" for="ship-different-address">Ship to a different address?</label>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>Телефон получателя<span class="required">*</span></label>
+                                    <input type="tel" class="form-control"/>
                                 </div>
                             </div>
+
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="notes" id="notes" cols="30" rows="6" placeholder="Order Notes" class="form-control"></textarea>
+                                    <label>Адрес <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-group">
+                                    <label>кв./офис, подъезд, этаж <span class="required">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12 col-md-12">
+                                <div class="form-group">
+                                    <textarea name="notes" id="notes" cols="30" rows="6" placeholder="Комментарий к заказу" class="form-control"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -158,17 +130,19 @@
                         <div class="payment-method">
                             <p>
                                 <input type="radio" id="direct-bank-transfer" name="radio-group" checked="">
-                                <label for="direct-bank-transfer">Direct Bank Transfer</label>
+                                <label for="direct-bank-transfer">Онлайн по ссылке</label>
+                                После создания заказа вы сразу сможете оплатить онлайн картой или п СПБ. А так же частями в рассрочку.
 
-                                Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
                             </p>
                             <p>
                                 <input type="radio" id="paypal" name="radio-group">
-                                <label for="paypal">PayPal</label>
+                                <label for="paypal">Наличными</label>
+                                Обращаем внимание - оплатить заказ при получении возможно только если доставка осуществляется вам и вы лично принимаете заказ.
                             </p>
                             <p>
                                 <input type="radio" id="cash-on-delivery" name="radio-group">
-                                <label for="cash-on-delivery">Cash on Delivery</label>
+                                <label for="cash-on-delivery">Расчётный счет</label>
+                                Согласовывайте оплату за ренее, отправка заказа будет осуществлена только после физического прихода средств.
                             </p>
                         </div>
 
