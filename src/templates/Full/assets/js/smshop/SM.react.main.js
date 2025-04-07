@@ -5736,17 +5736,17 @@ var Index = (function (_super) {
                 React.createElement("div", { className: "form-floating" },
                     this.compileControl(),
                     fieldTypesE.select_ajax != form_field.type && React.createElement("label", { htmlFor: "form_" + item.id + "_" + form_field.field }, form_field.name)),
-                form_field.type == fieldTypesE.text && this.compileDataSet()));
+                form_field.type == fieldTypesE.input && this.compileDataSet()));
         if (form_field.layout_type == 'horizontal')
             return (React.createElement("div", { className: "row mb-2" },
                 (form_field.type != fieldTypesE.checkbox && form_field.type != fieldTypesE.radio && form_field.name) && React.createElement("label", { htmlFor: "form_" + item.id + "_" + form_field.field, className: "col-sm-2 col-form-label" }, form_field.name),
                 React.createElement("div", { className: "col-sm-10" },
                     this.compileControl(),
-                    form_field.type == fieldTypesE.text && this.compileDataSet())));
+                    form_field.type == fieldTypesE.input && this.compileDataSet())));
         return (React.createElement("div", { className: "mb-2 " + (form_field.css_class ? form_field.css_class : 'col-12') },
             (form_field.type != fieldTypesE.checkbox && form_field.type != fieldTypesE.radio && form_field.name) && React.createElement("label", { htmlFor: "form_" + item.id + "_" + form_field.field }, form_field.name),
             this.compileControl(),
-            form_field.type == fieldTypesE.text && this.compileDataSet()));
+            form_field.type == fieldTypesE.input && this.compileDataSet()));
     };
     return Index;
 }(React.Component));
@@ -35743,10 +35743,10 @@ var Module = (function (_super) {
     Module.prototype.getSettings = function () {
         var _this = this;
         console.log('module getSettings');
-        var _a = this.props, form_field = _a.form_field, settings = _a.settings;
+        var _a = this.props, form_field = _a.form_field, settings = _a.settings, item = _a.item;
         var api = new api_class_1.ApiClass('');
         if (form_field.params && form_field.params.module_name)
-            api.req(form_field.params.module_name, 'settings', { parent_module_name: settings.module.name })
+            api.req(form_field.params.module_name, 'settings', { parent_id: item.id, parent_module_name: settings.module.name })
                 .then(function (res) { return _this.setState({
                 settings: res[0],
                 pager: res[0].grid.pager,
@@ -35844,8 +35844,12 @@ var Module = (function (_super) {
                     React.createElement("div", { className: "d-flex gap-3 mb-3" },
                         React.createElement("div", { className: "btn btn-label-secondary col-auto", onClick: this.getData.bind(this) },
                             React.createElement("i", { className: "fa fa-refresh" })),
-                        (settings.form !== false) &&
-                            React.createElement("div", { className: "btn btn-primary col-auto", onClick: this.openAddForm.bind(this) }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C"),
+                        (settings.form !== false) && React.createElement("div", { className: "btn btn-primary col-auto", onClick: this.openAddForm.bind(this) }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C"),
+                        settings.grid.buttons && settings.grid.buttons.map(function (button) {
+                            if (button.type == 'link')
+                                return (React.createElement("a", { target: "_blank", href: button.params.link, className: "btn col-auto " + (button.css_class ? button.css_class : "btn-label-secondary"), dangerouslySetInnerHTML: { __html: button.name } }));
+                            return;
+                        }),
                         (settings.grid['filters'] || settings.grid['groups']) &&
                             React.createElement("div", { className: "filters col" }, settings.grid['filters'] && React.createElement(filters_1.default, { settings: settings, changeFilter: this.changeFilter.bind(this), changeGrouper: this.changeGrouper.bind(this) }))),
                 (item == null || true) &&
@@ -36791,6 +36795,11 @@ var GridContainer = (function (_super) {
                 !itemsIsLoading && React.createElement("div", { className: "btn btn-label-secondary col-auto", onClick: this.reload.bind(this) },
                     React.createElement("i", { className: "fa fa-refresh" })),
                 (settings.form !== false) && React.createElement("div", { className: "btn btn-primary col-auto", onClick: openAddForm.bind(this) }, "\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C"),
+                settings.grid.buttons && settings.grid.buttons.map(function (button) {
+                    if (button.type == 'link')
+                        return (React.createElement("a", { target: "_blank", href: button.params.link, className: "btn col-auto " + (button.css_class ? button.css_class : "btn-label-secondary"), dangerouslySetInnerHTML: { __html: button.name } }));
+                    return;
+                }),
                 (settings.grid['filters'] || settings.grid['groups']) &&
                     React.createElement("div", { className: "filters col" }, settings.grid['filters'] && React.createElement(filters_1.default, { settings: settings, changeFilter: changeFilter.bind(this), changeGrouper: changeGrouper.bind(this) }))),
             stats.length > 0 &&
@@ -36811,6 +36820,17 @@ var GridContainer = (function (_super) {
                 React.createElement("div", { className: "card-body" },
                     React.createElement("div", { className: "table-responsive" },
                         React.createElement(table_1.default, __assign({ changeSorter: changeSorter, data: data, totals: totals }, settings.grid, { sorter: sorter, form_callback: getItem }))),
+                    React.createElement("div", { className: "summary float-start mt-3" },
+                        pager.total !== pager.filtered && React.createElement("span", null,
+                            "\u041E\u0442\u0444\u0438\u043B\u044C\u0442\u0440\u043E\u0432\u0430\u043D\u043E: ",
+                            pager.filtered,
+                            " \u0438\u0437 ",
+                            pager.total,
+                            " \u0441\u0442\u0440\u043E\u043A"),
+                        pager.total == pager.filtered && React.createElement("span", null,
+                            "\u0412\u0441\u0435\u0433\u043E: ",
+                            pager.total,
+                            " \u0441\u0442\u0440\u043E\u043A")),
                     (settings.grid.pager && data.length > 0) && React.createElement("div", { className: "pager float-end mt-3" },
                         React.createElement(pager_1.default, { current: pager.current, total: Math.ceil(pager.filtered / pager.limit), visiblePages: 5, onPageChanged: this.changePager.bind(this), titles: { first: "В начало", prev: "Назад", prevSet: "<<<", nextSet: ">>>", next: "Далее", last: "Последняя" } }))))));
     };

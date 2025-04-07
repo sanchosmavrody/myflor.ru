@@ -46,6 +46,16 @@ if ($_REQUEST['act'] === 'settings') {
         $items = ['name' => $name, 'fields' => $items];
 
     $Res = [
+        "buttons"    => [
+            [
+                'type'      => 'link',
+                'name'      => 'Синхронизация с сайтом',
+                'css_class' => '',
+                'params'    => [
+                    'link' => '/engine/ajax/smshop/admin.php?mod=shop_composition&act=synch'
+                ]
+            ]
+        ],
         "stats"      => [],
         "informer"   => [],
         "form"       => [
@@ -2995,4 +3005,75 @@ if ($_REQUEST['act'] == 'import') {
         $Composition = new Composition($main_table);
         $Res[] = $Composition->save($item);
     }
+}
+
+if ($_REQUEST['act'] == 'synch') {
+
+    define("DBHOST_B", "82.202.172.225");  //80.87.202.162  86.110.212.9:3310  82.202.170.167
+    define("DBNAME_B", "admin_bloom");
+    define("DBUSER_B", "crm");
+    define("DBPASS_B", "dX3zD1vM");
+    define("PREFIX_B", "flr");
+    define("USERPREFIX_B", "flr");
+    define("COLLATE_B", "utf8");
+
+    $dbbx = new db;
+
+    $sql = <<<SQL
+SELECT PROD.ID,
+DES.NAME,
+PR.PRICE, 
+1 AS ACTIVE,
+
+PROD.PURCHASING_PRICE AS `COSTPRICE`, PROD.PURCHASING_PRICE AS `COSTPRICE5`,PROD.PURCHASING_PRICE AS `COSTPRICE1` ,
+'' AS CATEGORY,
+ CONCAT('https://mybloom.ru/upload/',IMGP.SUBDIR,'/',IMGP.FILE_NAME) AS img
+
+FROM b_catalog_product PROD
+LEFT JOIN b_iblock_element DES ON DES.ID = PROD.ID
+
+LEFT JOIN b_catalog_product_sets PRSET ON PRSET.OWNER_ID = PROD.ID
+
+LEFT JOIN b_catalog_price PR ON PR.PRODUCT_ID = PROD.ID
+LEFT JOIN b_file IMGP ON IMGP.ID = DES.PREVIEW_PICTURE
+
+WHERE PRSET.SET_ID IS NULL
+GROUP BY PROD.ID
+SQL;
+
+
+    $dbbx->connect(DBUSER_B, DBPASS_B, DBNAME_B, DBHOST_B);
+    $dbbx->query("SET SESSION sql_mode = ''; ");
+    $rows = $dbbx->super_query($sql, true);
+
+    $Composition = new Composition($main_table);
+
+    $Products = ['added' => [], 'updated' => [],];
+    $stats = ['updated' => 0, 'added' => 0];
+    $stats['all'] = count($rows);
+    foreach ($rows as $product) {
+
+        $item = [
+            'bitrix_id'     => $product['ID'],
+            'title'         => $product['NAME'],
+            'category_name' => 'Цветы',// $product['CATEGORY']
+            'price'         => (int)$product['PRICE'],
+            'cost'          => (int)$product['COSTPRICE']
+        ];
+        $composition_item = DbHelper::get_row("SELECT id FROM shop_composition WHERE bitrix_id = '{$product['ID']}'");
+        if (!empty($composition_item['id'])) {
+            $item['id'] = $composition_item['id'];
+            $stats['updated']++;
+            $Products['updated'][] = $item;
+        } else {
+            $stats['added']++;
+            $Products['added'][] = $item;
+        }
+
+        $Composition->save($item);
+    }
+
+    $Res['stats'] = $stats;
+    $Res['Products'] = $Products;
+
 }
