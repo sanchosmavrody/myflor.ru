@@ -1591,8 +1591,6 @@
     </div>
 </section>
 
-
-
 <section class="subscribe-area ptb-60">
     <div class="container">
         <div class="row align-items-center">
@@ -1738,115 +1736,9 @@
     </div>
 </div>
 
-<!-- Start Shopping Cart Modal -->
-<div class="modal right fade shoppingCartModal" id="shoppingCartModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-
-            <div class="modal-body">
-                <h3>My Cart (3)</h3>
-
-                <div class="product-cart-content">
-                    <div class="product-cart">
-                        <div class="product-image">
-                            <img src="/templates/Full/assets/img/img2.jpg" alt="image">
-                        </div>
-
-                        <div class="product-content">
-                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
-                            <span>Blue / XS</span>
-                            <div class="product-price">
-                                <span>1</span>
-                                <span>x</span>
-                                <span class="price">$191.00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-cart">
-                        <div class="product-image">
-                            <img src="/templates/Full/assets/img/img3.jpg" alt="image">
-                        </div>
-
-                        <div class="product-content">
-                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
-                            <span>Blue / XS</span>
-                            <div class="product-price">
-                                <span>1</span>
-                                <span>x</span>
-                                <span class="price">$191.00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-cart">
-                        <div class="product-image">
-                            <img src="/templates/Full/assets/img/img4.jpg" alt="image">
-                        </div>
-
-                        <div class="product-content">
-                            <h3><a href="/?do=item">Belted chino trousers polo</a></h3>
-                            <span>Blue / XS</span>
-                            <div class="product-price">
-                                <span>1</span>
-                                <span>x</span>
-                                <span class="price">$191.00</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-cart-subtotal">
-                    <span>Subtotal</span>
-
-                    <span class="subtotal">$500.00</span>
-                </div>
-
-                <div class="product-cart-btn">
-                    <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
-                    <a href="cart.html" class="btn btn-light">View Shopping Cart</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 {include file="/modules/basket_modal.tpl"}
 
 {include file="/modules/modals.tpl"}
-
-
-<script>
-    const SMSHOPTPL = {
-        basket: {
-            count_target: $('[data-basket-count]'),
-            total_target: $('[data-basket-total]'),
-            short_target: $('#shoppingCartModal .product-cart-content'),
-            short_item: function (item) {
-                return `<div class="product-cart position-relative">
-                        <div class="product-image">
-                            <img src="${item['photo_main']}" alt="image">
-                        </div>
-                        <div class="product-content">
-                            <h3><a href="/id/${item['item_id']}">${item['title']}</a></h3>
-                            <span>${item['category_2']}</span>
-                            <div class="product-price">
-                                <span>${item['count']}</span>
-                                <span>x</span>
-                                <span class="price">${item['price']} <i class="fa fa-rub"></i> </span>
-                            </div>
-                        </div>
-                        <span class="position-absolute top-0 end-0 text-danger cursor-pointer" data-basket-btn="remove" data-item-id="${item['item_id']}" ><i class="fa fa-remove"></i></span>
-                    </div>`
-            },
-        }
-    }
-</script>
-
 
 <script>
     const SMSHOPTPL = {

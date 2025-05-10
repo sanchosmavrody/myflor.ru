@@ -17,21 +17,15 @@
             <div class="col-lg-6 col-md-6">
                 <div class="product-details-content">
                     <h3>{title}</h3>
-
                     <div class="price">
                         Цена: <span class="new-price">{price}<i class="fa fa-ruble"></i></span>
                     </div>
-
-
                     <ul class="product-info">
                         <li><span>Цветы:</span> <a href="#">Пионы</a>,<a href="#">Эвкалипт</a></li>
                         <li><span>Упаковка:</span> <a href="#">Фомиран</a></li>
                         <li><span>Высота:</span> <a href="#">60см.</a></li>
-
                     </ul>
-
                     <p class="fst-italic border-start border-2 border-primary ps-1 text-bg-light mt-2 mb-2">{description}</p>
-
                     <div class="product-size-wrapper">
                         <h4>Выбрать размер букета:</h4>
                         <ul>
@@ -39,9 +33,7 @@
                             <li class="active"><a href="#">21 пионов</a></li>
                             <li><a href="#">25 пионов</a></li>
                         </ul>
-
                     </div>
-
                     <div class="product-info-btn">
                         <a href="#" data-bs-toggle="modal" data-bs-target="#sizeGuideModal"><i class="fas fa-crop"></i> Изменить состав при заказе </a>
                     </div>
@@ -484,3 +476,35 @@
         </div>
     </div>
 </section>
+
+
+{include file="/modules/basket_modal.tpl"}
+
+{include file="/modules/modals.tpl"}
+
+<script>
+    const SMSHOPTPL = {
+        basket: {
+            count_target: $('[data-basket-count]'),
+            total_target: $('[data-basket-total]'),
+            short_target: $('#shoppingCartModal .product-cart-content'),
+            short_item: function (item) {
+                return `<div class="product-cart position-relative">
+                        <div class="product-image">
+                            <img src="${item['photo_main']}" alt="image">
+                        </div>
+                        <div class="product-content">
+                            <h3><a href="/id/${item['item_id']}">${item['title']}</a></h3>
+                            <span>${item['category_2']}</span>
+                            <div class="product-price">
+                                <span>${item['count']}</span>
+                                <span>x</span>
+                                <span class="price">${item['price']} <i class="fa fa-rub"></i> </span>
+                            </div>
+                        </div>
+                        <span class="position-absolute top-0 end-0 text-danger cursor-pointer" data-basket-btn="remove" data-item-id="${item['item_id']}" ><i class="fa fa-remove"></i></span>
+                    </div>`
+            },
+        }
+    }
+</script>
