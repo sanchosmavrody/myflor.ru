@@ -43,15 +43,7 @@
 [/available]
 
 [available=main]
-{include file="/modules/_home.tpl"}
-[/available]
-
-[available=catalog]
-{include file="/modules/_catalog.tpl"}
-[/available]
-
-[available=item]
-{include file="/modules/_item.tpl"}
+{include file="/pages/main.tpl"}
 [/available]
 
 
