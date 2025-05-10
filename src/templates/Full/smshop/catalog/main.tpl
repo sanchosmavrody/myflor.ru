@@ -153,9 +153,10 @@
 </section>
 <!-- End Facility Area -->
 
+{include file="/modules/basket_modal.tpl"}
+
 {include file="/modules/modals.tpl"}
 
-{include file="/modules/basket.tpl"}
 
 <script>
     const SMSHOPTPL = {
