@@ -26,7 +26,7 @@
 
                 <div class="product-cart-btn">
                     <a href="/order/" class="btn btn-primary">Быстрый заказ</a>
-                    <a href="/order/" class="btn btn-light">Оформить</a>
+                    <a href="/basket/" class="btn btn-light">Оформить</a>
                 </div>
             </div>
         </div>

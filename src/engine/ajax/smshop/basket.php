@@ -10,6 +10,8 @@ if (!empty($_REQUEST['act']) and in_array($_REQUEST['act'], ['add', 'remove', 'm
 
     $item['uid'] = $uid;
     $item['item_id'] = (int)$_REQUEST['item_id'];
+    if(!empty($_REQUEST['count']))
+        $item['count'] = (int)$_REQUEST['count'];
 
     if (in_array($_REQUEST['act'], ['set_count', 'minus', 'plus'])) {
         $row = DbHelper::get_row("SELECT id,count FROM shop_basket WHERE uid = '{$uid}' AND item_id = '{$item['item_id']}'");
@@ -38,3 +40,4 @@ if (!empty($_REQUEST['act']) and in_array($_REQUEST['act'], ['add', 'remove', 'm
 $Res = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100]);
 $Res['pager']['total'] = $Res['pager']['filtered'];
 $Res['uid'] = $uid;
+$Res['$item'] = $item;

@@ -41,11 +41,15 @@
                     <div class="product-add-to-cart">
                         <div class="input-counter">
                             <span class="minus-btn"><i class="fas fa-minus"></i></span>
-                            <input type="text" value="1">
+                            <input data-basket-add-count data-item-id="{id}" type="text" value="1">
                             <span class="plus-btn"><i class="fas fa-plus"></i></span>
                         </div>
 
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i> В корзину</button>
+                        <button class="btn btn-primary" data-basket-btn="add" data-item-id="{id}">
+                            <span class="basket_btn_add"><i class="fas fa-cart-plus"></i> В корзину</span>
+                            <span class="basket_btn_remove"><i class="fa-solid fa-trash-can"></i> Убрать из корзины</span>
+                        </button>
+
                     </div>
 
                     <div class="buy-checkbox-btn">
