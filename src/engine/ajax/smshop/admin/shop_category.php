@@ -68,7 +68,7 @@ if ($_REQUEST['act'] == 'settings') {
                     "title"        => "Родительская категория",
                     "type"         => "select",
                     "target_field" => "parent_id",
-                    "params"       => ['list' => array_merge([['value' => "", 'name' => "Все"]], $parent_category_list)],
+                    "params"       => ['list' => array_merge([['value' => "", 'name' => "Все"],['value' => "0", 'name' => "Корневые"]], $parent_category_list)],
                     "css_class"    => "col-4"
                 ],
             ]

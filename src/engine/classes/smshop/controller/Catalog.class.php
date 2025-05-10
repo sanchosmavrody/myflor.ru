@@ -6,6 +6,7 @@ class Catalog extends Core
     var array $filters = [
         'id'         => ["where" => "id = '{value}'"],
         'category_2' => ["where" => "field_17.field_value = '{value}'"],
+        'category_1' => ["where" => "FIND_IN_SET('{value}',field_22.field_value)"],
     ];
 
     public function __construct(string $table)

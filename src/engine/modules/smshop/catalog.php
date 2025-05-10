@@ -3,23 +3,33 @@ global $shop_catalog;
 $Catalog = new Catalog('shop_' . $shop_catalog);
 
 $state = ['pager' => ['current' => 0, 'limit' => 20], 'sorter' => [], 'filter' => [], 'grouper' => []];
-$link_parts = explode('page/', $_REQUEST['url']);
-if (!empty($link_parts[1])) {
+$url = $_REQUEST['url'];
+
+$link_parts = explode('/page/', $url);
+if (!empty($link_parts[1])) {//костыль на пейджилку, если первая страница убираем /page/
     $state['pager']['current'] = (int)$link_parts[1] - 1;
     if ($state['pager']['current'] == 0)
-        header("location: /{$shop_catalog}/" . $link_parts[0]);
+        header("location: /{$shop_catalog}/" . $link_parts[0].'/');
 }
+//substr($str,-1)
+if(substr($link_parts[0],-1)=='/')
+    $link_parts[0] = mb_substr($link_parts[0], 0, -1);
+$link_parts = explode('/', $link_parts[0]);//все кроме секции page/+
+//Базовый кейс /catalog/Цветы/Геогрины/
+$Category = new Category('shop_category');
+$categories = $Category->getList(['title'=>end($link_parts)],['current' => 0, 'limit' => 20]);
+$page_category = $categories['data'][0];
 
+if($link_parts[0]=='Цветы' and !empty($link_parts[1]) )
+    $state['filter']['category_1'] = $page_category['id'];
 
 $Res = $Catalog->getList($state['filter'], $state['pager']);
-
 $state['pager']['filtered'] = $state['pager']['total'] = $Res['pager']['filtered'];
 
 
 $tpl->load_template('/smshop/catalog/shortstory.tpl');
 
 foreach ($Res['data'] as &$item) {
-
     unset($item['photos']);
 
     foreach ($item as $field => $value)
