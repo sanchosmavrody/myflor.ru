@@ -14,10 +14,13 @@ const SMSHOP = {
         uid: localStorage.getItem('basket_uid') ? localStorage.getItem('basket_uid') : '',
         init: function () {
             $('body').on('click', '[data-basket-btn]', (function (e) {
+                let item_id = $(e.currentTarget).data('item-id').toString();
                 let count = 1
-                if ($('[data-basket-count][data-item-id="' + $(e.currentTarget).data('item-id') + '"]').length)
-                    count = $('[data-basket-count][data-item-id="' + $(e.currentTarget).data('item-id') + '"]').val()
-                this.req($(e.currentTarget).attr('data-basket-btn'), {'count': count, 'item_id': $(e.currentTarget).data('item-id').toString()})
+                if($('[data-basket-add-count][data-item-id="' +item_id + '"]').length)
+                    count = $('[data-basket-add-count][data-item-id="' +item_id + '"]').val()
+                //if ($('[data-basket-count][data-item-id="' +item_id + '"]').length)
+                //    count = $('[data-basket-count][data-item-id="' + item_id + '"]').val()
+                this.req($(e.currentTarget).attr('data-basket-btn'), {'count': count, 'item_id': item_id})
             }).bind(this));
 
             $('body').on('click', '[data-basket-change-count]', (function (e) {
