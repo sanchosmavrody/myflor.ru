@@ -59,7 +59,7 @@ if ($_REQUEST['act'] == 'settings') {
                 ],
             ]
         ],
-        "module"     => ['name' => 'main', 'title' => 'Каталог авто',],
+        "module"     => ['name' => 'main', 'title' => 'Каталог',],
         "api_url"    => "/api/v2/index.php?mod=",
         "upload_url" => 'https://' . $_SERVER['HTTP_HOST']
             . "/engine/ajax/smshop/admin.php?mod=uploader",
