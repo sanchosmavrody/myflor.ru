@@ -8,8 +8,8 @@ $state = [
     'filter'  => ['c2' => 6],
     'grouper' => []
 ];
-$carousel_name = '';
-$state['filter']['main_carousel'] = 'Новинки';
+if (!empty($carousel_name))
+    $state['filter']['main_carousel'] = $carousel_name;
 
 $Res = $Catalog->getList($state['filter'], $state['pager']);
 

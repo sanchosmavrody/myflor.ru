@@ -113,7 +113,7 @@
                         <div class="tabs_item">
                             <div class="row">
                                 <div class="all-products-slides owl-carousel owl-theme">
-                                    {include file="engine/modules/smshop/front/carusel_items.php"}
+                                    {include file="engine/modules/smshop/front/carusel_items.php?carousel_name=Новинки"}
                                 </div>
                             </div>
                         </div>
@@ -121,7 +121,7 @@
                         <div class="tabs_item">
                             <div class="row">
                                 <div class="all-products-slides owl-carousel owl-theme">
-                                    {include file="engine/modules/smshop/front/carusel_items.php"}
+                                    {include file="engine/modules/smshop/front/carusel_items.php?carousel_name=Популярное"}
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                         <div class="tabs_item">
                             <div class="row">
                                 <div class="all-products-slides owl-carousel owl-theme">
-                                    {include file="engine/modules/smshop/front/carusel_items.php"}
+                                    {include file="engine/modules/smshop/front/carusel_items.php?carousel_name=Акции"}
                                 </div>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
 
         <div class="row">
             <div class="trending-products-slides owl-carousel owl-theme">
-                {include file="engine/modules/smshop/front/carusel_items.php"}
+                {include file="engine/modules/smshop/front/carusel_items.php?carousel_name=Топ 15"}
             </div>
         </div>
     </div>
@@ -170,7 +170,7 @@
 
         <div class="row">
             <div class="best-sellers-products-slides owl-carousel owl-theme">
-                {include file="engine/modules/smshop/front/carusel_items.php"}
+                {include file="engine/modules/smshop/front/carusel_items.php?carousel_name=Самые популярные"}
             </div>
         </div>
     </div>
