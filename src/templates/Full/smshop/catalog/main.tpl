@@ -42,7 +42,7 @@
         <div class="section-title">
             <h2>
                 <span class="dot"></span>
-                Каталог букетов
+                Композиции
             </h2>
         </div>
         <div class="row">
@@ -77,10 +77,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col d-flex justify-content-center">
+                        <div class="col d-flex justify-content-center d-none">
                             <p>Показано 22 из 102 результатов</p>
                         </div>
-                        <div class="col d-flex">
+                        <div class="col d-flex d-none">
                             <span>Лимит:</span>
                             <div class="show-products-number">
                                 <select>

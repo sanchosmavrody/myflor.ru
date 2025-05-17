@@ -23,7 +23,7 @@
     </div>
     <div class="collapse-widget collections-list-widget">
         <h3 class="collapse-widget-title">
-            Категории
+            Цветы (вываливать ссылки на цветы)
             <i class="fas fa-angle-up"></i>
         </h3>
 
