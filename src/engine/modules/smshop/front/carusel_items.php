@@ -1,6 +1,6 @@
 <?php
 
-
+require_once ROOT_DIR . '/engine/classes/smshop/include.php';
 $Catalog = new Catalog('shop_catalog');
 $state = [
     'pager'   => ['current' => 0, 'limit' => 20],

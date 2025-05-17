@@ -92,19 +92,24 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12">
                     <ul class="tabs without-bg">
-                        <li><a href="/?do=catalog">
+                        <li>
+                            <a href="/?do=catalog">
                                 <div class="dot"></div>
                                 Новинки
-                            </a></li>
-
-                        <li><a href="/?do=catalog">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/?do=catalog">
                                 <div class="dot"></div>
                                 Популярное
-                            </a></li>
-
-                        <li><a href="/?do=catalog">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/?do=catalog">
                                 <div class="dot"></div>
-                                Акции </a></li>
+                                Акции
+                            </a>
+                        </li>
                     </ul>
                 </div>
 

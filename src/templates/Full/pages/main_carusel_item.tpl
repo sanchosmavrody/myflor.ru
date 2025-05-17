@@ -1,11 +1,15 @@
 <div class="col-lg-12 col-md-12 col-sm-12">
     <div class="single-product-box">
-        <div class="product-image">
+        <div class="product-image position-relative">
             <a href="/{shop_catalog}/id/{id}"><img src="{photo_main}" alt="image"></a>
             <ul>
                 <li><a href="#" data-tooltip="tooltip" data-placement="top" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
                 <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
             </ul>
+
+            <div class="art-tag">
+                Арт. №{id}
+            </div>
         </div>
 
         <div class="product-content">

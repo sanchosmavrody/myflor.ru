@@ -14,7 +14,7 @@
 
 
             <div class="art-tag">
-                Арт. #{id}
+                Арт. №{id}
             </div>
 
         </div>

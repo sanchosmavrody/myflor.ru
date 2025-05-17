@@ -16,11 +16,21 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item p-relative">
-                            <a href="/" class="nav-link">Главная </a>
+                            <a href="/" class="nav-link">Главная</a>
+                        </li>
+
+                        <li class="nav-item p-relative">
+                            <a href="/catalog/" class="nav-link">Каталог</a>
+                        </li>
+
+                        <li class="nav-item p-relative">
+                            <a href="/catalog/Тип композиции/Моно Букет/" class="nav-link">Моно букеты</a>
                         </li>
 
 
-                        <li class="nav-item megamenu"><a href="/catalog/" class="nav-link active">
+                        [group=13]
+                        <li class="nav-item megamenu">
+                            <a href="/catalog/" class="nav-link active">
                                 Каталог
                                 <i class="fas fa-chevron-down"></i>
                             </a>
@@ -34,9 +44,6 @@
                                 </li>
                             </ul>
                         </li>
-
-
-                        [group=13]
 
                         <li class="nav-item p-relative">
                             <a href="#" class="nav-link">Букеты <i class="fas fa-chevron-down"></i></a>

@@ -22,10 +22,10 @@
                     </div>
                     <ul class="product-info">
                         <li><span>Цветы:</span> {category_1}</li>
-                        <li><span>Тип композиции:</span> {category_2}</li>
+                        [group=13]<li><span>Тип композиции:</span> {category_2}</li>
                         <li><span>Цвет:</span> {category_3}</li>
                         <li><span>Повод:</span> {category_4}</li>
-                        <li><span>Для кого:</span> {category_5}</li>
+                        <li><span>Для кого:</span> {category_5}</li>[/group]
                     </ul>
                     <p class="fst-italic border-start border-2 border-primary ps-1 text-bg-light mt-2 mb-2">{description}</p>
                     <div class="product-size-wrapper">
