@@ -1,0 +1,25 @@
+<?php
+
+
+$Catalog = new Catalog('shop_catalog');
+$state = [
+    'pager' => ['current' => 0, 'limit' => 20],
+    'sorter' => [],
+    'filter' => ['c2'=>6],
+    'grouper' => []
+];
+$Res = $Catalog->getList($state['filter'], $state['pager']);
+
+$tpl->load_template('/pages/main_carusel_item.tpl');
+
+foreach ($Res['data'] as &$item) {
+    unset($item['photos']);
+
+    foreach ($item as $field => $value)
+        $tpl->set('{' . $field . '}', $value);
+
+    $tpl->set('{shop_catalog}', 'catalog');
+    $tpl->compile('items');
+}
+
+echo $tpl->result['items'];
