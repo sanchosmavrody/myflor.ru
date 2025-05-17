@@ -179,47 +179,7 @@
 <section class="testimonials-area ptb-60 jarallax" data-jarallax='{"speed": 0.3}'>
     <div class="container">
         <div class="testimonials-slides owl-carousel owl-theme">
-            <div class="single-testimonials">
-                <div class="client-image">
-                    <img src="/templates/Full/assets/img/client1.jpg" alt="image">
-                </div>
-
-                <p>Большое спасибо организации, большой выбор от классических букетов до оригинальных. От космического букета получатель был в восторге!!! Очень понравилось новогодняя коробочка с мандаринами. Учли все пожелания для оформления открытки юбиляру и дополнительной информации к цветам. По сколько это был сюрприз, курьер, спасибо большое ему, вручил цветы и уведомил меня о доставке.
-                    Приятно было общаться с сотрудниками, рекомендую доставку цветов очень-очень!!!</p>
-
-                <div class="client-info">
-                    <h4>Валерия Ж.</h4>
-                    <span>20.01.2025</span>
-                </div>
-            </div>
-
-            <div class="single-testimonials">
-                <div class="client-image">
-                    <img src="/templates/Full/assets/img/client1.jpg" alt="image">
-                </div>
-
-                <p>
-                    Отличный флористический! Учли все пожелания, доставили в точный диапазон. Огромный букет гортензий и очень красивый, утонченный ирисов. Буду рекомендовать другим и заказывать вновь. Спасибо за четкость. И, что важно, оплата не переводом, а картой на сайте. Все прозрачно, слаженно и очень красиво!
-                </p>
-
-                <div class="client-info">
-                    <h4>Сергей Г. </h4>
-                    <span>20.02.2025</span>
-                </div>
-            </div>
-
-            <div class="single-testimonials">
-                <div class="client-image">
-                    <img src="/templates/Full/assets/img/client1.jpg" alt="image">
-                </div>
-
-                <p>Быстро, своевременно! Всё работает чётко. Цветы свежайшие. Упаковано на отлично, лента атласная в цвет купола роз. Заказывала букет из 15 роз 40см, цены на сайте актуальные. Важно было доставить цветы до 14.00, цветы заказала около 10.20, менеджер отзвонился, обратная связь хорошая, доставили в указанное время. Благодарю за оперативность! Буду пользоваться вашими услугами ещё!)</p>
-
-                <div class="client-info">
-                    <h4>Инна Р.</h4>
-                    <span>26.01.2025</span>
-                </div>
-            </div>
+            {custom category="442" template="pages/main_reviews_item" available="global" navigation="no" from="0" limit="30" order="date" sort="desc" cache="yes"}
         </div>
     </div>
 </section>
