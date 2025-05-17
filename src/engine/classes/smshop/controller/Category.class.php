@@ -5,6 +5,7 @@ class Category extends Core
     var string $table = '';
     var array $filters = [
         'id'           => ["where" => "id = '{value}'"],
+        'active_menu'  => ["where" => "field_28.field_value = '{value}'"],
         'title'        => ["where" => "field_3.field_value = '{value}'"],
         'search_query' => ["where" => "field_3.field_value = '{value}'"],
         'parent_id'    => ["where" => "field_4.field_value = '{value}'"],

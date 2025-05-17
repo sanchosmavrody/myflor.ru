@@ -130,6 +130,11 @@ if ($_REQUEST['act'] === 'data') {
     $Res = [];
     if (!empty($req)) {
         $Catalog = new Catalog($main_table);
+
+
+        //белых пионов
+
+
         $Res = $Catalog->getList($req['filter'], $req['pager']);
 
         foreach ($Res['data'] as &$item)

@@ -19,10 +19,19 @@
                             <a href="#" class="nav-link">Главная </a>
                         </li>
 
-                        <li class="nav-item p-relative">
-                            <a href="/catalog/" class="nav-link">Каталог <i class="fas fa-chevron-down"></i></a>
+
+                        <li class="nav-item megamenu"><a href="/catalog/" class="nav-link active">
+                                Каталог
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
                             <ul class="dropdown-menu">
-                                {include file="/engine/modules/smshop/front/submenu_items.php?parent_id=1"}
+                                <li class="nav-item">
+                                    <div class="container">
+                                        <div class="row">
+                                            {include file="/engine/modules/smshop/front/submenu_items.php?parent_id=1&cols=4"}
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </li>
 
