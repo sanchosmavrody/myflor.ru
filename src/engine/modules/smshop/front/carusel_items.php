@@ -3,11 +3,14 @@
 
 $Catalog = new Catalog('shop_catalog');
 $state = [
-    'pager' => ['current' => 0, 'limit' => 20],
-    'sorter' => [],
-    'filter' => ['c2'=>6],
+    'pager'   => ['current' => 0, 'limit' => 20],
+    'sorter'  => [],
+    'filter'  => ['c2' => 6],
     'grouper' => []
 ];
+
+$state['filter']['main_carousel'] = '';
+
 $Res = $Catalog->getList($state['filter'], $state['pager']);
 
 $tpl->load_template('/pages/main_carusel_item.tpl');

@@ -4,11 +4,12 @@ class Catalog extends Core
 {
     var string $table = '';
     var array $filters = [
-        'id'           => ["where" => "id = '{value}'"],
-        'search_query' => ["where" => "field_1.field_value LIKE '%{value}%'"],
-        'c2'           => ["where" => "field_17.field_value IN({value})"],
-        'category_2'   => ["where" => "field_17.field_value = '{value}'"],
-        'category_1'   => ["where" => "FIND_IN_SET('{value}',field_22.field_value)"],
+        'id'            => ["where" => "id = '{value}'"],
+        'search_query'  => ["where" => "field_1.field_value LIKE '%{value}%'"],
+        'c2'            => ["where" => "field_17.field_value IN({value})"],
+        'category_2'    => ["where" => "field_17.field_value = '{value}'"],
+        'category_1'    => ["where" => "FIND_IN_SET('{value}',field_22.field_value)"],
+        'main_carousel' => ["where" => "field_29.field_value ='{value}'"],
     ];
 
     public function __construct(string $table)
