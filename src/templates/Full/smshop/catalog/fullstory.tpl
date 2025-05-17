@@ -484,6 +484,8 @@
 </section>
 
 
+{include file="modules/facility_area.tpl"}
+
 {include file="/modules/basket_modal.tpl"}
 
 {include file="/modules/modals.tpl"}

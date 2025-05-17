@@ -16,7 +16,7 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item p-relative">
-                            <a href="#" class="nav-link">Главная </a>
+                            <a href="/" class="nav-link">Главная </a>
                         </li>
 
 
@@ -56,7 +56,8 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item megamenu"><a href="#" class="nav-link active">
+                        <li class="nav-item megamenu">
+                            <a href="#" class="nav-link active">
                                 0
                                 <i class="fas fa-chevron-down"></i>
                             </a>
@@ -200,9 +201,9 @@
 
                     </ul>
                     <div class="others-option">
-                        <div class="option-item"><a href="#">Оплата <i class="fa-regular fa-credit-card"></i></a></div>
-                        <div class="option-item"><a href="#">Доставка <i class="fa-solid fa-truck-fast"></i></a></div>
-                        <div class="option-item"><a href="#" data-bs-toggle="modal" data-bs-target="#shoppingCartModal">
+                        <div class="option-item"><a href="/pay.html">Оплата <i class="fa-regular fa-credit-card"></i></a></div>
+                        <div class="option-item"><a href="/delivery.html">Доставка <i class="fa-solid fa-truck-fast"></i></a></div>
+                        <div class="option-item"><a href="/pay.html" data-bs-toggle="modal" data-bs-target="#shoppingCartModal">
                                 Корзина(<span data-basket-count>0</span>)
                                 <i class="fas fa-shopping-bag"></i></a></div>
                     </div>

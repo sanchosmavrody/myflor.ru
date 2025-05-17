@@ -38,7 +38,7 @@
 [/available]
 [/group]
 
-[available=smshop]
+[available=smshop|static]
 {content}
 [/available]
 
