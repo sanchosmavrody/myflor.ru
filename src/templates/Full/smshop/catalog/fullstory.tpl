@@ -21,9 +21,11 @@
                         Цена: <span class="new-price">{price}<i class="fa fa-ruble"></i></span>
                     </div>
                     <ul class="product-info">
-                        <li><span>Цветы:</span> <a href="#">Пионы</a>,<a href="#">Эвкалипт</a></li>
-                        <li><span>Упаковка:</span> <a href="#">Фомиран</a></li>
-                        <li><span>Высота:</span> <a href="#">60см.</a></li>
+                        <li><span>Цветы:</span> {category_1}</li>
+                        <li><span>Тип композиции:</span> {category_2}</li>
+                        <li><span>Цвет:</span> {category_3}</li>
+                        <li><span>Повод:</span> {category_4}</li>
+                        <li><span>Для кого:</span> {category_5}</li>
                     </ul>
                     <p class="fst-italic border-start border-2 border-primary ps-1 text-bg-light mt-2 mb-2">{description}</p>
                     <div class="product-size-wrapper">
