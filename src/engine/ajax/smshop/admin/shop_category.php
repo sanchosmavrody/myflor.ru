@@ -68,7 +68,7 @@ if ($_REQUEST['act'] == 'settings') {
                     "title"        => "Родительская категория",
                     "type"         => "select",
                     "target_field" => "parent_id",
-                    "params"       => ['list' => array_merge([['value' => "", 'name' => "Все"],['value' => "0", 'name' => "Корневые"]], $parent_category_list)],
+                    "params"       => ['list' => array_merge([['value' => "", 'name' => "Все"], ['value' => "0", 'name' => "Корневые"]], $parent_category_list)],
                     "css_class"    => "col-4"
                 ],
             ]
@@ -103,9 +103,10 @@ if ($_REQUEST['act'] === 'item') {
             "type"        => $field['control_type'],
             "layout_type" => (in_array($table_field['control_type'], ['text', 'input', 'textarea', 'select']) ? "floating" : ""),
             "css_class"   => "col-md-{$field['size']}",
-            "params"      => ['url' => $field['control_params']],
+            //  "params"      => ['url' => $field['control_params']],
         ];
-        if ($field['control_type'] == 'select') {
+
+        if ($field['control_type'] === 'select') {
             $list_rows = explode(PHP_EOL, $field['control_params']);
             $list = [];
             foreach ($list_rows as $list_row)
