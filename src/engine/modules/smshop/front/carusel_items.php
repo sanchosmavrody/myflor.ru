@@ -8,10 +8,11 @@ $state = [
     'filter'  => ['c2' => 6],
     'grouper' => []
 ];
-
-$state['filter']['main_carousel'] = '';
+$carousel_name = '';
+$state['filter']['main_carousel'] = 'Новинки';
 
 $Res = $Catalog->getList($state['filter'], $state['pager']);
+
 
 $tpl->load_template('/pages/main_carusel_item.tpl');
 

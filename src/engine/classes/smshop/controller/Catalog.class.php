@@ -9,7 +9,7 @@ class Catalog extends Core
         'c2'            => ["where" => "field_17.field_value IN({value})"],
         'category_2'    => ["where" => "field_17.field_value = '{value}'"],
         'category_1'    => ["where" => "FIND_IN_SET('{value}',field_22.field_value)"],
-        'main_carousel' => ["where" => "field_29.field_value ='{value}'"],
+        'main_carousel' => ["where" => "FIND_IN_SET('{value}',field_29.field_value)"],
     ];
 
     public function __construct(string $table)
