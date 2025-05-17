@@ -26,6 +26,9 @@
                             </ul>
                         </li>
 
+
+                        [group=13]
+
                         <li class="nav-item p-relative">
                             <a href="#" class="nav-link">Букеты <i class="fas fa-chevron-down"></i></a>
                             <ul class="dropdown-menu">
@@ -43,7 +46,7 @@
                             <ul class="dropdown-menu">
                             </ul>
                         </li>
-                        [group=13]
+
                         <li class="nav-item megamenu"><a href="#" class="nav-link active">
                                 0
                                 <i class="fas fa-chevron-down"></i>
