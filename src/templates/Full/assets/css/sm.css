@@ -16,3 +16,15 @@
     position: absolute;
     line-height: 48px;
 }
+
+.product-box .product-image .art-tag {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgb(202 202 202 / 34%);
+    color: #000;
+    padding: 3px;
+    border-radius: 6px;
+    z-index: 2;
+    box-shadow: 1px 1px 20px 0px #000000;
+}
