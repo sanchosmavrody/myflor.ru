@@ -184,6 +184,7 @@
                                 <li class="nav-item"><a href="/?do=admin#/shop_composition" class="nav-link">Составлюящие</a></li>
 
                                 <li class="nav-item"><a href="/?do=admin#/fields" class="nav-link">Настройка полей</a></li>
+                                <li class="nav-item"><a href="/demo/index.html" class="nav-link">Демо шаблон</a></li>
                             </ul>
                         </li>
                         [/group]
