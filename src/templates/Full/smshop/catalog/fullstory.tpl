@@ -64,8 +64,9 @@
                             </label>
                         </div>
 
+
                         <div class="item">
-                            <a href="#" class="btn btn-primary">Быстрый заказ</a>
+                            <a data-bs-toggle="modal" data-bs-target="#quickOrderModal" href="#" class="btn btn-primary">Быстрый заказ</a>
                         </div>
                     </div>
                 </div>
@@ -310,6 +311,8 @@
 {include file="modules/facility_area.tpl"}
 
 {include file="/modules/basket_modal.tpl"}
+
+{include file="/modules/quick_order_modal.tpl"}
 
 {include file="/modules/modals.tpl"}
 

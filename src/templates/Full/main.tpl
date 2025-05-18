@@ -79,6 +79,8 @@
 <!-- Main JS -->
 <script src="/templates/Full/assets/js/main.js"></script>
 
+<script src="/templates/Full/assets/js/jquery.mask.min.js"></script>
+
 <script src="/templates/Full/assets/js/smshop/front.js"></script>
 </body>
 </html>

@@ -1,6 +1,9 @@
 const SMSHOP = {
     init: function () {
         this.basket.init()
+
+
+        $('input[type="tel"]').mask('+7(000) 000-00-00');
     },
     ui: {},
     helpers: {
@@ -16,8 +19,8 @@ const SMSHOP = {
             $('body').on('click', '[data-basket-btn]', (function (e) {
                 let item_id = $(e.currentTarget).data('item-id').toString();
                 let count = 1
-                if($('[data-basket-add-count][data-item-id="' +item_id + '"]').length)
-                    count = $('[data-basket-add-count][data-item-id="' +item_id + '"]').val()
+                if ($('[data-basket-add-count][data-item-id="' + item_id + '"]').length)
+                    count = $('[data-basket-add-count][data-item-id="' + item_id + '"]').val()
                 //if ($('[data-basket-count][data-item-id="' +item_id + '"]').length)
                 //    count = $('[data-basket-count][data-item-id="' + item_id + '"]').val()
                 this.req($(e.currentTarget).attr('data-basket-btn'), {'count': count, 'item_id': item_id})
@@ -69,7 +72,21 @@ const SMSHOP = {
             }
         }
     },
-    order: {}
+    order: {},
+    order_quick: {
+        init: function () {
+            $('#quickOrderModal').on('click', '[data-basket-btn]', (function (e) {
+                let item_id = $(e.currentTarget).data('item-id').toString();
+                let count = 1
+                if ($('[data-basket-add-count][data-item-id="' + item_id + '"]').length)
+                    count = $('[data-basket-add-count][data-item-id="' + item_id + '"]').val()
+                //if ($('[data-basket-count][data-item-id="' +item_id + '"]').length)
+                //    count = $('[data-basket-count][data-item-id="' + item_id + '"]').val()
+                this.req($(e.currentTarget).attr('data-basket-btn'), {'count': count, 'item_id': item_id})
+            }).bind(this));
+
+        },
+    }
 }
 
 $(document).ready(function () {
