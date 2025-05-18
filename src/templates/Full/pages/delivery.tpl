@@ -1,57 +1,99 @@
-<section class="about-area ptb-60">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-                <div class="about-content">
-                    <h2>About Our Store</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+<style>
+  .delivery-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  .delivery-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #111;
+  }
+  .delivery-section h3, .delivery-section h4 {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #444;
+  }
+  .delivery-section p {
+    margin: 12px 0;
+  }
+  .delivery-section ul {
+    padding-left: 20px;
+  }
+  .delivery-section ul li {
+    margin-bottom: 8px;
+  }
+  .delivery-section blockquote {
+    background-color: #f4f4f4;
+    border-left: 5px solid #ccc;
+    padding: 10px 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #666;
+  }
+</style>
 
-                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+<div class="delivery-section">
+  <h2>🌸 Доставка премиальных букетов по Москве и области</h2>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+  <h3>Бесплатная доставка по Москве</h3>
+  <p>
+    Мы заботимся о вашем удобстве — именно поэтому доставка наших букетов
+    <strong>в пределах МКАД абсолютно бесплатна</strong>.<br>
+    Вы выбираете — мы привозим. Без скрытых платежей и сюрпризов.
+  </p>
+  <blockquote>
+    🚫 У нас нет самовывоза — вместо этого мы предлагаем <strong>комфортную и бесплатную доставку прямо до вашей двери</strong>.
+  </blockquote>
 
-                    <div class="signature mb-0">
-                        <img src="/templates/Full/assets/img/signature.png" alt="image">
-                    </div>
-                </div>
-            </div>
+  <h3>Доставка за пределы МКАД</h3>
+  <p>
+    Живёте за МКАД? Не проблема!<br>
+    Доставка за пределы МКАД осуществляется по индивидуальному тарифу — <strong>от 620 ₽</strong>.
+  </p>
+  <ul>
+    <li>На этапе оформления заказа — система рассчитает стоимость автоматически;</li>
+    <li>Или по телефону — просто укажите адрес оператору, и он быстро озвучит сумму.</li>
+  </ul>
 
-            <div class="col-lg-6 col-md-12">
-                <div class="about-image">
-                    <img src="/templates/Full/assets/img/about1.jpg" class="about-img1" alt="image">
+  <h3>График доставки</h3>
+  <p>
+    Мы доставляем цветочные композиции <strong>ежедневно с 9:00 до 23:00</strong>.<br>
+    Утром, днём или вечером — выберите удобный интервал, и мы привезём букет точно в нужное время.
+  </p>
 
-                    <img src="/templates/Full/assets/img/about2.jpg" class="about-img2" alt="image">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+  <p><strong>💬 Остались вопросы?</strong><br>
+  Свяжитесь с нами — мы поможем с выбором букета, оформим заказ и подскажем все детали по доставке.</p>
 
+  <h2>❓ Часто задаваемые вопросы</h2>
 
-<section class="customer-service-area ptb-60">
-    <div class="container">
-        <div class="section-title">
-            <h2><span class="dot"></span> Customer Service</h2>
-        </div>
+  <h4>📦 Можно ли выбрать точное время доставки?</h4>
+  <p>
+    Да, при оформлении заказа вы можете указать желаемый интервал доставки. Мы постараемся привезти букет точно в это время или заранее свяжемся с вами, если потребуется уточнение.
+  </p>
 
-        <div class="customer-service-content">
-            <h3><i class="fas fa-gift"></i> Shipping Times and Costs</h3>
-            <ul>
-                <li>Complimentary ground shipping within 1 to 7 business days</li>
-                <li>In-store collection available within 1 to 7 business days</li>
-                <li>Next-day and Express delivery options also available</li>
-                <li>Purchases are delivered in an orange box tied with a Bolduc ribbon, with the exception of certain items</li>
-                <li>See the delivery FAQs for details on shipping methods, costs and delivery times</li>
-            </ul>
-            <h3><i class="far fa-credit-card"></i> Payment Methods</h3>
-            <p>Shella accepts the following payment methods:</p>
-            <ul>
-                <li>Credit Card: Visa, MasterCard, Discover, American Express, JCB, Visa Electron. The total will be charged to your card when the order is shipped.</li>
-                <li>Shella features a Fast Checkout option, allowing you to securely save your credit card details so that you don't have to re-enter them for future purchases.</li>
-                <li>PayPal: Shop easily online without having to enter your credit card details on the website.Your account will be charged once the order is completed. To register for a PayPal account, visit the website <a href="#">paypal.com.</a></li>
-            </ul>
-            <h3><i class="fas fa-sync"></i> Exchanges, Returns and Refunds</h3>
-            <p>Items returned within 14 days of their original shipment date in same as new condition will be eligible for a full refund or store credit. Refunds will be charged back to the original form of payment used for purchase. Customer is responsible for shipping charges when making returns and shipping/handling fees of original purchase is non-refundable.</p>
-        </div>
-    </div>
-</section>
+  <h4>🚗 Сколько стоит доставка за пределы МКАД?</h4>
+  <p>
+    Стоимость начинается от <strong>620 рублей</strong> и зависит от расстояния.<br>
+    Рассчитать точную сумму можно на странице оформления заказа или по телефону, указав адрес оператору.
+  </p>
+
+  <h4>🛍 Есть ли самовывоз?</h4>
+  <p>
+    Нет, самовывоз не предусмотрен. Вместо этого мы предлагаем <strong>бесплатную доставку по Москве в пределах МКАД</strong>, чтобы вы могли получить букет без лишних хлопот.
+  </p>
+
+  <h4>⏰ Можно ли заказать доставку в тот же день?</h4>
+  <p>
+    Да, мы принимаем <strong>срочные заказы в день оформления</strong>, если время и наличие цветов позволяют.<br>
+    Рекомендуем уточнить возможность срочной доставки у нашего оператора.
+  </p>
+
+  <h4>📅 Можно ли оформить доставку на конкретную дату?</h4>
+  <p>
+    Конечно! Вы можете выбрать нужную дату и желаемое время при оформлении заказа — мы доставим букет в точности по вашему графику.
+  </p>
+</div>

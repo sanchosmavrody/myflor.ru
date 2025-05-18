@@ -1,57 +1,50 @@
-<section class="customer-service-area ptb-60">
-    <div class="container">
-        <div class="section-title">
-            <h2><span class="dot"></span> Customer Service</h2>
-        </div>
+<section class="payment-section" style="max-width:900px;margin:40px auto;padding:20px;font-family:'Arial',sans-serif;line-height:1.6;color:#333;">
+  <h2>💳 Способы оплаты</h2>
 
-        <div class="customer-service-content">
-            <h3><i class="fas fa-gift"></i> Shipping Times and Costs</h3>
-            <ul>
-                <li>Complimentary ground shipping within 1 to 7 business days</li>
-                <li>In-store collection available within 1 to 7 business days</li>
-                <li>Next-day and Express delivery options also available</li>
-                <li>Purchases are delivered in an orange box tied with a Bolduc ribbon, with the exception of certain items</li>
-                <li>See the delivery FAQs for details on shipping methods, costs and delivery times</li>
-            </ul>
-            <h3><i class="far fa-credit-card"></i> Payment Methods</h3>
-            <p>Shella accepts the following payment methods:</p>
-            <ul>
-                <li>Credit Card: Visa, MasterCard, Discover, American Express, JCB, Visa Electron. The total will be charged to your card when the order is shipped.</li>
-                <li>Shella features a Fast Checkout option, allowing you to securely save your credit card details so that you don't have to re-enter them for future purchases.</li>
-                <li>PayPal: Shop easily online without having to enter your credit card details on the website.Your account will be charged once the order is completed. To register for a PayPal account, visit the website <a href="#">paypal.com.</a></li>
-            </ul>
-            <h3><i class="fas fa-sync"></i> Exchanges, Returns and Refunds</h3>
-            <p>Items returned within 14 days of their original shipment date in same as new condition will be eligible for a full refund or store credit. Refunds will be charged back to the original form of payment used for purchase. Customer is responsible for shipping charges when making returns and shipping/handling fees of original purchase is non-refundable.</p>
-        </div>
-    </div>
-</section>
+  <h3>Онлайн-оплата на сайте</h3>
+  <p>
+    Вы можете оплатить заказ прямо на сайте с помощью банковской карты. Мы принимаем карты следующих платёжных систем:
+  </p>
+  <ul>
+    <li>Visa</li>
+    <li>Mastercard</li>
+    <li>МИР</li>
+  </ul>
+  <p>
+    Оплата проходит через надёжный и защищённый платёжный шлюз. Мы не сохраняем данные вашей карты.
+  </p>
 
+  <h3>Оплата по QR-коду через СБП</h3>
+  <p>
+    Вы можете оплатить заказ, отсканировав QR-код через Систему быстрых платежей (СБП). Это просто и безопасно:
+  </p>
+  <ul>
+    <li>Откройте приложение вашего банка</li>
+    <li>Выберите опцию оплаты по QR-коду</li>
+    <li>Отсканируйте предоставленный QR-код и подтвердите оплату</li>
+  </ul>
 
-<section class="about-area ptb-60">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 col-md-12">
-                <div class="about-content">
-                    <h2>About Our Store</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+  <h3>Оплата при доставке</h3>
+  <p>
+    Оплатите заказ при получении курьеру. Доступны:
+  </p>
+  <ul>
+    <li>Наличный расчёт</li>
+    <li>Оплата картой через мобильный терминал</li>
+  </ul>
 
-                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+  <h3>Корпоративные и безналичные заказы</h3>
+  <p>
+    Для юридических лиц мы предлагаем возможность выставления счёта и оплаты по безналичному расчёту.  
+    Для получения счёта свяжитесь с нашей службой поддержки.
+  </p>
 
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+  <h3>Оплата частями или в рассрочку</h3>
+  <p>
+    Мы предлагаем возможность оплатить заказ <strong>в рассрочку или частями — без переплат и скрытых комиссий</strong>.  
+    Услуга доступна при оформлении заказа через наши платёжные сервисы.  
+    Вы сможете выбрать количество платежей и сразу увидеть сумму каждого взноса.
+  </p>
 
-                    <div class="signature mb-0">
-                        <img src="/templates/Full/assets/img/signature.png" alt="image">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-12">
-                <div class="about-image">
-                    <img src="/templates/Full/assets/img/about1.jpg" class="about-img1" alt="image">
-
-                    <img src="/templates/Full/assets/img/about2.jpg" class="about-img2" alt="image">
-                </div>
-            </div>
-        </div>
-    </div>
+  <p><strong>⚠️ Важно:</strong> Все заказы отправляются в обработку только после подтверждения оплаты.</p>
 </section>
