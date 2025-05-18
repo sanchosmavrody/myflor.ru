@@ -5,7 +5,7 @@ $Catalog = new Catalog('shop_catalog');
 $state = [
     'pager'   => ['current' => 0, 'limit' => 20],
     'sorter'  => [],
-    'filter'  => ['c2' => 6],
+    'filter'  => [],
     'grouper' => []
 ];
 if (!empty($carousel_name))
