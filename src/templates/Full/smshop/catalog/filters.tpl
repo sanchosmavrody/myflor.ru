@@ -1,8 +1,39 @@
 <div class="woocommerce-sidebar-area">
-    <div class="collapse-widget filter-list-widget">
+
+    <div class="collapse-widget collections-list-widget">
+        <h3 class="collapse-widget-title">
+            Цветы
+            <i class="fas fa-angle-up"></i>
+        </h3>
+        <ul class="collections-list-row">
+            {categories_1}
+        </ul>
+    </div>
+
+    <div class="collapse-widget collections-list-widget">
+        <h3 class="collapse-widget-title">
+            Тип композиции
+            <i class="fas fa-angle-up"></i>
+        </h3>
+        <ul class="collections-list-row">
+            {categories_2}
+        </ul>
+    </div>
+
+    <div class="collapse-widget collections-list-widget">
+        <h3 class="collapse-widget-title">
+            Цвет
+            <i class="fas fa-angle-up"></i>
+        </h3>
+        <ul class="collections-list-row">
+            {categories_3}
+        </ul>
+    </div>
+
+    [group=13]
+    <div class="collapse-widget filter-list-widget d-none">
         <h3 class="collapse-widget-title">
             Ваш выбор
-
             <i class="fas fa-angle-up"></i>
         </h3>
 
@@ -20,20 +51,6 @@
                 </a>
             </div>
         </div>
-    </div>
-    <div class="collapse-widget collections-list-widget">
-        <h3 class="collapse-widget-title">
-            Цветы (вываливать ссылки на цветы)
-            <i class="fas fa-angle-up"></i>
-        </h3>
-
-        <ul class="collections-list-row">
-            <li class="active"><a href="collections-style-1.html">Букеты</a></li>
-            <li><a href="#">Коробки</a></li>
-            <li><a href="#">Корзины</a></li>
-            <li><a href="#">Букет невесте</a></li>
-            <li><a href="#">Декор</a></li>
-        </ul>
     </div>
     <div class="collapse-widget brands-list-widget">
         <h3 class="collapse-widget-title">
@@ -119,4 +136,5 @@
             <li><a href="#">Невесте</a></li>
         </ul>
     </div>
+    [/group]
 </div>

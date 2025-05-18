@@ -1,7 +1,7 @@
 {include file="/modules/page_title_area.tpl"}
 
 
-<section class="category-boxes-area pt-60">
+<section class="category-boxes-area pt-60 d-none">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-6 col-md-6">
@@ -47,7 +47,7 @@
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-12">
-                {include file="/smshop/catalog/filters.tpl"}
+                {include file="/engine/modules/smshop/front/filters.php"}
             </div>
             <div class="col-lg-9 col-md-12">
                 <div class="products-filter-options">
