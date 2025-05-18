@@ -51,7 +51,7 @@ class Catalog extends Core
     function processItem(array &$item): void
     {
         $item['user_id'] = DbHelper::get_row("SELECT name FROM dle_users WHERE user_id = '{$item['user_id']}' ")['name'];
-        $item['category_2'] = DbHelper::get_row("SELECT field_value FROM shop_category_fields WHERE shop_category = '{$item['category_2']}' and field = 3;")['field_value'];
+        $item['category_2_name'] = DbHelper::get_row("SELECT field_value FROM shop_category_fields WHERE shop_category = '{$item['category_2']}' and field = 3;")['field_value'];
         $item['active_site'] = $item['active_site'] == 1 ? 'Да' : 'Нет';
         $item['active_main'] = $item['active_main'] == 1 ? 'Да' : 'Нет';
 

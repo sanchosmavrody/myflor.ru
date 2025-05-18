@@ -18,27 +18,18 @@
                 <div class="product-details-content">
                     <h3>{title}</h3>
                     <div class="price">
-                        Цена: <span class="new-price">{price}<i class="fa fa-ruble"></i></span>
+                        Цена: <b style="font-size: 23px;" class="new-price">{price}<i class="fa fa-ruble"></i></b>
                     </div>
                     <ul class="product-info">
-                        <li><span>Цветы:</span> {category_1}</li>
-                        [group=13]<li><span>Тип композиции:</span> {category_2}</li>
-                        <li><span>Цвет:</span> {category_3}</li>
-                        <li><span>Повод:</span> {category_4}</li>
-                        <li><span>Для кого:</span> {category_5}</li>[/group]
+                        <li><span>Цветы:</span> {category_1_name}</li>
+                        [group=13]
+                        <li><span>Тип композиции:</span> {category_2_name}</li>
+                        <li><span>Цвет:</span> {category_3_name}</li>
+                        <li><span>Повод:</span> {category_4_name}</li>
+                        <li><span>Для кого:</span> {category_5_name}</li>
+                        [/group]
                     </ul>
-                    <p class="fst-italic border-start border-2 border-primary ps-1 text-bg-light mt-2 mb-2">{description}</p>
-                    <div class="product-size-wrapper">
-                        <h4>Выбрать размер букета:</h4>
-                        <ul>
-                            <li><a href="#">19 пионов</a></li>
-                            <li class="active"><a href="#">21 пионов</a></li>
-                            <li><a href="#">25 пионов</a></li>
-                        </ul>
-                    </div>
-                    <div class="product-info-btn">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#sizeGuideModal"><i class="fas fa-crop"></i> Изменить состав при заказе </a>
-                    </div>
+
 
                     <div class="product-add-to-cart">
                         <div class="input-counter">
@@ -56,19 +47,19 @@
 
                     <div class="buy-checkbox-btn">
                         <div class="item">
-                            <input class="inp-cbx" id="cbx" type="checkbox">
+                            <input class="inp-cbx" id="cbx" type="checkbox" checked="checked">
                             <label class="cbx" for="cbx">
                                         <span>
                                             <svg width="12px" height="10px" viewbox="0 0 12 10">
                                                 <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                                             </svg>
                                         </span>
-                                <span>Я на всё согласен</span>
+                                <span>Я согласен с условиями</span>
                             </label>
                         </div>
 
                         <div class="item">
-                            <a href="#" class="btn btn-primary">Купить сейчас!</a>
+                            <a href="#" class="btn btn-primary">Быстрый заказ</a>
                         </div>
                     </div>
                 </div>
@@ -84,12 +75,19 @@
                                         Описание
                                     </a></li>
 
+                                <li>
+                                    <a href="#">
+                                        <div class="dot"></div>
+                                        Доставка
+                                    </a>
+                                </li>
                                 <li><a href="#">
                                         <div class="dot"></div>
-                                        Доставка и оплата
-                                    </a></li>
+                                        Оплата
+                                    </a>
+                                </li>
 
-                                <li><a href="#">
+                                <li class="d-none"><a href="#">
                                         <div class="dot"></div>
                                         Отзывы
                                     </a></li>
@@ -100,27 +98,7 @@
                             <div class="tab_content">
                                 <div class="tabs_item">
                                     <div class="products-details-tab-content">
-                                        <p>Вот вам яркий пример современных тенденций — понимание сути ресурсосберегающих технологий способствует повышению качества соответствующих условий активизации.
-                                            Сложно сказать, почему независимые государства, вне зависимости от их уровня, должны быть ассоциативно распределены по отраслям. Но действия представителей оппозиции, вне зависимости от их уровня, должны быть подвергнуты целой серии независимых исследований. Современные технологии достигли такого уровня,
-                                            что современная методология разработки выявляет срочную потребность экономической целесообразности принимаемых решений.</p>
-
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6">
-                                                <ul>
-                                                    <li>Сложно сказать, почему независимые государства</li>
-                                                    <li>Но действия представителей оппозиции</li>
-                                                    <li>Вот вам яркий пример современных тенденций</li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="col-lg-6 col-md-6">
-                                                <ol>
-                                                    <li>Сложно сказать, почему независимые государства</li>
-                                                    <li>Но действия представителей оппозиции</li>
-                                                    <li>Вот вам яркий пример современных тенденций</li>
-                                                </ol>
-                                            </div>
-                                        </div>
+                                        {description}
                                     </div>
                                 </div>
 
@@ -293,191 +271,30 @@
     <div class="related-products-area">
         <div class="container">
             <div class="section-title">
-                <h2><span class="dot"></span> Related Products</h2>
+                <h2><span class="dot"></span> Похожие товары </h2>
             </div>
 
             <div class="row">
                 <div class="trending-products-slides-two owl-carousel owl-theme">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single-product-box">
-                            <div class="product-image">
-                                <a href="product-type-1.html">
-                                    <img src="assets/img/trending-img5.jpg" alt="image">
-                                    <img src="assets/img/trending-hover-img5.jpg" alt="image">
-                                </a>
-
-                                <ul>
-                                    <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
-                                </ul>
-                            </div>
-
-                            <div class="product-content">
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
-
-                                <div class="product-price">
-                                    <span class="new-price">$191.00</span>
-                                </div>
-
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single-product-box">
-                            <div class="product-image">
-                                <a href="product-type-1.html">
-                                    <img src="assets/img/trending-img6.jpg" alt="image">
-                                    <img src="assets/img/trending-hover-img6.jpg" alt="image">
-                                </a>
-
-                                <ul>
-                                    <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
-                                </ul>
-                            </div>
-
-                            <div class="product-content">
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
-
-                                <div class="product-price">
-                                    <span class="old-price">$200.00</span>
-                                    <span class="new-price">$191.00</span>
-                                </div>
-
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single-product-box">
-                            <div class="product-image">
-                                <a href="product-type-1.html">
-                                    <img src="assets/img/bestseller-img5.jpg" alt="image">
-                                    <img src="assets/img/bestseller-hover-img5.jpg" alt="image">
-                                </a>
-
-                                <ul>
-                                    <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
-                                </ul>
-
-                                <div class="sale-tag">
-                                    Sale
-                                </div>
-                            </div>
-
-                            <div class="product-content">
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
-
-                                <div class="product-price">
-                                    <span class="new-price">$191.00</span>
-                                </div>
-
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single-product-box">
-                            <div class="product-image">
-                                <a href="product-type-1.html">
-                                    <img src="assets/img/trending-img8.jpg" alt="image">
-                                    <img src="assets/img/trending-hover-img8.jpg" alt="image">
-                                </a>
-
-                                <ul>
-                                    <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
-                                </ul>
-                            </div>
-
-                            <div class="product-content">
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
-
-                                <div class="product-price">
-                                    <span class="new-price">$191.00</span>
-                                </div>
-
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12">
-                        <div class="single-product-box">
-                            <div class="product-image">
-                                <a href="product-type-1.html">
-                                    <img src="assets/img/img2.jpg" alt="image">
-                                    <img src="assets/img/img-hover2.jpg" alt="image">
-                                </a>
-
-                                <ul>
-                                    <li><a href="#" data-tooltip="tooltip" data-placement="left" title="Quick View" data-bs-toggle="modal" data-bs-target="#productQuickView"><i class="far fa-eye"></i></a></li>
-                                    <li><a href="product-type-1.html" data-tooltip="tooltip" data-placement="left" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
-                                    <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="left" title="Add to Compare"><i class="fas fa-sync"></i></a></li>
-                                </ul>
-                            </div>
-
-                            <div class="product-content">
-                                <h3><a href="product-type-1.html">Belted chino trousers polo</a></h3>
-
-                                <div class="product-price">
-                                    <span class="new-price">$191.00</span>
-                                </div>
-
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-
-                                <a href="cart.html" class="btn btn-light">Add to Cart</a>
-                            </div>
-                        </div>
-                    </div>
+                    {include file="engine/modules/smshop/front/carusel_items.php?carousel_name="}
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="best-sellers-area pb-60">
+    <div class="container">
+        <div class="section-title">
+            <h2>
+                <span class="dot"></span>
+                Вы смотрели
+            </h2>
+        </div>
+
+        <div class="row">
+            <div class="best-sellers-products-slides owl-carousel owl-theme">
+                {include file="engine/modules/smshop/front/carusel_items.php"}
             </div>
         </div>
     </div>
@@ -503,7 +320,7 @@
                         </div>
                         <div class="product-content">
                             <h3><a href="/id/${item['item_id']}">${item['title']}</a></h3>
-                            <span>${item['category_2']}</span>
+                            <span>${item['category_2_name']}</span>
                             <div class="product-price">
                                 <span>${item['count']}</span>
                                 <span>x</span>

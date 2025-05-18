@@ -128,7 +128,7 @@
                         </div>
                         <div class="product-content">
                             <h3><a href="/id/${item['item_id']}">${item['title']}</a></h3>
-                            <span>${item['category_2']}</span>
+                            <span>${item['category_2_name']}</span>
                             <div class="product-price">
                                 <span>${item['count']}</span>
                                 <span>x</span>

@@ -36,7 +36,6 @@
 
                         <ul>
                             <li>Товар <span data-basket-total></span></li>
-                            <li>Доставка <span>0</span></li>
                             <li>Итого <span><b data-basket-total></b><i class="fa fa-rub"></i></span></li>
                         </ul>
                         <a href="/order/" class="btn btn-light">Оформить заказ</a>
@@ -66,9 +65,8 @@
                     <td class="product-name">
                         <a href="/{shop_catalog}/id/${item['id']}">${item['title']}</a>
                         <ul>
-                            <li>Раздел: <strong>${item['category_2']}</strong></li>
-                            <li>Size: <strong>XL</strong></li>
-                            <li>Material: <strong>Cotton</strong></li>
+                            <li>Раздел: <strong>${item['category_2_name']}</strong></li>
+
                         </ul>
                     </td>
                     <td class="product-price">
