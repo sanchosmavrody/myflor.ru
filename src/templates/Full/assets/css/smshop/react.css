@@ -21,6 +21,10 @@
     width: auto;
 }
 
+.react_admin .modal-body {
+    min-height: 336px;
+}
+
 @keyframes spinner-animation {
     to {
         transform: rotate(360deg);
@@ -119,17 +123,22 @@
 }
 
 .react_admin .filters .filter_item .filter_item_title {
-    background-color: #eceef1;
-!important;
+    background-color: #eceef1 !important;
 }
 
 .dark-style .react_admin .filters .filter_item .filter_item_title {
-    background-color: #2b2c40;
-!important;
+    background-color: #2b2c40 !important;
 }
 
 .react_admin .table th.sorted {
     position: relative;
+    padding-right: 12px;
+}
+
+.react_admin .hide_column_edit {
+    cursor: pointer;
+    top: -5px !important;
+    right: -5px !important;
 }
 
 .react_admin .table th.sorted.asc,
@@ -153,4 +162,161 @@
 
 .react_admin .table th.desc::before {
     content: '\f0dd';
+}
+
+.text-wrapper {
+    display: inline;
+}
+
+.text-short {
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.text-more {
+    font-size: 11px;
+    font-style: italic;
+    color: gray;
+    cursor: pointer;
+    margin-left: 4px;
+    position: relative;
+}
+
+.text-more::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    right: 0;
+    bottom: 120%;
+    background: rgba(36, 52, 70, 0.95);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    max-width: 300px;
+    width: max-content;
+    min-width: 200px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+}
+
+.text-more:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.status-tags-container {
+    display: flex;
+    align-items: center;
+}
+
+.status-tag {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid white;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: white !important;
+    font-size: 12px;
+}
+
+.status-tag-danger {
+    background-color: rgba(255, 62, 29, 0.87);
+}
+
+.status-tag-success {
+    background-color: rgba(76, 175, 80, 0.89);
+}
+
+.status-tag-warning {
+    background-color: rgba(255, 193, 7, 0.9);
+}
+
+.status-tag-secondary {
+    background-color: rgba(97, 122, 152, 0.85);
+}
+
+/* Подсказка */
+.status-tag:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(36, 52, 70, 0.95);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(36, 52, 70, 0.4);
+    font-family: system-ui, sans-serif;
+}
+
+.status-tag:hover {
+    transform: translateY(-2px) scale(1.1);
+    z-index: 10;
+}
+
+.message-bubble {
+    background-color: #f1f0f0;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin: 4px 0;
+    display: inline-block;
+    max-width: 400px;
+    font-size: 14px;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.text-more {
+    color: #007bff;
+    cursor: pointer;
+    margin-left: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.dark-style .message-bubble {
+    background-color: rgba(35, 35, 51, 0.66);
+    color: #f0f0f0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.32);
+}
+
+.dark-style .text-more {
+    color: #66b0ff;
+}
+
+[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -38px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(36, 52, 70, 0.95);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(36, 52, 70, 0.4);
+    font-family: system-ui, sans-serif;
 }
