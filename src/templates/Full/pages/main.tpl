@@ -164,7 +164,7 @@
     </div>
 </section>
 
-<section class="best-sellers-area pb-60">
+<section class="best-sellers-area pb-60 d-none">
     <div class="container">
         <div class="section-title">
             <h2>

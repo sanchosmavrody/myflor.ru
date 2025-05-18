@@ -6,7 +6,7 @@
                     <div class="icon">
                         <i class="fas fa-plane"></i>
                     </div>
-                    <h3>Доставка до 2 часов по мск.</h3>
+                    <h3>Доставим за 2 часа по Москве</h3>
                 </div>
             </div>
 
