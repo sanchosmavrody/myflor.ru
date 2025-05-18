@@ -21,7 +21,7 @@ foreach ([1, 3, 4, 5] as $category_id)
             $category['item']['alt_name'] = $category['item']['alt_name'] ? $category['item']['alt_name'] : $category['item']['title'];
             $category_item = '<a href="' . $category['item']['alt_name'] . '">' . $category['item']['title'] . '</a>';
         }
-        $Res['item']['category_' . $category_id] = implode(', ', $Res['item']['category_' . $category_id]);
+        $Res['item']['category_' . $category_id . '_name'] = implode(', ', $Res['item']['category_' . $category_id]);
     }
 
 foreach ($Res['item'] as $field => $value)
