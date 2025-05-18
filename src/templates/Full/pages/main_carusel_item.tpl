@@ -10,10 +10,12 @@
             <div class="art-tag">
                 Арт. №{id}
             </div>
+
+            {tag_html}
         </div>
 
         <div class="product-content">
-            <h3 style=" height: 55px;"><a href="/{shop_catalog}/id/{id}">{title}</a></h3>
+            <h3 style=" height: 63px;    overflow: hidden;"><a href="/{shop_catalog}/id/{id}">{title}</a></h3>
 
             <div class="product-price">
                 <span class="new-price">

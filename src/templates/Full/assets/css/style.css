@@ -2535,7 +2535,7 @@ All Products Area CSS
 .product-box .product-image ul li:last-child {
   margin-bottom: 0;
 }
-.product-box .product-image .sale-tag {
+.sale-tag {
   position: absolute;
   top: 10px;
   left: 10px;

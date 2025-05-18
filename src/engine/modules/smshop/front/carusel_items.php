@@ -22,6 +22,11 @@ foreach ($Res['data'] as &$item) {
     foreach ($item as $field => $value)
         $tpl->set('{' . $field . '}', $value);
 
+    if ($item['tag'])
+        $tpl->set('{tag_html}', "<div class='sale-tag'>{$item['tag']}</div>");
+    else
+        $tpl->set('{tag_html}', "");
+
     $tpl->set('{shop_catalog}', 'catalog');
     $tpl->compile('items');
 }

@@ -28,18 +28,30 @@ $Category = new Category('shop_category');
 $categories = $Category->getList($cat_filters, ['current' => 0, 'limit' => 20]);
 $page_category = $categories['data'][0];
 
-if (!empty($link_parts[1])) {
-    if ($link_parts[0] == 'Цветы')
-        $state['filter']['category_1'] = $page_category['id'];
-    if ($link_parts[0] == 'Тип композиции')
-        $state['filter']['category_2'] = $page_category['id'];
-    if ($link_parts[0] == 'Цвет')
-        $state['filter']['category_3'] = $page_category['id'];
-    if ($link_parts[0] == 'Повод')
-        $state['filter']['category_4'] = $page_category['id'];
-    if ($link_parts[0] == 'Кому')
-        $state['filter']['category_5'] = $page_category['id'];
-}
+
+$Res = $Category->getList(['parent_id' => '0'], ['current' => 0, 'limit' => 100], [['field' => 'title', 'direction' => 'asc']]);
+$main_categories = [];
+foreach ($Res['data'] as &$category)
+    $main_categories[$category['id']] = $category['title'];
+
+if (!empty($link_parts[1]))
+    foreach ($main_categories as $category_id => $main_title)
+        if ($link_parts[0] == $main_title)
+            $state['filter']['category_' . $category_id] = $page_category['id'];
+
+
+//if (!empty($link_parts[1])) {
+//    if ($link_parts[0] == 'Цветы')
+//        $state['filter']['category_1'] = $page_category['id'];
+//    if ($link_parts[0] == 'Тип композиции')
+//        $state['filter']['category_2'] = $page_category['id'];
+//    if ($link_parts[0] == 'Цвет')
+//        $state['filter']['category_3'] = $page_category['id'];
+//    if ($link_parts[0] == 'Повод')
+//        $state['filter']['category_4'] = $page_category['id'];
+//    if ($link_parts[0] == 'Кому')
+//        $state['filter']['category_5'] = $page_category['id'];
+//}
 
 $Res = $Catalog->getList($state['filter'], $state['pager']);
 $state['pager']['filtered'] = $state['pager']['total'] = $Res['pager']['filtered'];
@@ -52,6 +64,12 @@ foreach ($Res['data'] as &$item) {
 
     foreach ($item as $field => $value)
         $tpl->set('{' . $field . '}', $value);
+
+    if ($item['tag'])
+        $tpl->set('{tag_html}', "<div class='sale-tag'>{$item['tag']}</div>");
+    else
+        $tpl->set('{tag_html}', "");
+
 
     $tpl->set('{shop_catalog}', $shop_catalog);
     $tpl->compile('items');

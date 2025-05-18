@@ -3,13 +3,19 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">
-                <div class="products-page-gallery">
+                <div class="products-page-gallery position-relative">
                     <div class="product-page-gallery-main">
                         {photos}
                     </div>
 
                     <div class="product-page-gallery-preview">
                         {photos}
+                    </div>
+
+                    {tag_html}
+
+                    <div class="art-tag" style="bottom: unset; top: 15px">
+                        Арт. №{id}
                     </div>
                 </div>
             </div>
@@ -21,12 +27,12 @@
                         Цена: <b style="font-size: 23px;" class="new-price">{price}<i class="fa fa-ruble"></i></b>
                     </div>
                     <ul class="product-info">
-                        <li><span>Цветы:</span> {category_1_name}</li>
+                        <li><span>Цветы:</span> {category_1_html}</li>
                         [group=13]
-                        <li><span>Тип композиции:</span> {category_2_name}</li>
-                        <li><span>Цвет:</span> {category_3_name}</li>
-                        <li><span>Повод:</span> {category_4_name}</li>
-                        <li><span>Для кого:</span> {category_5_name}</li>
+                        <li><span>Тип композиции:</span> {category_2_html}</li>
+                        <li><span>Цвет:</span> {category_3_html}</li>
+                        <li><span>Повод:</span> {category_4_html}</li>
+                        <li><span>Для кого:</span> {category_5_html}</li>
                         [/group]
                     </ul>
 

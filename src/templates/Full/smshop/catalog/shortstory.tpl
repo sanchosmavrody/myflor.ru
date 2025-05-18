@@ -8,9 +8,7 @@
                 <li><a href="product-type-3.html" data-tooltip="tooltip" data-placement="top" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
             </ul>
 
-            <div class="sale-tag">
-                Акция
-            </div>
+            {tag_html}
 
 
             <div class="art-tag">
