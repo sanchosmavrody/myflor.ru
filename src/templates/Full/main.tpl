@@ -23,6 +23,7 @@
     <link rel="icon" type="image/png" href="/templates/Full/assets/img/favicon.png">
     <link rel="stylesheet" href="/templates/Full/assets/css/sm.css">
     <link rel="stylesheet" href="/templates/Full/assets/css/smshop/front.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
 
