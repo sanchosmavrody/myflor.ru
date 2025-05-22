@@ -66,7 +66,7 @@
 
 
                         <div class="item">
-                            <a data-bs-toggle="modal" data-bs-target="#quickOrderModal" href="#" class="btn btn-primary">Быстрый заказ</a>
+                            <button data-order-quick-btn data-item-id="{id}" class="btn btn-primary w-100">Быстрый заказ</button>
                         </div>
                     </div>
                 </div>
@@ -321,7 +321,7 @@
         basket: {
             count_target: $('[data-basket-count]'),
             total_target: $('[data-basket-total]'),
-            short_target: $('#shoppingCartModal .product-cart-content'),
+            short_target: $('.product-cart-content'),
             short_item: function (item) {
                 return `<div class="product-cart position-relative">
                         <div class="product-image">
@@ -329,7 +329,6 @@
                         </div>
                         <div class="product-content">
                             <h3><a href="/id/${item['item_id']}">${item['title']}</a></h3>
-                            <span>${item['category_2_name']}</span>
                             <div class="product-price">
                                 <span>${item['count']}</span>
                                 <span>x</span>

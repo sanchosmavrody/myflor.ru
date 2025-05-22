@@ -1,8 +1,7 @@
 const SMSHOP = {
     init: function () {
         this.basket.init()
-
-
+        this.order_quick.init()
         $('input[type="tel"]').mask('+7(000) 000-00-00');
     },
     ui: {},
@@ -21,9 +20,13 @@ const SMSHOP = {
                 let count = 1
                 if ($('[data-basket-add-count][data-item-id="' + item_id + '"]').length)
                     count = $('[data-basket-add-count][data-item-id="' + item_id + '"]').val()
-                //if ($('[data-basket-count][data-item-id="' +item_id + '"]').length)
-                //    count = $('[data-basket-count][data-item-id="' + item_id + '"]').val()
                 this.req($(e.currentTarget).attr('data-basket-btn'), {'count': count, 'item_id': item_id})
+
+                if ($(e.currentTarget).attr('data-basket-btn') === 'add') {
+                    let myModal = new bootstrap.Modal(document.getElementById("shoppingCartModal"), {});
+                    myModal.show();
+                }
+
             }).bind(this));
 
             $('body').on('click', '[data-basket-change-count]', (function (e) {
@@ -40,6 +43,8 @@ const SMSHOP = {
             }).bind(this));
 
             this.req()
+
+
         },
         req: function (action = 'get', data = {}) {
             data['uid'] = this.uid
@@ -75,21 +80,31 @@ const SMSHOP = {
     order: {},
     order_quick: {
         init: function () {
-            $('#quickOrderModal').on('click', '[data-basket-btn]', (function (e) {
+
+            $('body').on('click', '[data-order-quick-btn]', (function (e) {
                 let item_id = $(e.currentTarget).data('item-id').toString();
-                let count = 1
-                if ($('[data-basket-add-count][data-item-id="' + item_id + '"]').length)
-                    count = $('[data-basket-add-count][data-item-id="' + item_id + '"]').val()
-                //if ($('[data-basket-count][data-item-id="' +item_id + '"]').length)
-                //    count = $('[data-basket-count][data-item-id="' + item_id + '"]').val()
-                this.req($(e.currentTarget).attr('data-basket-btn'), {'count': count, 'item_id': item_id})
+                SMSHOP.basket.req('add', {'count': 1, 'item_id': item_id})
+                let myModal = new bootstrap.Modal(document.getElementById("quickOrder"), {});
+                myModal.show();
             }).bind(this));
 
+            $('#quickOrderModal').on('click', '[data-order-quick-submit]', (function (e) {
+                this.req('add', {'count': count, 'item_id': item_id})
+            }).bind(this));
+        },
+        req: function (action = 'get', data = {}) {
+            data['uid'] = this.uid
+            SMSHOP.helpers.req('order_quick', action, data).done((function (res) {
+                this.state = res
+                if (!localStorage.getItem('basket_uid') && this.state.uid)
+                    localStorage.setItem('basket_uid', this.state.uid)
+                this.processItems()
+            }).bind(this))
         },
     }
 }
 
 $(document).ready(function () {
-    console.log("ready!");
+    console.info("ready!");
     SMSHOP.init()
 });

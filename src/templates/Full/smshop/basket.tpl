@@ -66,7 +66,6 @@
                         <a href="/{shop_catalog}/id/${item['id']}">${item['title']}</a>
                         <ul>
                             <li>Раздел: <strong>${item['category_2_name']}</strong></li>
-
                         </ul>
                     </td>
                     <td class="product-price">
