@@ -130,7 +130,7 @@ const SrcLib = ['site',
     'whatsapp',
     'market',
     'flowwow',
-    'flawery'];
+    'flawery','myflor',];
 
 const dellReasonLibs = ['Холодный лид',
     'Думает',

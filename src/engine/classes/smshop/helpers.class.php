@@ -216,7 +216,7 @@ HTML;
 
             if ((!isset($item[$field['name']]) and empty($files_to_upload[$field['name']])) or empty($item['id'])) continue;
 
-            
+
             if (in_array($field['control_type'], ['input', 'text', 'select', 'select_multi', 'select_ajax', 'radio', 'checkbox', 'textarea', 'upload_img', 'upload_img_gallery'])) {
                 DbHelper::query("INSERT INTO {$item_type}_fields (`{$item_type}`,field,field_value)
                     VALUES ('{$item['id']}','{$field['id']}','{$item[$field['name']]}')
@@ -378,4 +378,37 @@ class FilesHelper
         //rmdir($dir);
     }
 
+}
+
+class CrmHelper
+{
+    static function order_add(array $order)
+    {
+        return self::req('admin.orders', 'add', $order);
+    }
+
+    static function req($mod, $method, $data, $timeout = 10)
+    {
+        $ch = curl_init();
+
+
+        curl_setopt($ch, CURLOPT_URL, "https://adm.myflor.ru/engine/ajax/shop/admin.php?mod={$mod}&act={$method}");
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'Content-Type: application/json'
+            //, 'Content-Length: ' . strlen(json_encode($data))
+        ]);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
+
+        try {
+            $response = curl_exec($ch);
+            return json_decode($response, true);
+        } catch (Exception $e) {
+            return ['error' => $e->getMessage()];
+        } finally {
+            curl_close($ch);
+        }
+    }
 }
