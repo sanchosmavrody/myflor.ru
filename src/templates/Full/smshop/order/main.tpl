@@ -1,6 +1,6 @@
 <section class="checkout-area ptb-60">
     <div class="container">
-        <form>
+        <form id="formOrder">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="billing-details">
@@ -10,14 +10,14 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <label>Дата доставки <span class="required">*</span></label>
-                                    <input type="date" class="form-control">
+                                    <input name="date" type="date" class="form-control">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <label>Интервал времени <span class="required">*</span></label>
-                                    <select class="form-control">
+                                    <select name="time" class="form-control">
                                         <option value="" selected="selected">Выберите время</option>
                                         <option value="00.00-00.00" data-end="0">Согласовать с получателем</option>
                                         <option value="11.00-13.00" data-end="11">09.00-11.00</option>
@@ -36,34 +36,38 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <label>Ваше имя <span class="required">*</span></label>
-                                    <input type="text" class="form-control">
+                                    <input name="name" type="text" class="form-control">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <label>Ваш телефон <span class="required">*</span></label>
-                                    <input type="tel" class="form-control"/>
+                                    <input name="phone" type="tel" class="form-control"/>
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-md-12">
-                                <div class="form-check">
-                                    <input checked="checked" type="checkbox" class="form-check-input" id="recipient_other">
+                                <div class="form-check cursor-pointer">
+                                    <input type="checkbox" class="form-check-input" id="recipient_other"
+                                           data-bs-target="#recipientFields" data-bs-toggle="collapse">
                                     <label class="form-check-label" for="recipient_other">Получатель другой человек (доставим сюрпризом)</label>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label>Имя получателя <span class="required">*</span></label>
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="form-group">
-                                    <label>Телефон получателя<span class="required">*</span></label>
-                                    <input type="tel" class="form-control"/>
+                            <div class="collapse in multi-collapse" id="recipientFields">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">Имя получателя <span class="required">*</span></label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">Телефон получателя<span class="required">*</span></label>
+                                            <input type="tel" class="form-control">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -71,14 +75,15 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Адрес <span class="required">*</span></label>
-                                    <input type="text" class="form-control">
+                                    <input name="address" type="text" class="form-control">
+                                    <input name="addressP" type="hidden">
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <label>кв./офис, подъезд, этаж <span class="required">*</span></label>
-                                    <input type="text" class="form-control">
+                                    <input name="apartment" type="text" class="form-control">
                                 </div>
                             </div>
 

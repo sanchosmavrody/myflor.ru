@@ -82,5 +82,9 @@
 <script src="/templates/Full/assets/js/jquery.mask.min.js"></script>
 
 <script src="/templates/Full/assets/js/smshop/front.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@22.6.0/dist/css/suggestions.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@22.6.0/dist/js/jquery.suggestions.min.js"></script>
+
 </body>
 </html>
