@@ -29,8 +29,10 @@ class CatalogComposition extends Core
         $Composition = new Composition('shop_composition');
         foreach ($Res['data'] as &$item) {
             $composition_item = $Composition->getItem($item['composition_id']);
-            $item['composition'] = $composition_item['item'];
-            $item['composition_id'] = $composition_item['item']['title'];
+            //$item['composition'] = $composition_item['item'];
+            //$item['composition_id'] = $composition_item['item']['title'];
+            $item['title'] = $composition_item['item']['title'];
+            $item['bitrix_id'] = $composition_item['item']['bitrix_id'];
             $item['category_name'] = $composition_item['item']['category_name'];
 
             $item['cost'] = $composition_item['item']['cost'];

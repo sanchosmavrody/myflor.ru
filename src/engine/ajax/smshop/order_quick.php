@@ -23,6 +23,7 @@ $Res['uid'] = $uid;
 
 if ($_REQUEST['act'] == 'test') {
     $Basket = new Basket('shop_basket');
+    $Catalog = new Basket('shop_catalog');
 
     $uid = preg_replace('/[^a-z\d]/ui', '', $_REQUEST['uid']);
 
@@ -34,7 +35,7 @@ if ($_REQUEST['act'] == 'test') {
             'order_id'       => 0,
             'method_id'      => $methodIdByAlt[$method],
             'status_id'      => 1,
-            'amount'         => 100,
+            'amount'         => $amount,
             'account_number' => '',
             'type_id'        => 1 // полный расчет
         ];
@@ -46,34 +47,50 @@ if ($_REQUEST['act'] == 'test') {
 
     }
 
+    function OrderItemsComposition(array $itemComposition): array
+    {
+        $Res = [];
+        foreach ($itemComposition as $item)
+            $Res[] = [
+                'ID'        => empty($item['bitrix_id']) ? 28 : $item['bitrix_id'],
+                'count'     => $item['count'],
+                'PRICE'     => $item['price'],
+                'COSTPRICE' => $item['cost'],
+                'COAST'     => $item['cost'] * $item['count'],
+                'PROFIT'    => ($item['price'] - $item['cost']) * $item['count'],
+            ];
+
+        return $Res;
+    }
+
     function OrderItems(&$totalSumm, $basket)
     {
+
+        //  return $basket;
         $items = [];
         foreach ($basket as $basket_item) {
-            $items[$basket['id']] = [
-                'id'                 => 13,
-                'itemid'             => 13,
+            $totalSumm += $basket_item['count'] * $basket_item['price'];
+            $items[$basket_item['item_id']] = [
+                'id'                 => $basket_item['item_id'],
+                'itemid'             => $basket_item['item_id'],
                 'Assembled'          => '1',
-                'count'              => 2,
+                'count'              => $basket_item['count'],
                 'level'              => 0,
-                'photo1'             => '',
-                'title'              => 'Веник',
-                'price'              => 1000,
-                'coast'              => 1000,
-                'profit'             => 0,
-                'ProductComposition' => [
-                    ['ID' => 1, 'AMOUNT' => 1, 'COAST' => 1, 'COSTPRICE' => 1, 'PROFIT' => 1]
-                ],
+                'photo1'             => 'https://myflor.ru' . $basket_item['photo_main'],
+                'title'              => $basket_item['title'],
+                'price'              => $basket_item['price'],
+                'coast'              => $basket_item['item']['cost'],
+                'profit'             => $basket_item['item']['profit'],
+                'ProductComposition' => OrderItemsComposition($basket_item['item']['composition']),
             ];
         }
         return $items;
-
     }
 
 
-    $basket_items = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100]);
     function Order($basket,
                    int $PhoneI,
+                   string|null $paymentType,
                    string|null $NameI,
                    string|null $Comment,
                    int|null $PhoneP,
@@ -87,8 +104,6 @@ if ($_REQUEST['act'] == 'test') {
                    string|null $TimeTo
     ): array
     {
-
-
         $totalSumm = 0;
         $orderItems = OrderItems($totalSumm, $basket);
         return [
@@ -105,7 +120,7 @@ if ($_REQUEST['act'] == 'test') {
             "courierName"   => '',//может быть самовывоз
             "orderItems"    => $orderItems,
             "TableCheck"    => OrderTableCheck('Москва', 400),
-            "payments"      => [OrderPayment('online', 1)],
+            "payments"      => [OrderPayment($paymentType, $totalSumm)],
             "Date"          => $Date ?? date('Y-m-d'),
             "TimeFrom"      => $TimeFrom ?? "00:00",
             "TimeTo"        => $TimeTo ?? "00:00",
@@ -115,18 +130,23 @@ if ($_REQUEST['act'] == 'test') {
     }
 
 
-    $Res = CrmHelper::order_add(Order($basket_items['data'], 70000000,
-        '',
-        '',
-        null,
-        null,
-        '',
-        '',
-        '',
-        '',
-        date('Y-m-d'),
-        '',
-        ''));
+    $basket_items = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
+
+    $Res = CrmHelper::order_add(
+        Order($basket_items['data'],
+            70000000,
+            'cash',
+            '',
+            '',
+            null,
+            null,
+            '',
+            '',
+            '',
+            '',
+            date('Y-m-d'),
+            '',
+            ''));
 }
 
 

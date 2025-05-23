@@ -16,7 +16,22 @@ class Basket extends Core
 
     function getList(array $filter = [], array $pager = [], array $sorter = [], array $params = []): array
     {
-        return parent::get($filter, $pager, $sorter, $params);
+        $Res = parent::get($filter, $pager, $sorter, $params);
+        if (in_array('full', $params))
+            $this->fillFull($Res['data']);
+        return $Res;
+    }
+
+    private function fillFull(&$basket): void
+    {
+        $Catalog = new Catalog('shop_catalog');
+        $CatalogComposition = new CatalogComposition('shop_catalog_composition');
+        foreach ($basket as &$item) {
+            $item['item'] = $Catalog->getItem($item['item_id']);
+            $item['item'] = $item['item']['item'];
+            $item['item']['composition'] = $CatalogComposition->getList(['parent_id' => $item['item_id']], ['current' => 0, 'limit' => 100]);
+            $item['item']['composition'] = $item['item']['composition']['data'];
+        }
     }
 
     function getItem(int $id): array
