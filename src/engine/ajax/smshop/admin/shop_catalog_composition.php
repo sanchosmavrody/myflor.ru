@@ -104,7 +104,8 @@ if ($_REQUEST['act'] === 'data') {
         $Res = $CatalogComposition->getList($filter, $req['pager']);
 
         $Res['totals'] = ['total' => 0, 'total_cost' => 0];
-        foreach ($Res['data'] as $item) {
+        foreach ($Res['data'] as &$item) {
+            $item['composition_id'] = $item['title'];
             $Res['totals']['total'] += $item['total'];
             $Res['totals']['total_cost'] += $item['total_cost'];
         }
