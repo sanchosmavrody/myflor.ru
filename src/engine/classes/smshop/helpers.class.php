@@ -382,12 +382,124 @@ class FilesHelper
 
 class CrmHelper
 {
-    static function order_add(array $order)
+
+    static function cleanPhone($phone): int
+    {
+        $phone = preg_replace('/[^0-9]/', '', $phone);
+        if (strlen($phone) == 10)
+            return (int)('7' . $phone);
+        else if (strlen($phone) == 11)
+            return (int)('7' . substr($phone, 1));
+        else if (strlen($phone) == 12)
+            return (int)('7' . substr($phone, 2));
+        return (int)$phone;
+    }
+
+    static function order_add(array $order): array
     {
         return self::req('admin.orders', 'add', $order);
     }
 
-    static function req($mod, $method, $data, $timeout = 10)
+    private static function OrderPayment(string $method, int $amount): array
+    {
+        $methodIdByAlt = ['online' => 16, 'store' => 14, 'courier' => 12, 'rs' => 17];
+        return [
+            'bitrix_id'      => 0,
+            'order_id'       => 0,
+            'method_id'      => $methodIdByAlt[$method],
+            'status_id'      => 1,
+            'amount'         => $amount,
+            'account_number' => '',
+            'type_id'        => 1 // полный расчет
+        ];
+    }
+
+    private static function OrderTableCheck(string $des, int $price): array
+    {
+        return ["TableDost" => [["des" => $des, "price" => $price]], "TableItems" => []];
+
+    }
+
+    private static function OrderItemsComposition(array $itemComposition): array
+    {
+        $Res = [];
+        foreach ($itemComposition as $item)
+            $Res[] = [
+                'ID'        => empty($item['bitrix_id']) ? 28 : $item['bitrix_id'],
+                'count'     => $item['count'],
+                'PRICE'     => $item['price'],
+                'COSTPRICE' => $item['cost'],
+                'COAST'     => $item['cost'] * $item['count'],
+                'PROFIT'    => ($item['price'] - $item['cost']) * $item['count'],
+            ];
+
+        return $Res;
+    }
+
+    private static function OrderItems(&$totalSumm, $basket): array
+    {
+        $items = [];
+        foreach ($basket as $basket_item) {
+            $totalSumm += $basket_item['count'] * $basket_item['price'];
+            $items[$basket_item['item_id']] = [
+                'id'                 => $basket_item['item_id'],
+                'itemid'             => $basket_item['item_id'],
+                'Assembled'          => '1',
+                'count'              => $basket_item['count'],
+                'level'              => 0,
+                'photo1'             => 'https://myflor.ru' . $basket_item['photo_main'],
+                'title'              => $basket_item['title'],
+                'price'              => $basket_item['price'],
+                'coast'              => $basket_item['item']['cost'],
+                'profit'             => $basket_item['item']['profit'],
+                'ProductComposition' => self::OrderItemsComposition($basket_item['item']['composition']),
+            ];
+        }
+        return $items;
+    }
+
+    public static function Order($basket,
+                                 int $PhoneI,
+                                 string|null $paymentType,
+                                 string|null $NameI,
+                                 string|null $Comment,
+                                 int|null $PhoneP,
+                                 string|null $NameP,
+                                 string|null $card,
+                                 string|null $Adress,
+                                 string|null $AdressPoint,
+                                 string|null $Apartments,
+                                 string|null $Date,
+                                 string|null $TimeFrom,
+                                 string|null $TimeTo
+    ): array
+    {
+        $totalSumm = 0;
+        $orderItems = self::OrderItems($totalSumm, $basket);
+        return [
+            "AdminComments" => $card ? '#Записка: ' . $card : '',
+            "Adress"        => $Adress . " кв./офис " . $Apartments,
+            "AdressPoint"   => $AdressPoint ?? '',
+            "src"           => "myflor.ru",
+            "shop"          => "MFL",
+            "Comment"       => $Comment ?? '',
+            "PhoneI"        => $PhoneI,
+            "NameI"         => $NameI ?? '',
+            "PhoneP"        => $PhoneP ?? '',
+            "NameP"         => $NameP ?? '',
+            "courierName"   => '',//может быть самовывоз
+            "orderItems"    => $orderItems,
+            "TableCheck"    => self::OrderTableCheck('Москва', 400),
+            "payments"      => [self::OrderPayment($paymentType, $totalSumm)],
+            "Date"          => $Date ?? date('Y-m-d'),
+            "TimeFrom"      => $TimeFrom ?? "00:00",
+            "TimeTo"        => $TimeTo ?? "00:00",
+            "totalSumm"     => $totalSumm,
+            "paymentType"   => "cash",
+        ];
+    }
+
+    private static function req($mod, $method, $data, $timeout = 10): array
     {
         $ch = curl_init();
 

@@ -79,6 +79,7 @@ const SMSHOP = {
     },
     order: {},
     order_quick: {
+        state: null,
         init: function () {
 
             $('body').on('click', '[data-order-quick-btn]', (function (e) {
@@ -88,17 +89,17 @@ const SMSHOP = {
                 myModal.show();
             }).bind(this));
 
-            $('#quickOrderModal').on('click', '[data-order-quick-submit]', (function (e) {
-                this.req('add', {'count': count, 'item_id': item_id})
+            $('#quickOrder').on('click', '[data-order-quick-submit]', (function (e) {
+                this.req('add', {'phone': $('.quickOrder #qo_phone').val(), 'comment': $('.quickOrder #qo_comment').val()})
             }).bind(this));
         },
         req: function (action = 'get', data = {}) {
-            data['uid'] = this.uid
+            data['uid'] = SMSHOP.basket.uid
             SMSHOP.helpers.req('order_quick', action, data).done((function (res) {
                 this.state = res
                 if (!localStorage.getItem('basket_uid') && this.state.uid)
                     localStorage.setItem('basket_uid', this.state.uid)
-                this.processItems()
+                //this.processItems()
             }).bind(this))
         },
     }
