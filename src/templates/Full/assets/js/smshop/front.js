@@ -1,16 +1,25 @@
 const SMSHOP = {
     init: function () {
-        this.basket.init()
-        this.order_quick.init()
-        this.order.init()
+
+        if (window.location.pathname === '/order/')
+            this.order.init()
+        else {
+            this.basket.init()
+            this.order_quick.init()
+        }
         $('input[type="tel"]').mask('+7(000) 000-00-00');
 
-    }, ui: {}, helpers: {
+    },
+    ui: {},
+    helpers: {
         ajax_url: '/engine/ajax/smshop/index.php', req: function (mod, action, data) {
             return $.ajax(this.ajax_url + `?mod=${mod}&act=${action}`, {data: data, type: 'POST'})
         },
-    }, basket: {
-        state: null, uid: localStorage.getItem('basket_uid') ? localStorage.getItem('basket_uid') : '', init: function () {
+    },
+    basket: {
+        state: null,
+        uid: localStorage.getItem('basket_uid') ? localStorage.getItem('basket_uid') : '',
+        init: function () {
             $('body').on('click', '[data-basket-btn]', (function (e) {
                 let item_id = $(e.currentTarget).data('item-id').toString();
                 let count = 1
@@ -35,18 +44,17 @@ const SMSHOP = {
                     'count': $(e.currentTarget).val(), 'item_id': $(e.currentTarget).data('item-id').toString()
                 })
             }).bind(this));
-
             this.req()
-
-
-        }, req: function (action = 'get', data = {}) {
+        },
+        req: function (action = 'get', data = {}) {
             data['uid'] = this.uid
             SMSHOP.helpers.req('basket', action, data).done((function (res) {
                 this.state = res
                 if (!localStorage.getItem('basket_uid') && this.state.uid) localStorage.setItem('basket_uid', this.state.uid)
                 this.processItems()
             }).bind(this))
-        }, processItems: function () {
+        },
+        processItems: function () {
             if (this.state) {
 
                 $(SMSHOPTPL.basket.count_target).text(this.state.pager.total)
@@ -65,32 +73,88 @@ const SMSHOP = {
                 })
             }
         }
-    }, order: {
+    },
+    order: {
+        uid: localStorage.getItem('basket_uid') ? localStorage.getItem('basket_uid') : '',
+        state: {
+            address: '456',
+            addressPoint: '',
+            apartment: '',
+            date: '',
+            time: '',
+            name: '',
+            phone: '',
+            nameP: '',
+            phoneP: '',
+            basket: {data: []},
+            delivery: {
+                price: 0,
+                des: ''
+            },
+            paymentType: '',
+        },
         init: function () {
-            if ($('[name="address"]').length > 0) {
-                $('[name="address"]').change(function (e) {
+            if ($('#address').length > 0) {
+                $('#address').change(function (e) {
                     $('[name="adressP"]').val($(this).val());
                 });
-
-                $('[name="address"]').suggestions({
-                    token: "5eaf99e5874141a6ce002e8d3badc229ecb42825", type: "ADDRESS", /* Вызывается, когда пользователь выбирает одну из подсказок */
-                    onSelect: function (suggestion) {
-
-
-                        var Selected = {
-                            name: suggestion.value, coordinates: [suggestion.data.geo_lat, suggestion.data.geo_lon], type: suggestion.data.fias_level, metro: suggestion.data.metro
-                        }
-
-                        $('[name="adressP"]').val(Selected.name);
-                        $('[name="adressPPoint"]').val(Selected.coordinates);
-                        ///SM.getTotal();
-                    }
+                $('#address').suggestions({
+                    token: "5eaf99e5874141a6ce002e8d3badc229ecb42825", type: "ADDRESS",
+                    onSelect: (function (suggestion) {
+                        const Selected = {name: suggestion.value, coordinates: [suggestion.data.geo_lat, suggestion.data.geo_lon], type: suggestion.data.fias_level, metro: suggestion.data.metro}
+                        this.state.address = Selected.name
+                        this.state.addressPoint = Selected.coordinates
+                        this.setState(this.state)
+                        this.req('calc', this.state)
+                    }).bind(this)
                 });
-
             }
-        }
-    }, order_quick: {
-        state: null, init: function () {
+
+            $('#recipient_other').change(function () {
+                if (!$(this).is(':checked'))
+                    $('[name="nameP"],[name="phoneP"]').val('')
+            })
+
+            $('#formOrder [name]').change((function (item) {
+                this.state[$(item.target).attr('name')] = $(item.target).val()
+                if (['date', 'time', 'addressPoint'].indexOf($(item.target).attr('name')) > -1)
+                    this.req('calc', this.state)
+            }).bind(this))
+
+            this.req()
+        },
+        setState: function (newState) {
+            this.state = {...this.state, ...newState};
+            $('#formOrder [name]').each((function (i, item) {
+                if (this.state[$(item).attr('name')] === undefined)
+                    return
+
+                if ($(item).attr('type') === 'radio') {
+                    $('input:radio[name="' + $(item).attr('name') + '"][value=' + this.state[$(item).attr('name')] + ']').prop('checked', true);
+                } else
+                    $(item).val(this.state[$(item).attr('name')])
+            }).bind(this))
+
+            if (this.state.delivery)
+                $('#totalDelivery').text(this.state.delivery.price)
+
+
+            $(SMSHOPTPL.basket.short_target).html('')
+            this.state.basket.data.map(function (item) {
+                $(SMSHOPTPL.basket.short_target).append(SMSHOPTPL.basket.short_item(item))
+            })
+
+        },
+        req: function (action = 'get', data = {}) {
+            data['uid'] = this.uid
+            SMSHOP.helpers.req('order', action, data).done((function (newState) {
+                this.setState(newState)
+            }).bind(this))
+        },
+    },
+    order_quick: {
+        state: null,
+        init: function () {
 
             $('body').on('click', '[data-order-quick-btn]', (function (e) {
                 let item_id = $(e.currentTarget).data('item-id').toString();
@@ -102,12 +166,12 @@ const SMSHOP = {
             $('#quickOrder').on('click', '[data-order-quick-submit]', (function (e) {
                 this.req('add', {'phone': $('.quickOrder #qo_phone').val(), 'comment': $('.quickOrder #qo_comment').val()})
             }).bind(this));
-        }, req: function (action = 'get', data = {}) {
+        },
+        req: function (action = 'get', data = {}) {
             data['uid'] = SMSHOP.basket.uid
             SMSHOP.helpers.req('order_quick', action, data).done((function (res) {
                 this.state = res
                 if (!localStorage.getItem('basket_uid') && this.state.uid) localStorage.setItem('basket_uid', this.state.uid)
-                //this.processItems()
             }).bind(this))
         },
     }

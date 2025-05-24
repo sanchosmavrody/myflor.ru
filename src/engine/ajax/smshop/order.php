@@ -8,7 +8,47 @@ if (empty($uid))
 
 
 $Res['uid'] = $uid;
+$defState = [
+    'address'      => '',
+    'addressPoint' => '',
+    'apartment'    => '',
+    'date'         => '',
+    'time'         => '',
+    'name'         => '',
+    'phone'        => '',
+    'nameP'        => '',
+    'phoneP'       => '',
+    'basket'       => ['data' => []],
+    'delivery'     => [
+        'price' => 0,
+        'des'   => ''
+    ],
+    'paymentType'  => 'courier'
+];
 
+$Basket = new Basket('shop_basket');
+
+if ($_REQUEST['act'] == 'get') {
+
+    $basket_items = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
+
+
+    $Res['item'] = CrmHelper::Order($basket_items['data'],
+        0,
+        'courier',
+        '',
+        '',
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        date('Y-m-d'),
+        null,
+        null);
+
+}
 
 if ($_REQUEST['act'] == 'add') {
 

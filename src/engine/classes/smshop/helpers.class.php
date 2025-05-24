@@ -400,6 +400,22 @@ class CrmHelper
         return self::req('admin.orders', 'add', $order);
     }
 
+    static function order_calc(array &$order): void
+    {
+        //проверка товара на даты и доступность - вернем кол во 0
+        //возможность самовывоза минимального количества итп
+        //проверка скидок клиента и в будущем промокода + обсчет
+        //обсчет доставки по геозонам
+
+        // https://adm.myflor.ru/engine/ajax/shop/index.php?mod=delivery&act=calcDelivery
+        // {"AdressPPoint":["55.92373","37.750433"],"AdressP":"Московская обл, г Мытищи, ул Белобородова, д 2Г, кв 1","inPrice":5200}
+
+        $delivery = self::req('delivery', 'calcDelivery', ["AdressPPoint" => ["55.92373", "37.750433"], 'AdressP' => '', 'inPrice' => 52200]);
+
+        $order['delivery'] = $delivery;
+
+    }
+
     private static function OrderPayment(string $method, int $amount): array
     {
         $methodIdByAlt = ['online' => 16, 'store' => 14, 'courier' => 12, 'rs' => 17];

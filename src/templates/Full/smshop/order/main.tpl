@@ -36,7 +36,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <label>Ваше имя <span class="required">*</span></label>
-                                    <input name="name" type="text" class="form-control">
+                                    <input name="name" type="text" class="form-control"/>
                                 </div>
                             </div>
 
@@ -59,13 +59,13 @@
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group mb-3">
                                             <label class="form-label">Имя получателя <span class="required">*</span></label>
-                                            <input type="text" class="form-control">
+                                            <input name="nameP" type="text" class="form-control"/>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group mb-3">
                                             <label class="form-label">Телефон получателя<span class="required">*</span></label>
-                                            <input type="tel" class="form-control">
+                                            <input name="phoneP" type="tel" class="form-control"/>
                                         </div>
                                     </div>
                                 </div>
@@ -75,8 +75,9 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
                                     <label>Адрес <span class="required">*</span></label>
-                                    <input name="address" type="text" class="form-control">
-                                    <input name="addressP" type="hidden">
+                                    <input id="address" type="text" class="form-control"/>
+                                    <input name="address" type="text">
+                                    <input name="addressPoint" type="text">
                                 </div>
                             </div>
 
@@ -116,7 +117,7 @@
                                     </td>
 
                                     <td class="shipping-price">
-                                        <span>0</span> <i class="fa fa-rub"></i>
+                                        <span id="totalDelivery">0</span> <i class="fa fa-rub"></i>
                                     </td>
                                 </tr>
                                 <tr>
@@ -134,20 +135,19 @@
 
                         <div class="payment-method">
                             <p>
-                                <input type="radio" id="direct-bank-transfer" name="radio-group" checked="">
-                                <label for="direct-bank-transfer">Онлайн по ссылке</label>
+                                <input value="online" type="radio" id="pt_online" name="paymentType" checked="checked">
+                                <label for="pt_online">Онлайн по ссылке</label>
                                 После создания заказа вы сразу сможете оплатить онлайн картой или п СПБ. А так же частями в рассрочку.
-
                             </p>
                             <p>
-                                <input type="radio" id="paypal" name="radio-group">
-                                <label for="paypal">Наличными</label>
+                                <input value="cash" type="radio" id="pt_cash" name="paymentType">
+                                <label for="pt_cash">Наличными</label>
                                 Обращаем внимание - оплатить заказ при получении возможно только если доставка осуществляется вам и вы лично принимаете заказ.
                             </p>
                             <p>
-                                <input type="radio" id="cash-on-delivery" name="radio-group">
-                                <label for="cash-on-delivery">Расчётный счет</label>
-                                Согласовывайте оплату за ренее, отправка заказа будет осуществлена только после физического прихода средств.
+                                <input value="rs" type="radio" id="pt_rs" name="paymentType">
+                                <label for="pt_rs">Расчётный счет</label>
+                                Уважаемые клиенты! Просим заранее согласовать условия оплаты. Отгрузка товара производится исключительно после поступления денежных средств на наш счет.
                             </p>
                         </div>
 
