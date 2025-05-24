@@ -23,17 +23,17 @@ $defState = [
         'price' => 0,
         'des'   => ''
     ],
-    'paymentType'  => 'courier'
+    'paymentType'  => 'courier',
+    'totalSumm'    => 0
 ];
 
 $Basket = new Basket('shop_basket');
 
 if ($_REQUEST['act'] == 'get') {
+    $Res = $defState;
+    $Res['basket'] = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
 
-    $basket_items = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
-
-
-    $Res['item'] = CrmHelper::Order($basket_items['data'],
+    $order = CrmHelper::Order($Res['basket']['data'],
         0,
         'courier',
         '',
@@ -48,6 +48,27 @@ if ($_REQUEST['act'] == 'get') {
         null,
         null);
 
+    $Res['totalSumm'] = $order['totalSumm'];
+
+}
+if ($_REQUEST['act'] == 'calc') {
+    $basket_items = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
+
+
+    $Res['basket'] = [];
+
+
+    foreach ($order['orderItems'] as $orderItem) {
+        $Res['basket']['data'][] = [
+            'id'         => $orderItem['itemid'],
+            'item_id'    => $orderItem['itemid'],
+            'count'      => $orderItem['count'],
+            'title'      => $orderItem['title'],
+            'price'      => $orderItem['price'],
+            'photo_main' => $orderItem['photo1'],
+            'total'      => $orderItem['count'] * $orderItem['price']
+        ];
+    }
 }
 
 if ($_REQUEST['act'] == 'add') {

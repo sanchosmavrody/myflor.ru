@@ -24,25 +24,23 @@ if ($_REQUEST['act'] === 'add') {
     if (isset($_REQUEST['phoneP']))
         $phoneP = CrmHelper::cleanPhone($_REQUEST['phoneP']);
 
-    if ($phone)
-        $Res = CrmHelper::order_add(
-            CrmHelper::Order($basket_items['data'],
-                $phone,
-                'courier',
-                '',
-                $_REQUEST['comment'],
-                $phoneP,
-                null,
-                '',
-                '',
-                '',
-                '',
-                date('Y-m-d'),
-                '',
-                '')
-        );
+    if ($phone) {
+        $order = CrmHelper::Order($basket_items['data'],
+            $phone,
+            'courier',
+            '',
+            $_REQUEST['comment'],
+            $phoneP,
+            null,
+            '',
+            '',
+            '',
+            '',
+            date('Y-m-d'),
+            '',
+            '');
 
+        $Res = CrmHelper::order_add($order);
+    }
 }
-
-
 

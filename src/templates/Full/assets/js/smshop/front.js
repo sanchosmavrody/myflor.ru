@@ -1,6 +1,5 @@
 const SMSHOP = {
     init: function () {
-
         if (window.location.pathname === '/order/')
             this.order.init()
         else {
@@ -8,7 +7,6 @@ const SMSHOP = {
             this.order_quick.init()
         }
         $('input[type="tel"]').mask('+7(000) 000-00-00');
-
     },
     ui: {},
     helpers: {
@@ -23,7 +21,8 @@ const SMSHOP = {
             $('body').on('click', '[data-basket-btn]', (function (e) {
                 let item_id = $(e.currentTarget).data('item-id').toString();
                 let count = 1
-                if ($('[data-basket-add-count][data-item-id="' + item_id + '"]').length) count = $('[data-basket-add-count][data-item-id="' + item_id + '"]').val()
+                if ($('[data-basket-add-count][data-item-id="' + item_id + '"]').length)
+                    count = $('[data-basket-add-count][data-item-id="' + item_id + '"]').val()
                 this.req($(e.currentTarget).attr('data-basket-btn'), {'count': count, 'item_id': item_id})
 
                 if ($(e.currentTarget).attr('data-basket-btn') === 'add') {
@@ -69,7 +68,8 @@ const SMSHOP = {
                 //process all button to basket on page
                 $('body [data-basket-btn]').each(function () {
                     $(this).attr('data-basket-btn', 'add')
-                    if (item_id_list.indexOf($(this).data('item-id').toString()) > -1) $(this).attr('data-basket-btn', 'remove')
+                    if (item_id_list.indexOf($(this).data('item-id').toString()) > -1)
+                        $(this).attr('data-basket-btn', 'remove')
                 })
             }
         }
@@ -92,6 +92,7 @@ const SMSHOP = {
                 des: ''
             },
             paymentType: '',
+            totalSumm: 0
         },
         init: function () {
             if ($('#address').length > 0) {
@@ -128,22 +129,20 @@ const SMSHOP = {
             $('#formOrder [name]').each((function (i, item) {
                 if (this.state[$(item).attr('name')] === undefined)
                     return
-
-                if ($(item).attr('type') === 'radio') {
+                if ($(item).attr('type') === 'radio')
                     $('input:radio[name="' + $(item).attr('name') + '"][value=' + this.state[$(item).attr('name')] + ']').prop('checked', true);
-                } else
+                else
                     $(item).val(this.state[$(item).attr('name')])
             }).bind(this))
 
-            if (this.state.delivery)
-                $('#totalDelivery').text(this.state.delivery.price)
 
-
+            $(SMSHOPTPL.basket.delivery_price_target).text(this.state.delivery.price)
+            $(SMSHOPTPL.basket.delivery_des_target).text(this.state.delivery.des)
+            $(SMSHOPTPL.basket.total_target).text(this.state.totalSumm)
             $(SMSHOPTPL.basket.short_target).html('')
             this.state.basket.data.map(function (item) {
                 $(SMSHOPTPL.basket.short_target).append(SMSHOPTPL.basket.short_item(item))
             })
-
         },
         req: function (action = 'get', data = {}) {
             data['uid'] = this.uid

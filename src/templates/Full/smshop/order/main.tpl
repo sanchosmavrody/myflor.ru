@@ -113,11 +113,11 @@
                                 <tfoot>
                                 <tr>
                                     <td class="order-shipping">
-                                        <span>Доставка</span>
+                                        <span>Доставка:</span> <b data-basket-delivery-des></b>
                                     </td>
 
                                     <td class="shipping-price">
-                                        <span id="totalDelivery">0</span> <i class="fa fa-rub"></i>
+                                        <span id="totalDelivery" data-basket-delivery-price>0</span> <i class="fa fa-rub"></i>
                                     </td>
                                 </tr>
                                 <tr>
@@ -126,7 +126,7 @@
                                     </td>
 
                                     <td class="product-subtotal">
-                                        <span class="subtotal-amount"><span data-basket-total></span> <i class="fa fa-rub"></i></span>
+                                        <span class="subtotal-amount"><span data-basket-total>0</span> <i class="fa fa-rub"></i></span>
                                     </td>
                                 </tr>
                                 </tfoot>
@@ -140,7 +140,7 @@
                                 После создания заказа вы сразу сможете оплатить онлайн картой или п СПБ. А так же частями в рассрочку.
                             </p>
                             <p>
-                                <input value="cash" type="radio" id="pt_cash" name="paymentType">
+                                <input value="courier" type="radio" id="pt_cash" name="paymentType">
                                 <label for="pt_cash">Наличными</label>
                                 Обращаем внимание - оплатить заказ при получении возможно только если доставка осуществляется вам и вы лично принимаете заказ.
                             </p>
@@ -165,6 +165,8 @@
         basket: {
             count_target: $('[data-basket-count]'),
             total_target: $('[data-basket-total]'),
+            delivery_price_target: $('[data-basket-delivery-price]'),
+            delivery_des_target: $('[data-basket-delivery-des]'),
             short_target: $('#basket_full_grid'),
             short_item: function (item) {
                 return `
