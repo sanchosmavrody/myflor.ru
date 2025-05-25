@@ -135,7 +135,9 @@ if ($_REQUEST['act'] == 'add') {
             $time[1]);
 
         CrmHelper::order_calc($order);//рекулькуляция - посчитает доставку и проведет валидацию
-        $Res['order'] = CrmHelper::order_add($order);
+        $order = CrmHelper::order_add($order);
+        
+        $Res['order_id'] = 1;
 
     }
 }
