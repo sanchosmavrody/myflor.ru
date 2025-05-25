@@ -114,7 +114,7 @@ if ($_REQUEST['act'] == 'add') {
         $basket_items = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
         $phone = CrmHelper::cleanPhone($_REQUEST['phone']);
         $phoneP = null;
-        if (isset($_REQUEST['phoneP']))
+        if (!empty($_REQUEST['phoneP']))
             $phoneP = CrmHelper::cleanPhone($_REQUEST['phoneP']);
 
         $time = explode('-', $_REQUEST['time']);
@@ -136,8 +136,8 @@ if ($_REQUEST['act'] == 'add') {
 
         CrmHelper::order_calc($order);//рекулькуляция - посчитает доставку и проведет валидацию
         $order = CrmHelper::order_add($order);
-        
-        $Res['order_id'] = 1;
+
+        $Res['order_id'] = $order['order_id'];
 
     }
 }
