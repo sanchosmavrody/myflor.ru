@@ -6,6 +6,11 @@
                     <div class="billing-details">
                         <h3 class="title">Оформление заказа</h3>
 
+
+                        <div class="messages">
+                        </div>
+
+
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
@@ -19,15 +24,15 @@
                                     <label>Интервал времени <span class="required">*</span></label>
                                     <select name="time" class="form-control">
                                         <option value="" selected="selected">Выберите время</option>
-                                        <option value="00.00-00.00" data-end="0">Согласовать с получателем</option>
-                                        <option value="11.00-13.00" data-end="11">09.00-11.00</option>
-                                        <option value="13.00-15.00" data-end="13">11.00-13.00</option>
-                                        <option value="15.00-17.00" data-end="15">13.00-15.00</option>
-                                        <option value="17.00-19.00" data-end="17">15.00-17.00</option>
-                                        <option value="19.00-21.00" data-end="19">17.00-19.00</option>
-                                        <option value="21.00-23.00" data-end="21">19.00-21.00</option>
-                                        <option value="21.00-23.00" data-end="23">21.00-23.00</option>
-                                        <option value="23.00-09.00" data-end="99">23.00-09.00</option>
+                                        <option value="00:00-00:00" data-end="0">Согласовать с получателем</option>
+                                        <option value="11:00-13:00" data-end="11">09.00-11.00</option>
+                                        <option value="13:00-15:00" data-end="13">11.00-13.00</option>
+                                        <option value="15:00-17:00" data-end="15">13.00-15.00</option>
+                                        <option value="17:00-19:00" data-end="17">15.00-17.00</option>
+                                        <option value="19:00-21:00" data-end="19">17.00-19.00</option>
+                                        <option value="21:00-23:00" data-end="21">19.00-21.00</option>
+                                        <option value="21:00-23:00" data-end="23">21.00-23.00</option>
+                                        <option value="23:00-09:00" data-end="99">23.00-09.00</option>
                                     </select>
                                 </div>
                             </div>
@@ -35,15 +40,15 @@
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label>Ваше имя <span class="required">*</span></label>
-                                    <input name="name" type="text" class="form-control"/>
+                                    <label>Ваш телефон <span class="required">*</span></label>
+                                    <input name="phone" type="tel" class="form-control"/>
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label>Ваш телефон <span class="required">*</span></label>
-                                    <input name="phone" type="tel" class="form-control"/>
+                                    <label>Ваше имя</label>
+                                    <input name="name" type="text" class="form-control"/>
                                 </div>
                             </div>
 
@@ -76,18 +81,17 @@
                                 <div class="form-group">
                                     <label>Адрес <span class="required">*</span></label>
                                     <input id="address" type="text" class="form-control"/>
-                                    <input name="address" type="text">
-                                    <input name="addressPoint" type="text">
+                                    <input name="address" type="hidden"/>
+                                    <input name="addressPoint" type="hidden"/>
                                 </div>
                             </div>
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <label>кв./офис, подъезд, этаж <span class="required">*</span></label>
-                                    <input name="apartment" type="text" class="form-control">
+                                    <label>кв./офис, подъезд, этаж</label>
+                                    <input name="apartment" type="text" class="form-control"/>
                                 </div>
                             </div>
-
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
@@ -151,7 +155,7 @@
                             </p>
                         </div>
 
-                        <a href="#" class="btn btn-primary order-btn">Оформить</a>
+                        <button data-order-submit class="btn btn-primary order-btn">Оформить</button>
                     </div>
                 </div>
             </div>
@@ -162,17 +166,22 @@
 
 <script>
     const SMSHOPTPL = {
+        order: {
+            message_target: $('.messages'),
+            message_item: function (item) {
+                return `<div class="alert alert-${item['type']}" role="alert">${item['text']} </div>`
+            },
+            delivery_price_target: $('[data-basket-delivery-price]'),
+            delivery_des_target: $('[data-basket-delivery-des]'),
+        },
         basket: {
             count_target: $('[data-basket-count]'),
             total_target: $('[data-basket-total]'),
-            delivery_price_target: $('[data-basket-delivery-price]'),
-            delivery_des_target: $('[data-basket-delivery-des]'),
             short_target: $('#basket_full_grid'),
             short_item: function (item) {
-                return `
-                <tr>
+                return `<tr>
                     <td class="product-name">
-                        <a href="/{shop_catalog}/id/${item['id']}">${item['title']}</a>
+                        <a target="_blank" href="/{shop_catalog}/id/${item['id']}"><b>${item['count']}х</b> ${item['title']}</a>
                     </td>
                     <td class="product-total">
                         <span class="subtotal-amount">${item['total']} <i class="fa fa-rub"></i></span>

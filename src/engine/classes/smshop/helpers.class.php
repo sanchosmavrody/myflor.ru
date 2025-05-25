@@ -407,14 +407,17 @@ class CrmHelper
         //проверка скидок клиента и в будущем промокода + обсчет
         //обсчет доставки по геозонам
 
-        // https://adm.myflor.ru/engine/ajax/shop/index.php?mod=delivery&act=calcDelivery
-        // {"AdressPPoint":["55.92373","37.750433"],"AdressP":"Московская обл, г Мытищи, ул Белобородова, д 2Г, кв 1","inPrice":5200}
+        $order['totalSumm'] = 0;
+        if (!empty($order['AdressPoint'])) {
+            $delivery = self::req('delivery', 'calcDelivery', ["AdressPPoint" => explode(',', $order['AdressPoint']), 'AdressP' => '', 'inPrice' => $order['totalSumm']]);
+            $order['TableCheck'] = self::OrderTableCheck($delivery['des'], $delivery['price']);
+            $order['totalSumm'] += $delivery['price'];
+        }
 
-        $delivery = self::req('delivery', 'calcDelivery', ["AdressPPoint" => ["55.92373", "37.750433"], 'AdressP' => '', 'inPrice' => 52200]);
-
-        $order['delivery'] = $delivery;
-
+        foreach ($order['orderItems'] as $orderItem)
+            $order['totalSumm'] += $orderItem['price'] * $orderItem['count'];
     }
+
 
     private static function OrderPayment(string $method, int $amount): array
     {
@@ -433,7 +436,6 @@ class CrmHelper
     private static function OrderTableCheck(string $des, int $price): array
     {
         return ["TableDost" => [["des" => $des, "price" => $price]], "TableItems" => []];
-
     }
 
     private static function OrderItemsComposition(array $itemComposition): array
@@ -483,15 +485,21 @@ class CrmHelper
                                  string|null $NameP,
                                  string|null $card,
                                  string|null $Adress,
-                                 string|null $AdressPoint,
+                                 string|array|null $AdressPoint,
                                  string|null $Apartments,
                                  string|null $Date,
                                  string|null $TimeFrom,
-                                 string|null $TimeTo
+                                 string|null $TimeTo,
+                                 array $defaultDelivery = ['des' => 'Москва в пределах МКАД', 'price' => 0],
     ): array
     {
-        $totalSumm = 0;
+        $totalSumm = $defaultDelivery['price'];
         $orderItems = self::OrderItems($totalSumm, $basket);
+
+
+        if (!empty($AdressPoint) and is_array($AdressPoint))
+            $AdressPoint = implode(',', $AdressPoint);
+
         return [
             "AdminComments" => $card ? '#Записка: ' . $card : '',
             "Adress"        => $Adress . " кв./офис " . $Apartments,
@@ -505,7 +513,7 @@ class CrmHelper
             "NameP"         => $NameP ?? '',
             "courierName"   => '',//может быть самовывоз
             "orderItems"    => $orderItems,
-            "TableCheck"    => self::OrderTableCheck('Москва', 400),
+            "TableCheck"    => self::OrderTableCheck($defaultDelivery['des'], $defaultDelivery['price']),
             "payments"      => [self::OrderPayment($paymentType, $totalSumm)],
             "Date"          => $Date ?? date('Y-m-d'),
             "TimeFrom"      => $TimeFrom ?? "00:00",
@@ -515,7 +523,7 @@ class CrmHelper
         ];
     }
 
-    private static function req($mod, $method, $data, $timeout = 10): array
+    private static function req($mod, $method, $data, $timeout = 10): array|null
     {
         $ch = curl_init();
 

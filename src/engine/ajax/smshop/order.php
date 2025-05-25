@@ -9,10 +9,11 @@ if (empty($uid))
 
 $Res['uid'] = $uid;
 $defState = [
+    'messages'     => [],
     'address'      => '',
     'addressPoint' => '',
     'apartment'    => '',
-    'date'         => '',
+    'date'         => date('Y-m-d'),
     'time'         => '',
     'name'         => '',
     'phone'        => '',
@@ -35,7 +36,7 @@ if ($_REQUEST['act'] == 'get') {
 
     $order = CrmHelper::Order($Res['basket']['data'],
         0,
-        'courier',
+        $Res['paymentType'],
         '',
         '',
         null,
@@ -44,59 +45,94 @@ if ($_REQUEST['act'] == 'get') {
         null,
         null,
         null,
-        date('Y-m-d'),
+        $Res['date'],
         null,
         null);
 
     $Res['totalSumm'] = $order['totalSumm'];
+    $Res['delivery'] = [
+        'price' => $order['TableCheck']['TableDost'][0]['price'],
+        'des'   => $order['TableCheck']['TableDost'][0]['des']
+    ];
 
 }
 if ($_REQUEST['act'] == 'calc') {
-    $basket_items = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
+    $Res['basket'] = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
 
 
-    $Res['basket'] = [];
+    if (empty($Res['messages'])) {
+        $phone = CrmHelper::cleanPhone($_REQUEST['phone']);
 
+        $order = CrmHelper::Order($Res['basket']['data'],
+            $phone,
+            $_REQUEST['paymentType'],
+            '',
+            '',
+            null,
+            null,
+            null,
+            null,
+            $_REQUEST['addressPoint'],
+            null,
+            $_REQUEST['date'],
+            null,
+            null);
 
-    foreach ($order['orderItems'] as $orderItem) {
-        $Res['basket']['data'][] = [
-            'id'         => $orderItem['itemid'],
-            'item_id'    => $orderItem['itemid'],
-            'count'      => $orderItem['count'],
-            'title'      => $orderItem['title'],
-            'price'      => $orderItem['price'],
-            'photo_main' => $orderItem['photo1'],
-            'total'      => $orderItem['count'] * $orderItem['price']
-        ];
+        CrmHelper::order_calc($order);//рекулькуляция - посчитает доставку и проведет валидацию
+
+        $Res['totalSumm'] = $order['totalSumm'];
+        $Res['delivery']['price'] = $order['TableCheck']['TableDost'][0]['price'];
+        $Res['delivery']['des'] = $order['TableCheck']['TableDost'][0]['des'];
     }
+
+//    foreach ($order['orderItems'] as $orderItem) {
+//        $Res['basket']['data'][] = [
+//            'id'         => $orderItem['itemid'],
+//            'item_id'    => $orderItem['itemid'],
+//            'count'      => $orderItem['count'],
+//            'title'      => $orderItem['title'],
+//            'price'      => $orderItem['price'],
+//            'photo_main' => $orderItem['photo1'],
+//            'total'      => $orderItem['count'] * $orderItem['price']
+//        ];
+//    }
 }
 
 if ($_REQUEST['act'] == 'add') {
 
-    $basket_items = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
 
-    $phone = CrmHelper::cleanPhone($_REQUEST['phone']);
-    $phoneP = null;
-    if (isset($_REQUEST['phoneP']))
-        $phoneP = CrmHelper::cleanPhone($_REQUEST['phoneP']);
+    if (empty($_REQUEST['phone']))
+        $Res['messages'][] = ['type' => 'danger', 'text' => 'Укажите номер телефона'];
+    if (empty($_REQUEST['date']))
+        $Res['messages'][] = ['type' => 'danger', 'text' => 'Укажите дату доставки'];
 
-    if ($phone)
+    if (empty($Res['messages'])) {
+
+        $basket_items = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
+        $phone = CrmHelper::cleanPhone($_REQUEST['phone']);
+        $phoneP = null;
+        if (isset($_REQUEST['phoneP']))
+            $phoneP = CrmHelper::cleanPhone($_REQUEST['phoneP']);
+
+        $time = explode('-', $_REQUEST['time']);
+
         $Res = CrmHelper::order_add(
             CrmHelper::Order($basket_items['data'],
                 $phone,
-                'cash',
-                '',
+                $_REQUEST['paymentType'],
+                $_REQUEST['nameI'],
                 $_REQUEST['comment'],
                 $phoneP,
-                null,
+                $_REQUEST['nameP'],
                 '',
-                '',
-                '',
-                '',
-                date('Y-m-d'),
-                '',
-                ''));
+                $_REQUEST['address'],
+                $_REQUEST['addressPoint'],
+                $_REQUEST['apartment'],
+                $_REQUEST['date'],
+                $time[0],
+                $time[1]));
 
+    }
 }
 
 

@@ -77,7 +77,8 @@ const SMSHOP = {
     order: {
         uid: localStorage.getItem('basket_uid') ? localStorage.getItem('basket_uid') : '',
         state: {
-            address: '456',
+            messages: [],
+            address: '',
             addressPoint: '',
             apartment: '',
             date: '',
@@ -122,10 +123,20 @@ const SMSHOP = {
                     this.req('calc', this.state)
             }).bind(this))
 
+            $('body').on('click', '[data-order-quick-submit]', (function (e) {
+                this.req('add', this.state)
+            }).bind(this));
+
             this.req()
         },
         setState: function (newState) {
             this.state = {...this.state, ...newState};
+
+            $(SMSHOPTPL.order.message_target).html('')
+            this.state.messages.map(function (item) {
+                $(SMSHOPTPL.order.message_target).append(SMSHOPTPL.order.message_item(item))
+            })
+
             $('#formOrder [name]').each((function (i, item) {
                 if (this.state[$(item).attr('name')] === undefined)
                     return
@@ -135,9 +146,8 @@ const SMSHOP = {
                     $(item).val(this.state[$(item).attr('name')])
             }).bind(this))
 
-
-            $(SMSHOPTPL.basket.delivery_price_target).text(this.state.delivery.price)
-            $(SMSHOPTPL.basket.delivery_des_target).text(this.state.delivery.des)
+            $(SMSHOPTPL.order.delivery_price_target).text(this.state.delivery.price)
+            $(SMSHOPTPL.order.delivery_des_target).text(this.state.delivery.des)
             $(SMSHOPTPL.basket.total_target).text(this.state.totalSumm)
             $(SMSHOPTPL.basket.short_target).html('')
             this.state.basket.data.map(function (item) {
@@ -146,7 +156,10 @@ const SMSHOP = {
         },
         req: function (action = 'get', data = {}) {
             data['uid'] = this.uid
+            delete data['basket']
             SMSHOP.helpers.req('order', action, data).done((function (newState) {
+                if (action === 'add' && newState.messages.length === 0 && newState.order_id)
+                    location.href = '/order/' + newState.order_id
                 this.setState(newState)
             }).bind(this))
         },
@@ -154,14 +167,12 @@ const SMSHOP = {
     order_quick: {
         state: null,
         init: function () {
-
             $('body').on('click', '[data-order-quick-btn]', (function (e) {
                 let item_id = $(e.currentTarget).data('item-id').toString();
                 SMSHOP.basket.req('add', {'count': 1, 'item_id': item_id})
                 let myModal = new bootstrap.Modal(document.getElementById("quickOrder"), {});
                 myModal.show();
             }).bind(this));
-
             $('#quickOrder').on('click', '[data-order-quick-submit]', (function (e) {
                 this.req('add', {'phone': $('.quickOrder #qo_phone').val(), 'comment': $('.quickOrder #qo_comment').val()})
             }).bind(this));
