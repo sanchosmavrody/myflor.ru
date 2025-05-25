@@ -8,6 +8,7 @@ if (empty($uid))
 
 
 $Res['uid'] = $uid;
+$Res['messages'] = [];
 $defState = [
     'messages'     => [],
     'address'      => '',
@@ -105,6 +106,8 @@ if ($_REQUEST['act'] == 'add') {
         $Res['messages'][] = ['type' => 'danger', 'text' => 'Укажите номер телефона'];
     if (empty($_REQUEST['date']))
         $Res['messages'][] = ['type' => 'danger', 'text' => 'Укажите дату доставки'];
+    if (empty($_REQUEST['time']))
+        $Res['messages'][] = ['type' => 'danger', 'text' => 'Укажите время доставки'];
 
     if (empty($Res['messages'])) {
 
@@ -116,21 +119,23 @@ if ($_REQUEST['act'] == 'add') {
 
         $time = explode('-', $_REQUEST['time']);
 
-        $Res = CrmHelper::order_add(
-            CrmHelper::Order($basket_items['data'],
-                $phone,
-                $_REQUEST['paymentType'],
-                $_REQUEST['nameI'],
-                $_REQUEST['comment'],
-                $phoneP,
-                $_REQUEST['nameP'],
-                '',
-                $_REQUEST['address'],
-                $_REQUEST['addressPoint'],
-                $_REQUEST['apartment'],
-                $_REQUEST['date'],
-                $time[0],
-                $time[1]));
+        $order = CrmHelper::Order($basket_items['data'],
+            $phone,
+            $_REQUEST['paymentType'],
+            $_REQUEST['name'],
+            $_REQUEST['comment'],
+            $phoneP,
+            $_REQUEST['nameP'],
+            '',
+            $_REQUEST['address'],
+            $_REQUEST['addressPoint'],
+            $_REQUEST['apartment'],
+            $_REQUEST['date'],
+            $time[0],
+            $time[1]);
+
+        CrmHelper::order_calc($order);//рекулькуляция - посчитает доставку и проведет валидацию
+        $Res['order'] = CrmHelper::order_add($order);
 
     }
 }

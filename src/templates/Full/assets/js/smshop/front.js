@@ -97,13 +97,21 @@ const SMSHOP = {
         },
         init: function () {
             if ($('#address').length > 0) {
-                $('#address').change(function (e) {
-                    $('[name="adressP"]').val($(this).val());
-                });
+                $('#address').change((function (e) {
+                    console.log('address', $(e.target).val());
+                    if ($(e.target).val() === '') {
+                        this.state.address = ''
+                        this.state.addressPoint = ''
+                        this.setState(this.state)
+                        this.req('calc', this.state)
+                    }
+                }).bind(this));
                 $('#address').suggestions({
                     token: "5eaf99e5874141a6ce002e8d3badc229ecb42825", type: "ADDRESS",
                     onSelect: (function (suggestion) {
+
                         const Selected = {name: suggestion.value, coordinates: [suggestion.data.geo_lat, suggestion.data.geo_lon], type: suggestion.data.fias_level, metro: suggestion.data.metro}
+                        console.log('suggestions', suggestion);
                         this.state.address = Selected.name
                         this.state.addressPoint = Selected.coordinates
                         this.setState(this.state)
@@ -120,11 +128,11 @@ const SMSHOP = {
             $('#formOrder [name]').change((function (item) {
                 this.state[$(item.target).attr('name')] = $(item.target).val()
                 if (['date', 'time', 'addressPoint'].indexOf($(item.target).attr('name')) > -1)
-                    this.req('calc', this.state)
+                    this.req('calc', {...this.state})
             }).bind(this))
 
-            $('body').on('click', '[data-order-quick-submit]', (function (e) {
-                this.req('add', this.state)
+            $('body').on('click', '[data-order-submit]', (function (e) {
+                this.req('add', {...this.state})
             }).bind(this));
 
             this.req()

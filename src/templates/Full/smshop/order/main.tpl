@@ -1,15 +1,12 @@
 <section class="checkout-area ptb-60">
     <div class="container">
-        <form id="formOrder">
+        <div id="formOrder">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="billing-details">
                         <h3 class="title">Оформление заказа</h3>
 
-
-                        <div class="messages">
-                        </div>
-
+                        <div class="messages"></div>
 
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
@@ -24,19 +21,18 @@
                                     <label>Интервал времени <span class="required">*</span></label>
                                     <select name="time" class="form-control">
                                         <option value="" selected="selected">Выберите время</option>
-                                        <option value="00:00-00:00" data-end="0">Согласовать с получателем</option>
-                                        <option value="11:00-13:00" data-end="11">09.00-11.00</option>
-                                        <option value="13:00-15:00" data-end="13">11.00-13.00</option>
-                                        <option value="15:00-17:00" data-end="15">13.00-15.00</option>
-                                        <option value="17:00-19:00" data-end="17">15.00-17.00</option>
-                                        <option value="19:00-21:00" data-end="19">17.00-19.00</option>
-                                        <option value="21:00-23:00" data-end="21">19.00-21.00</option>
-                                        <option value="21:00-23:00" data-end="23">21.00-23.00</option>
-                                        <option value="23:00-09:00" data-end="99">23.00-09.00</option>
+                                        <option value="00:00-00:00">Согласовать с получателем</option>
+                                        <option value="09.00-11.00">09.00-11.00</option>
+                                        <option value="11:00-13:00">11.00-13.00</option>
+                                        <option value="13:00-15:00">13.00-15.00</option>
+                                        <option value="15:00-17:00">15.00-17.00</option>
+                                        <option value="17:00-19:00">17.00-19.00</option>
+                                        <option value="19:00-21:00">19.00-21.00</option>
+                                        <option value="21:00-23:00">21.00-23.00</option>
+                                        <option value="23:00-09:00">23.00-09.00</option>
                                     </select>
                                 </div>
                             </div>
-
 
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
@@ -63,19 +59,18 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
                                         <div class="form-group mb-3">
-                                            <label class="form-label">Имя получателя <span class="required">*</span></label>
-                                            <input name="nameP" type="text" class="form-control"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="form-group mb-3">
                                             <label class="form-label">Телефон получателя<span class="required">*</span></label>
                                             <input name="phoneP" type="tel" class="form-control"/>
                                         </div>
                                     </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label">Имя получателя <span class="required">*</span></label>
+                                            <input name="nameP" type="text" class="form-control"/>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
@@ -95,7 +90,7 @@
 
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="notes" id="notes" cols="30" rows="6" placeholder="Комментарий к заказу" class="form-control"></textarea>
+                                    <textarea name="comment" id="notes" cols="30" rows="6" placeholder="Комментарий к заказу" class="form-control"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +154,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 </section>
 
