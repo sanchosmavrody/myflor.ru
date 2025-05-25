@@ -56,8 +56,9 @@ class Basket extends Core
         $total = 0;
         foreach ($Res['data'] as &$item) {
             $catalog_item = $Catalog->getItem($item['item_id'])['item'];
-            foreach (['title', 'price', 'category_2', 'photo_main',] as $field_to_map)
+            foreach (['title', 'price', 'category_2_name', 'photo_main',] as $field_to_map)
                 $item[$field_to_map] = $catalog_item[$field_to_map];
+            //$item['item'] = $catalog_item;
             $item['total'] = $item['count'] * $item['price'];
             $total += $item['total'];
         }
