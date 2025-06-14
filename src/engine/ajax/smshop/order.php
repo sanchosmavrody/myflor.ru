@@ -1,10 +1,12 @@
 <?php
+
 $Basket = new Basket('shop_basket');
 
 //Во всех запросах передается UID, если он пустой генерим и на фронте положим в локал сторадж
 $uid = preg_replace('/[^a-z\d]/ui', '', $_REQUEST['uid']);
-if (empty($uid))
+if (empty($uid)) {
     $uid = uniqid("", true);
+}
 
 
 $Res['uid'] = $uid;
@@ -35,7 +37,8 @@ if ($_REQUEST['act'] == 'get') {
     $Res = $defState;
     $Res['basket'] = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
 
-    $order = CrmHelper::Order($Res['basket']['data'],
+    $order = CrmHelper::Order(
+        $Res['basket']['data'],
         0,
         $Res['paymentType'],
         '',
@@ -48,23 +51,23 @@ if ($_REQUEST['act'] == 'get') {
         null,
         $Res['date'],
         null,
-        null);
+        null
+    );
 
     $Res['totalSumm'] = $order['totalSumm'];
     $Res['delivery'] = [
         'price' => $order['TableCheck']['TableDost'][0]['price'],
         'des'   => $order['TableCheck']['TableDost'][0]['des']
     ];
-
 }
 if ($_REQUEST['act'] == 'calc') {
     $Res['basket'] = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
 
-
     if (empty($Res['messages'])) {
         $phone = CrmHelper::cleanPhone($_REQUEST['phone']);
 
-        $order = CrmHelper::Order($Res['basket']['data'],
+        $order = CrmHelper::Order(
+            $Res['basket']['data'],
             $phone,
             $_REQUEST['paymentType'],
             '',
@@ -77,7 +80,8 @@ if ($_REQUEST['act'] == 'calc') {
             null,
             $_REQUEST['date'],
             null,
-            null);
+            null
+        );
 
         CrmHelper::order_calc($order);//рекулькуляция - посчитает доставку и проведет валидацию
 
@@ -85,7 +89,6 @@ if ($_REQUEST['act'] == 'calc') {
         $Res['delivery']['price'] = $order['TableCheck']['TableDost'][0]['price'];
         $Res['delivery']['des'] = $order['TableCheck']['TableDost'][0]['des'];
     }
-
 //    foreach ($order['orderItems'] as $orderItem) {
 //        $Res['basket']['data'][] = [
 //            'id'         => $orderItem['itemid'],
@@ -98,28 +101,29 @@ if ($_REQUEST['act'] == 'calc') {
 //        ];
 //    }
 }
-
 if ($_REQUEST['act'] == 'add') {
-
-
-    if (empty($_REQUEST['phone']))
+    if (empty($_REQUEST['phone'])) {
         $Res['messages'][] = ['type' => 'danger', 'text' => 'Укажите номер телефона'];
-    if (empty($_REQUEST['date']))
+    }
+    if (empty($_REQUEST['date'])) {
         $Res['messages'][] = ['type' => 'danger', 'text' => 'Укажите дату доставки'];
-    if (empty($_REQUEST['time']))
+    }
+    if (empty($_REQUEST['time'])) {
         $Res['messages'][] = ['type' => 'danger', 'text' => 'Укажите время доставки'];
+    }
 
     if (empty($Res['messages'])) {
-
         $basket_items = $Basket->getList(['uid' => $uid, 'order_id' => 0], ['current' => 0, 'limit' => 100], [], ['full']);
         $phone = CrmHelper::cleanPhone($_REQUEST['phone']);
         $phoneP = null;
-        if (!empty($_REQUEST['phoneP']))
+        if (!empty($_REQUEST['phoneP'])) {
             $phoneP = CrmHelper::cleanPhone($_REQUEST['phoneP']);
+        }
 
         $time = explode('-', $_REQUEST['time']);
 
-        $order = CrmHelper::Order($basket_items['data'],
+        $order = CrmHelper::Order(
+            $basket_items['data'],
             $phone,
             $_REQUEST['paymentType'],
             $_REQUEST['name'],
@@ -132,15 +136,12 @@ if ($_REQUEST['act'] == 'add') {
             $_REQUEST['apartment'],
             $_REQUEST['date'],
             $time[0],
-            $time[1]);
+            $time[1]
+        );
 
         CrmHelper::order_calc($order);//рекулькуляция - посчитает доставку и проведет валидацию
         $order = CrmHelper::order_add($order);
 
         $Res['order_id'] = $order['order_id'];
-
     }
 }
-
-
-

@@ -409,7 +409,7 @@ class CrmHelper
 
         $order['totalSumm'] = 0;
         if (!empty($order['AdressPoint'])) {
-            $delivery = self::req('delivery', 'calcDelivery', ["AdressPPoint" => explode(',', $order['AdressPoint']), 'AdressP' => '', 'inPrice' => $order['totalSumm']]);
+            $delivery = self::req('delivery', 'calcDelivery', ["shop"=>$order['shop'],"AdressPPoint" => explode(',', $order['AdressPoint']), 'AdressP' => '', 'inPrice' => $order['totalSumm']]);
             $order['TableCheck'] = self::OrderTableCheck($delivery['des'], $delivery['price']);
             $order['totalSumm'] += $delivery['price'];
         }

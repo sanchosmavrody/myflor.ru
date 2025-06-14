@@ -103,7 +103,7 @@ const SMSHOP = {
                         this.state.address = ''
                         this.state.addressPoint = ''
                         this.setState(this.state)
-                        this.req('calc', this.state)
+                        this.req('calc', {...this.state, ...{'shop': 'MFL'}})
                     }
                 }).bind(this));
                 $('#address').suggestions({
@@ -115,7 +115,7 @@ const SMSHOP = {
                         this.state.address = Selected.name
                         this.state.addressPoint = Selected.coordinates
                         this.setState(this.state)
-                        this.req('calc', this.state)
+                        this.req('calc', {...this.state, ...{'shop': 'MFL'}})
                     }).bind(this)
                 });
             }
@@ -128,7 +128,7 @@ const SMSHOP = {
             $('#formOrder [name]').change((function (item) {
                 this.state[$(item.target).attr('name')] = $(item.target).val()
                 if (['date', 'time', 'addressPoint'].indexOf($(item.target).attr('name')) > -1)
-                    this.req('calc', {...this.state})
+                    this.req('calc', {...this.state, ...{'shop': 'MFL'}})
             }).bind(this))
 
             $('body').on('click', '[data-order-submit]', (function (e) {
