@@ -131,14 +131,26 @@ if ($_REQUEST['act'] === 'data') {
     if (!empty($req)) {
         $Catalog = new Catalog($main_table);
 
-
-        //белых пионов
-
-
         $Res = $Catalog->getList($req['filter'], $req['pager']);
-
-        foreach ($Res['data'] as &$item)
+        $CatalogComposition = new CatalogComposition('shop_catalog_composition');
+        foreach ($Res['data'] as &$item) {
             $item['photos'] = implode(",", $item['photos']);
+            //$item['composition'] = $CatalogComposition->getList(['parent_id' => $item['id']], ['current' => 0, 'limit' => 100]);
+        }
+
+    }
+}
+
+if ($_REQUEST['act'] === 'searchBuket') {
+    $Res = [];
+    if (!empty($req)) {
+        $Catalog = new Catalog($main_table);
+        $CatalogComposition = new CatalogComposition('shop_catalog_composition');
+        $Res = $Catalog->getList($req['filter'], $req['pager']);
+        foreach ($Res['data'] as &$item) {
+            $item['composition'] = $CatalogComposition->getList(['parent_id' => $item['id']], ['current' => 0, 'limit' => 100]);
+        }
+
 
     }
 }

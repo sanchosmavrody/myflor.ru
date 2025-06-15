@@ -4,10 +4,9 @@ class Catalog extends Core
 {
     var string $table = '';
     var array $filters = [
-        'id'           => ["where" => "id = '{value}'"],
-        'search_query' => ["where" => "field_1.field_value LIKE '%{value}%'"],
-        'c2'           => ["where" => "field_17.field_value IN({value})"],
-
+        'id'            => ["where" => "id = '{value}'"],
+        'search_query'  => ["where" => "field_1.field_value LIKE '%{value}%'"],
+        'c2'            => ["where" => "field_17.field_value IN({value})"],
         'category_3'    => ["where" => "field_15.field_value IN({value})"],
         'category_2'    => ["where" => "field_17.field_value IN({value})"],
         'category_1'    => ["where" => "FIND_IN_SET('{value}',field_22.field_value)"],
@@ -32,9 +31,7 @@ class Catalog extends Core
     function save(array $item): int
     {
         global $member_id;
-        //if ($item['id'] == 0)
         $item['user_id'] = $member_id['user_id'];
-
         $id = parent::save($item);
         if ($item['id'] == 0) {
             DbHelper::query("UPDATE shop_catalog_composition SET parent_id = '{$id}' WHERE user_id = '{$member_id['user_id']}' AND parent_id = 0; ");
@@ -46,7 +43,6 @@ class Catalog extends Core
     {
         foreach ($Res['data'] as &$item) {
             $this->processItem($item);
-            // unset($item['photos']);
         }
     }
 
@@ -56,7 +52,6 @@ class Catalog extends Core
         $item['category_2_name'] = DbHelper::get_row("SELECT field_value FROM shop_category_fields WHERE shop_category = '{$item['category_2']}' and field = 3;")['field_value'];
         $item['active_site'] = $item['active_site'] == 1 ? 'Да' : 'Нет';
         $item['active_main'] = $item['active_main'] == 1 ? 'Да' : 'Нет';
-
         $item['photos'] = explode(',', $item['photos']);
         $item['photo_main'] = empty($item['photos'][0]) ? '/templates/Full/assets/img/catalog_no_photo.png' : $item['photos'][0];
     }
