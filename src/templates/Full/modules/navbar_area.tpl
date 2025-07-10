@@ -219,14 +219,9 @@
                     </div>
 
                     <div class="main_contacts position-absolute animate__animated animate__backInRight" style="bottom: -3px;    z-index: 2;    right: 80px;    font-size: 18px;">
-
-                        <a class="d-inline text-dark fw-bold me-1" href="https://wa.me/79771137941?text=Добрый день!" rel="nofollow" target="_blank"><i style="color: #0cc143" class="fa-brands fa-whatsapp"></i></a>
-                        <a class="d-inline text-dark fw-bold me-1" href="https://t.me/79771137941?text=Добрый день!" rel="nofollow" target="_blank"><i style="color: #2da7e2" class="fa-brands fa-telegram"></i></a>
-
-
-                        <a class="d-inline text-dark fw-bold" rel="nofollow" href="tel:+7(495)000-00-00"><i class="fa fa-phone text-dark"></i>+7 (495) 000-00-00</a>
-
-
+                        <a class="d-inline text-dark fw-bold me-1" href="https://wa.me/79670997755?text=Добрый день!" rel="nofollow" target="_blank"><i style="color: #0cc143" class="fa-brands fa-whatsapp"></i></a>
+                        <a class="d-inline text-dark fw-bold me-1" href="https://t.me/79670997755?text=Добрый день!" rel="nofollow" target="_blank"><i style="color: #2da7e2" class="fa-brands fa-telegram"></i></a>
+                        <a class="d-inline text-dark fw-bold" rel="nofollow" href="tel:+74951287000"><i class="fa fa-phone text-dark"></i>+7 (495) 128-70-00</a>
                     </div>
                 </div>
             </nav>

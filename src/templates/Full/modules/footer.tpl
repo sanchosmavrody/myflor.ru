@@ -41,8 +41,8 @@
                     <h3>Наши контакты</h3>
                     <ul class="footer-contact-info">
                         <li><i class="fas fa-map-marker-alt"></i> Россия, Москва, Красная площадь д.1</li>
-                        <li><i class="fas fa-phone"></i> Наши телефоны: <a href="tel:+">+7(495) 111-22-33</a></li>
-                        <li><i class="far fa-envelope"></i> Email Us: <a href="mailto:support@comero.com">ьфтфпук@myflor.кг</a></li>
+                        <li><i class="fas fa-phone"></i> Наши телефоны: <a href="tel:+74951287000">+7 (495) 128-70-00</a></li>
+                        <li><i class="far fa-envelope"></i> Email: <a href="mailto:manager@myflor.ru">manager@myflor.ru</a></li>
                     </ul>
                 </div>
             </div>
