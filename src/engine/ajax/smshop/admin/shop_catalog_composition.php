@@ -109,7 +109,6 @@ if ($_REQUEST['act'] === 'data') {
             $Res['totals']['total'] += $item['total'];
             $Res['totals']['total_cost'] += $item['total_cost'];
         }
-
     }
 }
 

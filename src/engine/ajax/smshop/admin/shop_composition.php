@@ -3018,7 +3018,6 @@ if ($_REQUEST['act'] == 'synch') {
     define("COLLATE_B", "utf8");
 
     $dbbx = new db;
-
     $sql = <<<SQL
 SELECT PROD.ID,
 DES.NAME,
@@ -3040,7 +3039,6 @@ LEFT JOIN b_file IMGP ON IMGP.ID = DES.PREVIEW_PICTURE
 WHERE PRSET.SET_ID IS NULL
 GROUP BY PROD.ID
 SQL;
-
 
     $dbbx->connect(DBUSER_B, DBPASS_B, DBNAME_B, DBHOST_B);
     $dbbx->query("SET SESSION sql_mode = ''; ");
