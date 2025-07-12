@@ -18,7 +18,7 @@
                         <li><a href="about.html">О нас</a></li>
                         <li><a href="faq.html">Доставка</a></li>
                         <li><a href="customer-service.html">Оплата</a></li>
-                        <li><a href="contact-us.html">Оферта</a></li>
+                        <li><a href="oferta.html">Оферта</a></li>
                     </ul>
                 </div>
             </div>
