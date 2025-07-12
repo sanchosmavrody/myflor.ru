@@ -80,7 +80,6 @@ foreach ($Res['data'] as &$item) {
 //exit();
 
 include 'navigation.php';
-
 $tpl->load_template('/smshop/catalog/main.tpl');
 $tpl->set('{shop_catalog}', $shop_catalog);
 $tpl->set('{items}', $tpl->result['items']);

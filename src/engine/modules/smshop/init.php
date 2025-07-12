@@ -1,9 +1,6 @@
 <?php
 require_once ROOT_DIR . '/engine/classes/smshop/include.php';
-
 $shop_catalog = $_REQUEST['shop_catalog'];
-
-
 if ($shop_catalog == 'order')
     include 'order.php';
 else if ($shop_catalog == 'basket') {
