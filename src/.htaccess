@@ -7,7 +7,7 @@ DirectoryIndex index.php
 
 RewriteEngine On
 
-RewriteRule ^(md)?/(|moldova)?/(catalog|basket|order)/(.*)$ index.php?do=smshop&shop_catalog=$1&url=$2 [B,L]
+RewriteRule ^(catalog|basket|order)/(.*)$ index.php?do=smshop&shop_catalog=$1&url=$2 [B,L]
 
 RewriteRule ^page/([0-9]+)(/?)$ index.php?cstart=$1 [L]
 
