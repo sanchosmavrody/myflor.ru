@@ -13,9 +13,7 @@ if (file_exists(__DIR__ . '/' . $_REQUEST['mod'] . '.php')) {
     define('ENGINE_DIR', ROOT_DIR . '/engine');
 
     include ENGINE_DIR . '/data/config.php';
-
     date_default_timezone_set($config['date_adjust']);
-
     require_once ENGINE_DIR . '/classes/mysql.php';
     require_once ENGINE_DIR . '/data/dbconfig.php';
     require_once ENGINE_DIR . '/modules/functions.php';
@@ -48,7 +46,4 @@ if (file_exists(__DIR__ . '/' . $_REQUEST['mod'] . '.php')) {
     echo json_encode($Res);
 
 } else
-    exit('METHOD NO FOUND ' . $_SERVER['DOCUMENT_ROOT'] . '/engine/ajax/rocketme/' . $_REQUEST['mod'] . '.php');
-
-
-  
+    exit('METHOD NO FOUND ');
